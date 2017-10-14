@@ -32,6 +32,9 @@ export default class RevealComp extends React.Component<RevealCompProps> {
             // vertical
             center: false,
 
+            // Flags if speaker notes should be visible to all viewers
+	        showNotes: false,
+
             // width: "100%",
             // height: "100%",
             // margin: 0,
@@ -40,9 +43,10 @@ export default class RevealComp extends React.Component<RevealCompProps> {
 
             dependencies: [
               { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-              // { src: 'reveal.js/plugin/markdown/marked.js' },
-              // { src: 'reveal.js/plugin/markdown/markdown.js' },
-            //   { src: 'plugin/notes/notes.js', async: true }
+              { src: 'reveal.js/plugin/markdown/marked.js' },
+              { src: 'reveal.js/plugin/markdown/markdown.js' },
+              { src: 'reveal.js/plugin/notes/notes.js', async: true }
+            
             ]
           });          
     }

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Markdown, SpeakerNotes } from '../reveal-react';
 
 export class Intro extends React.Component {
     render() {
@@ -6,7 +7,12 @@ export class Intro extends React.Component {
         return (
             <section>
                 <section className="center">
-                    <h1>CSS in a Components’ World</h1>
+                    <h1>CSS in a Components’ World</h1>                    
+                    <SpeakerNotes>
+                        <Markdown>{`
+                            # Intro
+                        `}</Markdown>
+                    </SpeakerNotes>
                 </section>
                 <section>
                     <ul>
