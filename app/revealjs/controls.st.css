@@ -1,0 +1,23 @@
+.root {
+    -st-scoped: controls;
+}
+
+.navigateUp {
+    -st-scoped: navigate-up;
+    -st-states: enabled(".enabled");
+}
+
+.navigateRight {
+    -st-scoped: navigate-right;
+    -st-states: enabled(".enabled");
+}
+
+.navigateDown {
+    -st-scoped: navigate-down;
+    -st-states: enabled(".enabled");
+}
+
+.navigateLeft {
+    -st-scoped: navigate-left;
+    -st-states: enabled(".enabled");
+}

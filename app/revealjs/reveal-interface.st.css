@@ -1,0 +1,94 @@
+:vars {
+    navigateColor: currentColor;
+}
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+ /* check */
+
+/*********************************************
+ * VIEW FRAGMENTS
+ *********************************************/
+ :import {
+    -st-theme: true;
+    -st-from: "./fragment.st.css";
+    -st-named: Fragment;
+}
+
+ /*********************************************
+ * HEADERS
+ *********************************************/
+@custom-selector :--headings h1, h2, h3, h4, h5, h6;
+
+/*********************************************
+ * OTHER
+ *********************************************/
+  /* check */
+pre {
+  display: block;
+  position: relative;
+  text-align: left;
+  font-family: monospace;
+  line-height: 1.2em;
+  word-wrap: break-word;
+}
+  
+  /*********************************************
+  * LINKS
+  *********************************************/
+  /* check */
+
+  /*********************************************
+ * IMAGES
+ *********************************************/
+   /* check */
+
+/*********************************************
+ * SLIDES
+ *********************************************/
+:import {
+    -st-from: "./slides.st.css";
+    -st-named: root as slides;
+}
+@custom-selector :--slides .slides;
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+:import {
+    -st-theme:true;
+    -st-from: "./controls.st.css";
+    -st-default: Controls;
+}
+@custom-selector :--controls Controls;
+
+@custom-selector :--navigateBtn Controls::navigateDown, Controls::navigateLeft, Controls::navigateRight, Controls::navigateUp;
+
+Controls::navigateUp {
+    border-bottom-color: value(navigateColor);
+}
+
+Controls::navigateRight {
+    border-left-color: value(navigateColor);
+}
+
+Controls::navigateDown {
+    border-top-color: value(navigateColor);
+}
+
+Controls::navigateLeft {
+    border-right-color: value(navigateColor);
+}
+
+ /*********************************************
+ * PROGRESS BAR
+ *********************************************/
+ :import {
+    -st-theme:true;
+    -st-from: "./progress.st.css";
+    -st-default: Progress;
+}
+
+@custom-selector :--progress Progress;
+Progress{}

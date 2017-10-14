@@ -1,0 +1,29 @@
+.root {
+    -st-scoped: fragment;
+}
+.current-fragment {
+    -st-root: true;
+    -st-scoped: current-fragment;
+}
+.visible {
+    -st-root: true;
+    -st-scoped: visible;
+}
+.fade-out {
+    -st-root: true;
+    -st-scoped: fade-out;
+}
+
+.fade-in-hidden {
+    -st-root: true;
+    -st-scoped: fade-in-hidden; 
+    -st-states: visible(".visible");
+}
+.root.fade-in-hidden:not(:visible) { display: none; }
+
+.fade-out-hide { 
+    -st-root: true;
+    -st-scoped: fade-out-hide; 
+    -st-states: visible(".visible");
+}
+.root.fade-out-hide:visible { display: none; }
