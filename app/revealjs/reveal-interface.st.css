@@ -10,10 +10,10 @@
 /*********************************************
  * VIEW FRAGMENTS
  *********************************************/
- :import {
+:import {
     -st-theme: true;
     -st-from: "./fragment.st.css";
-    -st-named: Fragment;
+    -st-default: Fragment;
 }
 
  /*********************************************
@@ -48,36 +48,38 @@ pre {
  * SLIDES
  *********************************************/
 :import {
-    -st-from: "./slides.st.css";
-    -st-named: root as slides;
+    -st-theme: true;
+    -st-from: "./slides.st.css";    
+    -st-default: Slides;
 }
-@custom-selector :--slides .slides;
+
+@custom-selector :--slides Slides;
 
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
 :import {
-    -st-theme:true;
+    -st-theme: true;
     -st-from: "./controls.st.css";
     -st-default: Controls;
 }
 @custom-selector :--controls Controls;
 
-@custom-selector :--navigateBtn Controls::navigateDown, Controls::navigateLeft, Controls::navigateRight, Controls::navigateUp;
+@custom-selector :--navigateBtn Controls::up, Controls::right, Controls::down, Controls::left;
 
-Controls::navigateUp {
+Controls::up {
     border-bottom-color: value(navigateColor);
 }
 
-Controls::navigateRight {
+Controls::right {
     border-left-color: value(navigateColor);
 }
 
-Controls::navigateDown {
+Controls::down {
     border-top-color: value(navigateColor);
 }
 
-Controls::navigateLeft {
+Controls::left {
     border-right-color: value(navigateColor);
 }
 
@@ -91,4 +93,3 @@ Controls::navigateLeft {
 }
 
 @custom-selector :--progress Progress;
-Progress{}

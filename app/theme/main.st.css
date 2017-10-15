@@ -7,7 +7,6 @@
 
 .root {
     -st-extends: Reveal;
-    -st-compose: Reveal;
 }
 /* .root::headings { color:purple; } */
 
@@ -18,8 +17,12 @@
     top:10px;
 }
 
-.root::slides {}
-.root::slides::background {}
+.root::slides {
+    
+}
+.root::slides::background {
+    background: rgba(0,0,0,0.8);
+}
 
 /*********************************************
  * GLOBAL STYLES
@@ -30,17 +33,23 @@
     background-color: #222; 
 }
 
+:global(::selection) {
+    color: #fff;
+    background: #bee4fd;
+    text-shadow: none; 
+}
+
+
+/*********************************************
+ * ROOT STYLES
+ *********************************************/
+
+
 .root {
     font-family: "Source Sans Pro", Helvetica, sans-serif;
     font-size: 42px;
     font-weight: normal;
     color: #fff;
-}
-
-:global(::selection) {
-    color: #fff;
-    background: #bee4fd;
-    text-shadow: none; 
 }
   
 /* .root::slides > section,
@@ -293,7 +302,7 @@ font-weight: inherit; } */
 *********************************************/
 .root::progress {
     height:20px;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(255, 0, 0, 0.2);
 }
 /* .root::progress::bar {
     background:green;

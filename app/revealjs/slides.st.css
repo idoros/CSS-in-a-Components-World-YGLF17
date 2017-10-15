@@ -2,8 +2,10 @@
     -st-scoped: slides;
 }
 
-@custom-selector :--background .root + :global(.backgrounds) > .background:not([data-background-hash]);
+
+@custom-selector :--background :global(.backgrounds) .background, :global(~ .backgrounds) .background;
+
 .background {
     -st-scoped: slide-background;
-    -st-states: past(".past"), present(".present"), future(".future")
+    -st-states: past(".past"), present(".present"), future(".future");
 }

@@ -3562,8 +3562,8 @@ stylable-integration@^5.1.7:
     yargs "^8.0.2"
 
 "stylable@git://github.com/wix/stylable.git#ido/manual-class-mapping":
-  version "4.0.18"
-  resolved "git://github.com/wix/stylable.git#10f11c45f0824e0bbad207fbabe96e7d7b5b4708"
+  version "4.0.20"
+  resolved "git://github.com/wix/stylable.git#36959e448e1806933e7c9e1582a66effba8499d8"
   dependencies:
     css-selector-tokenizer "^0.7.0"
     deindent "^0.1.0"

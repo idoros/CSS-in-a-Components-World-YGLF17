@@ -2,22 +2,22 @@
     -st-scoped: controls;
 }
 
-.navigateUp {
+.up {
     -st-scoped: navigate-up;
     -st-states: enabled(".enabled");
 }
 
-.navigateRight {
+.right {
     -st-scoped: navigate-right;
     -st-states: enabled(".enabled");
 }
 
-.navigateDown {
+.down {
     -st-scoped: navigate-down;
     -st-states: enabled(".enabled");
 }
 
-.navigateLeft {
+.left {
     -st-scoped: navigate-left;
     -st-states: enabled(".enabled");
 }

@@ -5,7 +5,7 @@ export class Intro extends React.Component {
     render() {
         let index = 0;
         return (
-            <section>
+            <section data-background-image="http://jsmaker.com/img/Me.png">
                 <section className="center">
                     <h1>CSS in a Components’ World</h1>                    
                     <SpeakerNotes>
