@@ -7,10 +7,10 @@ type MarkdownProps = {
     vertical?:string;
     separatorNotes?:string;
 };
-
+//data-separator={seperator} data-vertical={vertical} data-separator-notes={separatorNotes}
 export const Markdown = ({children, externalURL="", seperator='^\n---\n$', vertical='^\n--\n$', separatorNotes='^Note:'}:MarkdownProps) => {
     return (
-        <div data-markdown={externalURL} data-separator={seperator} data-vertical={vertical} data-separator-notes={separatorNotes}>
+        <div data-markdown={externalURL} >
             {externalURL ? null : <script type="text/template">{children}</script> }
         </div>
     );
