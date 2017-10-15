@@ -8,31 +8,44 @@ export class TypedCSS extends React.Component {
             <section>
                 <section className="center">
                     <h1>Typed CSS</h1>
-                    <pre>
+                    <h4>
                         Components as Types
-                    </pre>
+                    </h4>
+                    <h4>
+                        Stylesheets as Interfaces // change me?
+                    </h4>
+
+                    <SpeakerNotes markdown> 
+                        {`
+                            * Components as types - Gallery example
+                            * Styles as interfaces
+                        `}
+                    </SpeakerNotes>
                 </section>
                 <section>
                     <h3>Typed CSS</h3>
                     <ul>
-                        <li>Deep discovery - 
+                        <li>CSS Superset
                             <ul>
-                                <li>Inner parts - as pseudo-elements</li>
-                                <li>States - as pseudo-classes</li>
-                                <li>CSS variables</li>
-
+                                <li>Classes as Pseudo-Elements</li>
+                                <li>Define custom Pseudo-Classes</li>
                             </ul>
                         </li>
-                        <li>Type checking - code hinting & validations</li>
+                        <li>Type Aware Dependencies</li>
+                        <li>IDE & Build - code completions, highlighting & validations</li>
                         <li>Optimization - ruleset shaking</li>
                     </ul>
-                    
+
                     <SpeakerNotes markdown> 
                         {`
-                            * Components as types
-                            * Inner structure & states as pseudo-elements & pseudo-classes
-                            * Autocomplete & validations
-                            * Declaration interface
+                            * CSS Superset
+                                * Inner Parts as Pseudo-Classes 
+                                * Define custom Pseudo-Classes
+                            * Type Aware Dependencies - typed imports, exports
+                            * Type Checking - code hinting, validations
+                            * Optimizations - Ruleset shaking, based on imports, what's not used isn't bundled
+
+                            * Declaration interface // Whats this?
                         `}
                     </SpeakerNotes>
                 </section>
