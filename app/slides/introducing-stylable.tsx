@@ -6,32 +6,32 @@ export class IntroducingStylable extends React.Component {
         let index = 0;
         return (
             <section>
-                <section className="center" data-notes="testing">
-                    <h1>Introducing Stylable</h1>
+                <section className="center">
+                    <img src="../assets/stylable-logo-horizontal.svg" alt="Stylable logo"/>
                     <pre>
                         Stylable is a CSS preprocessor for styling components with a typesafe CSS
                     </pre>
                 </section>
 
                 <section>
-                    <h3>Introducing Stylable - bundle components’ CSS</h3>
+                    <h2>Introducing Stylable</h2>
                     <ul>
                         <li>
-                        CSS Superset - import, extend, states...
+                            A Typed CSS Implementation
                         </li>
                         <li>
-                        Tooling - VSCode extension based on a Stylable Language Server
+                            VSCode Extension - Completions & Validations
                         </li>
                         <li>
-                        Integration - webpack, react…
+                            Integration - React, Webpack
                         </li>
                     </ul>
 
                     <SpeakerNotes markdown> 
                         {`
-                            * CSS Superset 
-                                * ".myGallery" is a type of Gallery - so structure! (import / extend)
-                                * Define custom pseudo-elements / pseudo-classe
+                            * Typed CSS Implementation 
+                                * A result of multiple PoCs
+                                * Tries to stick to the spirit of CSS for new features syntax
                             * Tooling 
                                 * Hinting - know when you’re trying to access something that’s not there
                                 * Validations - keeps you using valid CSS & Stylable syntax
@@ -44,10 +44,16 @@ export class IntroducingStylable extends React.Component {
                 </section>
                 
                 <section>
-                    <h3>State of Stylable</h3>
+                    <pre>State of Stylable</pre>
                     <ul>
                         <li>Alpha</li>
-                        <li>TODO: Add existing feature list</li>
+                        <li> Currently Available Features:
+                            <ul>
+                                <li>Pseudo-Elements & Pseudo-Classes</li>
+                                <li>Theming</li>
+                                <li>Mixins</li>
+                            </ul>
+                        </li>
                     </ul>
                     
                     <SpeakerNotes markdown> 
@@ -63,7 +69,7 @@ export class IntroducingStylable extends React.Component {
                 </section>
                 
                 <section>
-                    <h3>Roadmap</h3>
+                    <pre>Roadmap</pre>
                     <ul>
                         <li>Dynamicness! (Soon. ™)</li>
                         <li>Custom Pseudo-Classes with parameters</li>
@@ -83,7 +89,7 @@ export class IntroducingStylable extends React.Component {
                 </section>
 
                 <section className="center">
-                    <h3>[ ReavelJS DEMO ]</h3>
+                    <pre>[ ReavelJS DEMO ]</pre>
                 </section>
             </section>
         );

@@ -33,7 +33,13 @@ export default class RevealComp extends React.Component<RevealCompProps> {
             center: false,
 
             // Flags if speaker notes should be visible to all viewers
-	        showNotes: false,
+            showNotes: false,
+            
+            // Transition style
+            transition: 'fade', // none/fade/slide/convex/concave/zoom            
+            
+            // Transition speed
+            transitionSpeed: 'fast', // default/fast/slow
 
             // width: "100%",
             // height: "100%",
