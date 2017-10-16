@@ -11,6 +11,18 @@
 }
 /* .root::headings { color:purple; } */
 
+.customMark {
+    border: 4px solid currentColor;
+    border-width: 0px 0px 4px 0px;
+    background-color:initial;
+}
+.customMark * { color:white; font-weight: bold; }
+.root code mark[data-name="icon"] { -st-mixin:customMark; color:#a4c1f4; }
+.root code mark[data-name="navBtn"] { -st-mixin:customMark; color:#b6d7a8; }
+.root code mark[data-name="gallery"] { -st-mixin:customMark; color:#ea9899; }
+.root code mark[data-name="nav"] { -st-mixin:customMark; color:#fde8b2; }
+.root code mark[data-name="btn"] { -st-mixin:customMark; color:#5f7b53; }
+
 /*********************************************
  * TESTS
  *********************************************/

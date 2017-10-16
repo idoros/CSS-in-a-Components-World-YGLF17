@@ -1,5 +1,25 @@
 import * as React from 'react';
-import { Fragment, Code } from '../reveal-react';
+import { Fragment, MarkCode, SpeakerNotes } from '../reveal-react';
+
+const markMap = {
+    '.icon':'icon',
+    'icon':'icon',
+    '.gallery__icon':'icon',
+    'gallery__icon':'icon',
+    '.button__icon':'icon',
+    'button__icon':'icon',
+    '::icon':'icon',
+    '::navIcon':'icon',
+    '.navBtn':'navBtn',
+    'navBtn':'navBtn',
+    '.gallery__navBtn':'navBtn',
+    'gallery__navBtn':'navBtn',
+    '::navBtn':'navBtn',
+    'a':'btn',
+    'nav':'nav',
+    '.gallery':'gallery',
+    'gallery':'gallery',
+};
 
 export class ComponentsInCSS extends React.Component {
     render() {
@@ -7,191 +27,192 @@ export class ComponentsInCSS extends React.Component {
         return (
             <section>
                 <section className="center">
-                    <h1>Components<br/>+<br/>CSS</h1>
+                    <h1>CSS<br/>💘<br/>Components</h1>
+                    <SpeakerNotes markdown>{`
+                        # What do we believe we need in order to write Component friendly CSS
+                    `}</SpeakerNotes> 
                 </section>
                 <section>
-                    <h3>Many Ways to Style a Component</h3>
-                    {/* <Fragment fade="in" index={index++}>1111</Fragment>
-                    <Fragment fade="in" index={index++}>222</Fragment> */}
-                    <Fragment fade="in" index={index++}>
-                        <Fragment fade="out-hide" index={index}>
-                            xxxx
-                        </Fragment>
-                    </Fragment>
-                    <Fragment fade="in" index={index++}>
-                        <Fragment fade="out-hide" index={index}>
-                            yyyy
-                        </Fragment>
-                    </Fragment>
-                    {this.generateMatchingExamples(elementTargetingExamples, index)}
+                    <h3>Styling Components</h3>
+                    <ul>
+                        <li>Modular</li>
+                        <li>Dynamic</li>
+                        <li>Performant</li>
+                        <li>CSS capabilities</li>
+                        <li>Tooling</li>
+                    </ul>     
+                    <SpeakerNotes markdown>{`
+                        # What do we believe we need to write CSS for components
+
+                        - breakdown and manage styling as a modules
+                        - modify style at runtime
+                        - fast! minimal runtime & caching
+                        - Complex selectors / media queries / pseudo…
+                        - code completions, highlighting, linting, prefixer...
+                    `}</SpeakerNotes> 
+                </section>
+                <section>
+                    <h3>Many Ways to Style HTML</h3>
+                </section>
+                <section>
+                    <h3>Targeting DOM</h3>
+                    <MarkCode lang="html">{`
+                    <div class="gallery">
+                        <div class="navBtn">
+                            <div class="icon"></div>
+                        </div>
+                    </div>
+                    `}</MarkCode>
+                    <pre>Style the icon in the navigation button of a gallery</pre>
+                    <SpeakerNotes markdown>{`
+                        - Potential HTML markup for a Gallery with a navigation button that has or contains an icon
+                        - Lets style that icon!
+                    `}</SpeakerNotes>
+                </section>
+                <section>
+                    <MarkCode lang="css" markMapping={markMap}>{`%.icon% {}`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <div class="gallery">
+                        <div class="navBtn">
+                            <div class="%icon%"></div>
+                        </div>
+                    </div>
+                    `}</MarkCode>
+                    <SpeakerNotes markdown>{`
+                        - Target the icon CSS class works
+                    `}</SpeakerNotes>
+                </section>
+                <section>
+                    <MarkCode lang="css" markMapping={markMap}>{`%.icon% {}`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <div class="gallery">
+                        <div class="navBtn">
+                            <div class="%icon%"></div>
+                        </div>
+                        <div class="%icon%"></div>
+                    </div>
+                    `}</MarkCode>
+                    <SpeakerNotes markdown>{`
+                        - Icon class might not be unique to the navigation button
+                    `}</SpeakerNotes>
+                </section>
+                <section>
+                    <MarkCode lang="css" markMapping={markMap}>{`%.navBtn% %.icon% {}`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <div class="gallery">
+                        <div class="%navBtn%">
+                            <div class="%icon%"></div>
+                        </div>
+                        <div class="icon"></div>
+                    </div>
+                    `}</MarkCode>
+                    <SpeakerNotes markdown>{`
+                        - Need to make our selector more specific
+                    `}</SpeakerNotes>
+                </section>
+                <section>
+                    <MarkCode lang="css" markMapping={markMap}>{`%.navBtn% %.icon% {}`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <div class="gallery">
+                        <div class="%navBtn%">
+                            <div class="%icon%"></div>
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <div class="%navBtn%">
+                            <div class="%icon%"></div>
+                        </div>
+                    </div>
+                    `}</MarkCode>
+                    <SpeakerNotes markdown>{`
+                        - Navigation button may also be reused outside of gallery
+                        - need to make selector more specific
+                    `}</SpeakerNotes>
+                </section>
+                <section>
+                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery% %.navBtn% %.icon% {}`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <div class="%gallery%">
+                        <div class="%navBtn%">
+                            <div class="%icon%"></div>
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <div class="navBtn">
+                            <div class="icon"></div>
+                        </div>
+                    </div>
+                    `}</MarkCode>
+                    <SpeakerNotes markdown>{`
+                        - Markup can indicate structure in many ways - not restricted to CSS classes
+                        - For example:
+                    `}</SpeakerNotes>
+                </section>
+                <section>
+                    <h3>Semantic elements</h3>
+                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery% %nav% %a% %.icon% {}`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <div class="%gallery%">
+                        <%nav%>
+                            <%a%>
+                                <span class="%icon%"></span>
+                            </%a%>
+                        </%nav%>
+                    </div>
+                    `}</MarkCode>
+                </section>
+                <section>
+                    <h3>BEM - namespacing convention</h3>
+                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery% %.gallery__navBtn% %.gallery__icon% {}`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <div class="%gallery%">
+                        <div class="%gallery__navBtn%">
+                            <div class="%gallery__icon%"></div>
+                        </div>
+                    </div>
+                    `}</MarkCode>
+                    <SpeakerNotes markdown>{`
+                        BEM - Block, Element, Modifiers (component, inner part, state)
+
+                        - Namespacing convention for styling components
+                    `}</SpeakerNotes>
+                </section>
+                <section>
+                    <h3>BEM - namespacing convention</h3>
+                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery% %.gallery__navBtn% %.button__icon% {}`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <div class="%gallery%">
+                        <div class="button %gallery__navBtn%">
+                            <div class="%button__icon%"></div>
+                        </div>
+                    </div>
+                    `}</MarkCode>
+                    <SpeakerNotes markdown>{`
+                        - Breakdown structure into components: Gallrey -> button -> icon
+                    `}</SpeakerNotes>
+                </section>
+                <section>
+                    <h3>Abstraction</h3>
+                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery%%::navBtn%%::icon% {}`}</MarkCode>
+                    Or even
+                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery%%::navIcon% {}`}</MarkCode>
+
+                    <SpeakerNotes markdown>{`
+                        - Why do we need to know the internal implementation
+                        - What if it changes?
+                    `}</SpeakerNotes>
+                </section>
+                <section>
+                    <h3>Syntax</h3>
+                    Native pseudo elements
+                    <MarkCode lang="css" markMapping={markMap}>{`::before {}`}</MarkCode>
+                    Current future spac
+                    <MarkCode lang="css" markMapping={markMap}>{`::part() {}`}</MarkCode>
+
+                    <SpeakerNotes markdown>{`
+                    `}</SpeakerNotes>
                 </section>
             </section>
         );
     }
-    private generateMatchingExamples(examples:CodeExample[], index:number=0) {
-        return examples.map(({title, timeline, snippets}) => [
-            title ? <Fragment fade="in" index={index}><div>{title}</div></Fragment> : null,
-            timeline.map(snippetIds => {
-                return <Fragment fade="out-hide" index={index+1}>
-                <Fragment fade="in" index={index++}>
-                    { 
-                        snippetIds.map(snipId => {
-                            let {lang, code} = snippets[snipId];
-                            const markSplit = code.split(/%(.+)%/);
-                            const codeTarget = markSplit.map((snip, index) => index % 2 ? <mark>{snip}</mark> : snip);
-                            return <Code lang={lang} trim={true} noEscape={codeTarget.length>1}>{codeTarget}</Code>
-                        })
-                    }
-                    </Fragment>
-                </Fragment>;
-            })
-        ]);
-    }
 }
-
-type CodeExample = {
-    title?:string;
-    timeline:string[][];
-    snippets:{[id:string]:{lang:string, code:string}};
-};
-
-const elementTargetingExamples = [
-    {
-        title: 'CSS classes',
-        timeline:[
-            ['noSelector', 'html'],
-            ['iconSelector', 'iconSelectorMatch'],
-            ['iconSelector', 'iconSelectorMatchToMuch'],
-            ['iconOfNavBtnSelector', 'iconOfNavBtnSelectorMatch']
-        ],
-        snippets:{
-            noSelector:{
-                lang:'nohighlight',
-                code:`Icon of navigation button of our gallery?`
-            },
-            iconSelector:{
-                lang:'css',
-                code:`.icon`
-            },
-            iconOfNavBtnSelector:{
-                lang:'css',
-                code:`.navBtn .icon`
-            },
-            html:{
-                lang:'html',
-                code:`
-                <div class="myGallery">
-                    <div class="navBtn">
-                        <div class="icon"></div>
-                    </div>
-                </div>
-                `
-            },
-            iconSelectorMatch:{
-                lang:'html',
-                code:`
-                <div class="myGallery">
-                    <div class="navBtn">
-                        <div class="%icon%"></div>
-                    </div>
-                </div>
-                `
-            },
-            iconSelectorMatchToMuch:{
-                lang:'html',
-                code:`
-                <div class="myGallery">
-                    <div class="navBtn">
-                        <div class="%icon%"></div>
-                    </div>
-                    <div class="%icon%"></div>
-                </div>
-                `
-            },
-            iconOfNavBtnSelectorMatch:{
-                lang:'html',
-                code:`
-                <div class="myGallery">
-                    <div class="navBtn">
-                        <div class="%icon%"></div>
-                    </div>
-                    <div class="icon"></div>
-                </div>
-                `
-            },
-            iconOfNavBtnSelectorMatchManyGalleries:{
-                lang:'html',
-                code:`
-                <div class="myGallery">
-                    <div class="navBtn">
-                        <div class="%icon%"></div>
-                    </div>
-                    <div class="icon"></div>
-                </div>
-                `
-            }
-        }
-    },
-    // {
-    //     title: 'CSS classes',
-    //     css:`.myGallery .navBtn .icon`,
-    //     html:`
-    //     <div class="myGallery">
-    //         <div class="btn">
-    //             <div class="icon"></div>
-    //         </div>
-    //     </div>
-    //     `
-    // },
-    // {
-    //     title: 'CSS attribute selector',
-    //     css:`.myGallery  [aria-label=”nav”] .icon`,
-    //     html:`
-    //     <div class="myGallery">
-    //         <div aria-label="nav">
-    //             <div class="icon"></div>
-    //         </div>
-    //     </div>
-    //     `
-    // },
-    // {
-    //     title: 'BEM style',
-    //     css:`.myGallery.gallery--root .gallery--navBtn .btn--icon`,
-    //     html:`
-    //     <div class="myGallery gallery--root">
-    //         <div class="gallery--navBtn">
-    //             <div class="btn--icon"></div>
-    //         </div>
-    //     </div>
-    //     `
-    // }
-];
-
-
-//<div style={{display:'flex'}}>
-//                        <div style={{flex:3}}>
-//                            <Fragment fade="in" index={0}>
-//                                <Fragment fade="out-shrink" index={1}>I'll fade in, then out</Fragment>
-//                            </Fragment>
-//                            <Fragment fade="in" index={1}>
-//                                <Fragment fade="out-shrink" index={2}>fsdfsfsft</Fragment>
-//                            </Fragment>
-//                            <Fragment fade="in" index={2}>
-//                                <Fragment fade="out-hide" index={3}><Code lang="html">{HTML_1}</Code></Fragment>
-//                            </Fragment>
-//                            <Fragment fade="in" index={3}>
-//                                <Fragment fade="out-hide" index={4}><Code lang="html">{HTML_1}</Code></Fragment>
-//                            </Fragment>
-//                            {/* <Fragment index={0}>zzzzz</Fragment>
-//                            <Fragment index={2}>yyy</Fragment>
-//                            <Fragment index={4}>xxxx</Fragment> */}
-//                        </div>
-//                        <div style={{flex:2}}>
-//                            {/* <Fragment index={1}>
-//                                <Code lang="html">{HTML_1}</Code>
-//                            </Fragment>
-//                            <Fragment index={3}>
-//                                <Code lang="html">{HTML_1}</Code>
-//                            </Fragment> */}
-//                        </div>
-//                    </div>
