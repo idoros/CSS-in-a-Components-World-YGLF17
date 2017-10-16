@@ -23,6 +23,9 @@ export class Intro extends React.Component {
                         <li>Father of a 1.5 Year Old</li>
                     </ul>
                 </section>
+                <section>
+                    ToDo: what is this presentation about
+                </section>
             </section>
         );
     }
