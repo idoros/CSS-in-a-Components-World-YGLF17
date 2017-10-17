@@ -21,8 +21,8 @@ export class TypedCSS extends React.Component {
                     <ul>
                         <li>CSS Superset
                             <ul>
-                                <li>Classes as Pseudo-Elements</li>
-                                <li>Define custom Pseudo-Classes</li>
+                                <li>Inner Parts as Pseudo-Elements</li>
+                                <li>Create Custom Pseudo-Classes</li>
                             </ul>
                         </li>
                         <li>Type Aware Dependencies</li>
@@ -43,6 +43,15 @@ export class TypedCSS extends React.Component {
                         `}
                     </SpeakerNotes>
                 </section>
+
+                <section className="center">
+                    <h1>Definitely Styled</h1>
+                </section>
+
+                <section className="center">
+                    <pre>[ ReavelJS DEMO ]</pre>
+                </section>
+
             </section>
         );
     }

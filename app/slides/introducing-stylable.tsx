@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SpeakerNotes } from '../reveal-react';
+import { SpeakerNotes, Fragment } from '../reveal-react';
 
 export class IntroducingStylable extends React.Component {
     render() {
@@ -9,29 +9,43 @@ export class IntroducingStylable extends React.Component {
                 <section className="center">
                     <img src="../assets/stylable-logo-horizontal.svg" alt="Stylable logo"/>
                     <pre>
-                        Stylable is a CSS preprocessor for styling components with a typesafe CSS
+                        Stylable is a CSS preprocessor for styling components with typed CSS
                     </pre>
-                </section>
-
-                <section>
-                    <h2>Introducing Stylable</h2>
-                    <ul>
-                        <li>
+                    <Fragment>
+                        <h4>
                             A Typed CSS Implementation
-                        </li>
-                        <li>
-                            VSCode Extension - completions & validations
-                        </li>
-                        <li>
-                            Integration - React, Webpack
-                        </li>
-                    </ul>
-
+                        </h4>
+                    </Fragment>
+                    
                     <SpeakerNotes markdown> 
                         {`
                             * Typed CSS Implementation 
                                 * A result of multiple PoCs
                                 * Tries to stick to the spirit of CSS for new features syntax
+                            
+                        `}
+                    </SpeakerNotes>
+                </section>
+                
+                <section>
+                    <h3>State of Stylable</h3>
+                        <h4>Currently Available Features:</h4>
+                        <ul>
+                            <li>Pseudo-Elements & Pseudo-Classes</li>
+                            <li>Theming</li>
+                            <li>Mixins</li>
+                            <li>
+                                VSCode Extension - completions & validations
+                            </li>
+                            <li>
+                                Integration - React, Webpack
+                            </li>
+                        </ul>
+                    
+                    <SpeakerNotes markdown> 
+                        {`
+                            * Alpha
+                            * Features
                             * Tooling 
                                 * Hinting - know when you’re trying to access something that’s not there
                                 * Validations - keeps you using valid CSS & Stylable syntax
@@ -39,27 +53,6 @@ export class IntroducingStylable extends React.Component {
                             * Integrations
                                 * React
                                 * Webpack
-                        `}
-                    </SpeakerNotes>
-                </section>
-                
-                <section>
-                    <pre>State of Stylable</pre>
-                    <ul>
-                        <li>Alpha</li>
-                        <li> Currently Available Features:
-                            <ul>
-                                <li>Pseudo-Elements & Pseudo-Classes</li>
-                                <li>Theming</li>
-                                <li>Mixins</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    
-                    <SpeakerNotes markdown> 
-                        {`
-                            * Alpha
-                            * Features
                             * Conflicts with native: // Add this???
                                 * Override native syntax
                                 * chained pseudo-elements (show 1 spec restriction of depth - ignore it because we are abstracting and removing in build-time)
@@ -84,13 +77,6 @@ export class IntroducingStylable extends React.Component {
                     </SpeakerNotes>
                 </section>
 
-                <section className="center">
-                    <h1>Definitely Styled</h1>
-                </section>
-
-                <section className="center">
-                    <pre>[ ReavelJS DEMO ]</pre>
-                </section>
             </section>
         );
     }

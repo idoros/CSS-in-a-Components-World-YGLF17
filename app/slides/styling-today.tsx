@@ -7,7 +7,7 @@ export class StylingToday extends React.Component {
         return (
             <section>
                 <section className="center">
-                    <h1>Taking a Look Back on Stylin’</h1>
+                    <h1>Taking a look at Stylin’</h1>
                     <SpeakerNotes markdown>{`
                         # State of CSS
                     `}</SpeakerNotes>   
@@ -44,7 +44,8 @@ export class StylingToday extends React.Component {
                     `}</SpeakerNotes>                  
                 </section>
                 <section className="center">
-                    <h1>CSS Stylesheets</h1>
+                    <h1>Stylesheets</h1>
+                    <span>Separation of presentation and content</span>
                     <SpeakerNotes markdown>{`
                         Style sheets were added in HTML 4.0
                     `}</SpeakerNotes>
@@ -52,10 +53,11 @@ export class StylingToday extends React.Component {
                 <section>
                     <h3>CSS Stylesheets</h3>
                     <ul>
-                        <li>Separation of presentation and content</li>
-                        <li>Complex Selectors (.class / #id / [attribute])</li>
+                        <li>Selectors (.class / #id / [attribute])</li>
                         <li>Pseudo Classes (:hover)</li>
                         <li>Pseudo Elements (::before)</li>
+                        <li>Media Queries</li>
+                        ...
                     </ul>
                     <SpeakerNotes markdown>{`
                         # CSS Stylesheets
@@ -94,8 +96,8 @@ export class StylingToday extends React.Component {
                     <h3>CSS Stylesheets</h3>
                     <ul>
                         <li>Everything is global</li>
-                        <li>No reasonable dependency system - @import</li>
                         <li>CSS order Affects cascade</li>
+                        <li>No reasonable dependency system - @import</li>
                     </ul>
                 </section>
                 <section className="center">
@@ -109,6 +111,7 @@ export class StylingToday extends React.Component {
                     <ul>
                         <li>Vars / mixins / Loops...</li>
                         <li>CSS nesting</li>
+                        <li>Stylesheet dependencies</li>
                     </ul>
                     <SpeakerNotes markdown>{`
                         # CSS superset 
@@ -117,14 +120,6 @@ export class StylingToday extends React.Component {
                             - scripting
                             - templating
                             - sugar
-                    `}</SpeakerNotes>  
-                </section>
-                <section>
-                    <h3>Preprocessors</h3>
-                    <ul>
-                        <li>Stylesheet dependencies</li>
-                    </ul>
-                    <SpeakerNotes markdown>{`
                         - Breakdown CSS to manageable files
                     `}</SpeakerNotes>  
                 </section>
