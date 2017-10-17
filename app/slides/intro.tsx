@@ -20,7 +20,7 @@ export class Intro extends React.Component {
                         <li>Frontend Developer since 2001</li>
                         <li>Joined Wix in 2010</li>
                         <li>Lead the move from Flash to HTML at Wix</li>
-                        <li>Developer tools, Layout and styling</li>
+                        <li>Developer tools, layout and styling</li>
                         <li>Father to a 1.5 Year Old</li>
                     </ul>
                 </section>
