@@ -10,6 +10,7 @@ const markMap = {
     'button__icon':'icon',
     '::icon':'icon',
     '::navIcon':'icon',
+    
     '.navBtn':'navBtn',
     'navBtn':'navBtn',
     '.gallery__navBtn':'navBtn',
@@ -17,8 +18,15 @@ const markMap = {
     '::navBtn':'navBtn',
     'a':'btn',
     'nav':'nav',
+
     '.gallery':'gallery',
     'gallery':'gallery',
+
+    '.loading':'loading',
+    'loading':'loading',
+    'loading="true"':'loading',
+    '[loading="true"]':'loading',
+    ':loading':'loading',
 };
 
 export class ComponentsInCSS extends React.Component {
@@ -191,6 +199,7 @@ export class ComponentsInCSS extends React.Component {
                         - Breakdown structure into components: Gallrey -> button -> icon
                     `}</SpeakerNotes>
                 </section>
+
                 <section>
                     <h3>Abstraction</h3>
                     <MarkCode lang="css" markMapping={markMap}>{`%.gallery%%::navBtn%%::icon% {}`}</MarkCode>
@@ -212,6 +221,42 @@ export class ComponentsInCSS extends React.Component {
                     <SpeakerNotes markdown>{`
                     `}</SpeakerNotes>
                 </section>
+
+                {/*******/}
+
+                <section>
+                    <h3>Target State</h3>
+                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <div class="gallery"></div>
+                    `}</MarkCode>
+                    <pre>Style gallery when loading</pre>
+                    <SpeakerNotes markdown>{`
+                        - Sometimes we need to style according to a state of our code
+                    `}</SpeakerNotes>
+                </section>
+                <section>
+                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery%%.loading% {}`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <div class="%gallery% %loading%"></div>
+                    `}</MarkCode>
+                </section>
+                <section>
+                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery%%[loading="true"]% {}`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <div class="%gallery%" %loading="true"%></div>
+                    `}</MarkCode>
+                </section>
+
+                <section>
+                    <h3>Abstraction</h3>
+                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery%%:loading% {}`}</MarkCode>
+
+                    <SpeakerNotes markdown>{`
+                        - Why do we need to know the internal implementation
+                        - What if it changes?
+                    `}</SpeakerNotes>
+                </section>                
+
             </section>
         );
     }
