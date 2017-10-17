@@ -24,8 +24,8 @@ const markMap = {
 
     '.loading':'loading',
     'loading':'loading',
-    'loading="true"':'loading',
-    '[loading="true"]':'loading',
+    'data-loading':'loading',
+    '[data-loading]':'loading',
     ':loading':'loading',
 };
 
@@ -186,7 +186,7 @@ export class ComponentsInCSS extends React.Component {
                     `}</SpeakerNotes>
                 </section>
                 <section>
-                    <h3>BEM - namespacing convention</h3>
+                    <h3>BEM - namespacing convention for components</h3>
                     <MarkCode lang="css" markMapping={markMap}>{`%.gallery% %.gallery__navBtn% %.button__icon% {}`}</MarkCode>
                     <MarkCode lang="html" markMapping={markMap}>{`
                     <div class="%gallery%">
@@ -201,61 +201,79 @@ export class ComponentsInCSS extends React.Component {
                 </section>
 
                 <section>
-                    <h3>Abstraction</h3>
-                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery%%::navBtn%%::icon% {}`}</MarkCode>
-                    Or even
-                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery%%::navIcon% {}`}</MarkCode>
-
+                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery% %.gallery__navBtn% {}`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <div class="%gallery%">
+                        <div class="%gallery__navBtn%"></div>
+                    </div>
+                    `}</MarkCode>
+                    <pre>Hide navBtn while the gallery is loading</pre>
                     <SpeakerNotes markdown>{`
+                        - 
+                    `}</SpeakerNotes>
+                </section>
+                <section>
+                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery%%.loading% %.gallery__navBtn% {}`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <div class="%gallery% %loading%">
+                        <div class="%gallery__navBtn%"></div>
+                    </div>
+                    `}</MarkCode>
+                    <SpeakerNotes markdown>{`
+                        - maybe as classes?
+                    `}</SpeakerNotes>
+                </section>
+                <section>
+                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery%%[data-loading]% %.gallery__navBtn% {}`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <div class="%gallery%" %data-loading%>
+                        <div class="%gallery__navBtn%"></div>
+                    </div>
+                    `}</MarkCode>
+                    <SpeakerNotes markdown>{`
+                        - maybe as attributes?
+                    `}</SpeakerNotes>
+                </section>
+                <section>
+                    <MarkCode lang="css" markMapping={markMap} dimUnmarked>{`%.gallery%[data-%loading%] .gallery__%navBtn% {}`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <div class="%gallery%" %data-loading%>
+                        <div class="%gallery__navBtn%"></div>
+                    </div>
+                    `}</MarkCode>
+                    <SpeakerNotes markdown>{`
+                        - Minimum interface
                         - Why do we need to know the internal implementation
                         - What if it changes?
+                        - lets remove!
                     `}</SpeakerNotes>
                 </section>
                 <section>
-                    <h3>Syntax</h3>
-                    Native pseudo elements
-                    <MarkCode lang="css" markMapping={markMap}>{`::before {}`}</MarkCode>
-                    Current future spac
-                    <MarkCode lang="css" markMapping={markMap}>{`::part() {}`}</MarkCode>
-
-                    <SpeakerNotes markdown>{`
-                    `}</SpeakerNotes>
-                </section>
-
-                {/*******/}
-
-                <section>
-                    <h3>Target State</h3>
+                    {/* <h3>xxx</h3> */}
+                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery% %loading% %navBtn% {}`}</MarkCode>
                     <MarkCode lang="html" markMapping={markMap}>{`
-                    <div class="gallery"></div>
+                    <div class="%gallery%" %data-loading%>
+                        <div class="%gallery__navBtn%"></div>
+                    </div>
                     `}</MarkCode>
-                    <pre>Style gallery when loading</pre>
                     <SpeakerNotes markdown>{`
-                        - Sometimes we need to style according to a state of our code
+                        - Need Abstraction
+                        // add native pseudo elements & classes as source
                     `}</SpeakerNotes>
                 </section>
                 <section>
-                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery%%.loading% {}`}</MarkCode>
+                    {/* <h3>Abstraction</h3> */}
+                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery%%:loading%%::navBtn% { visibility:hidden; }`}</MarkCode>
                     <MarkCode lang="html" markMapping={markMap}>{`
-                    <div class="%gallery% %loading%"></div>
+                    <div class="%gallery%" %data-loading%>
+                        <div class="%gallery__navBtn%"></div>
+                    </div>
                     `}</MarkCode>
-                </section>
-                <section>
-                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery%%[loading="true"]% {}`}</MarkCode>
-                    <MarkCode lang="html" markMapping={markMap}>{`
-                    <div class="%gallery%" %loading="true"%></div>
-                    `}</MarkCode>
-                </section>
-
-                <section>
-                    <h3>Abstraction</h3>
-                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery%%:loading% {}`}</MarkCode>
-
                     <SpeakerNotes markdown>{`
-                        - Why do we need to know the internal implementation
-                        - What if it changes?
+                        - Abstraction
+                        // add note abound draft spec ::part() and unknown future for custom pseudo-classes
                     `}</SpeakerNotes>
-                </section>                
+                </section>   
 
             </section>
         );

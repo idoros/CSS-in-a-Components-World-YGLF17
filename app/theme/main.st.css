@@ -11,6 +11,12 @@
 }
 /* .root::headings { color:purple; } */
 
+.dimUnmarked {
+    -st-scoped: dimUnmarked;
+} 
+.root code.dimUnmarked *:not(mark) {
+    color:rgba(141, 137, 137, 0.61);
+}
 .customMark {
     border: 4px solid currentColor;
     border-width: 0px 0px 4px 0px;
@@ -23,6 +29,18 @@
 .root code mark[data-name="nav"] { -st-mixin:customMark; color:#fde8b2; }
 .root code mark[data-name="btn"] { -st-mixin:customMark; color:#5f7b53; }
 .root code mark[data-name="loading"] { -st-mixin:customMark; color:#EA98EA; }
+
+.root code * {
+    color:rgb(206, 206, 206);
+}
+.root code.dimUnmarked mark * {
+    color:inherit;
+}
+/* .root code[data-size="medium"] {
+    font-size: 42px;
+    line-height: 100%;
+    overflow-y:visible!important;
+} */
 
 /*********************************************
  * TESTS
