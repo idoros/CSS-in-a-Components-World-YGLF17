@@ -176,13 +176,13 @@ export class StylingToday extends React.Component {
                     <SpeakerNotes markdown>{`
                         # Performance costs
 
-                        - Generate CSS at runtime. reflow, repaint...
                         - Add JS code to handle CSS creation
+                        - Generate CSS at runtime. reflow, repaint...
                         - SSR means loading CSS twice (JS and generated CSS)
                     `}</SpeakerNotes>      
                 </section>
                 <section>
-                    <h3>Export to static</h3>
+                    <h3>CSS-from-JS</h3>
                     <ul>
                         <li>Output CSS-in-JS to CSS</li>
                         <li>Extract static CSS from JS</li>
