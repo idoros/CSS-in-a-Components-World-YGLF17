@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Markdown, SpeakerNotes } from '../reveal-react';
+import { Markdown, SpeakerNotes, MarkCode } from '../reveal-react';
 
 export class StylingToday extends React.Component {
     render() {
@@ -13,10 +13,25 @@ export class StylingToday extends React.Component {
                     `}</SpeakerNotes>   
                 </section>
                 <section>
-                    <h3>In the Beginning...</h3>
-                    Presentational Markup for HTML and Later Inline Style
-                    {`<font>`}, bgcolor, align, style attribute, etc...
-                    "Scriptable" from JavaScript  
+                    <h3>In the Beginning ...</h3>
+                    <MarkCode lang="javascript">
+                        {`document.tags.H1.fontSize = "20pt"`}
+                    </MarkCode>
+                    <MarkCode lang="html">{`
+                    <font face="Comic Sans MS" color="lime">
+                        ...
+                    </font>`}
+                    </MarkCode>
+
+                    <h3>... and Later on</h3>
+                    <MarkCode lang="html">{`
+                    <div style="font-family: 'Comic Sans MS'; color: lime">
+                        ...
+                    </div>`}
+                    </MarkCode>
+                    
+
+                    <pre>Scriptable from JavaScript</pre>
                     <SpeakerNotes markdown>{`
                         # Presentational Markup and then inline style                        
 

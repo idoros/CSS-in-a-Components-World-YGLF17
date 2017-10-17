@@ -20,7 +20,7 @@ export class IntroducingStylable extends React.Component {
                             A Typed CSS Implementation
                         </li>
                         <li>
-                            VSCode Extension - Completions & Validations
+                            VSCode Extension - completions & validations
                         </li>
                         <li>
                             Integration - React, Webpack

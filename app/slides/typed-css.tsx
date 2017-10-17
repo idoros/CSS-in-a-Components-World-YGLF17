@@ -7,13 +7,7 @@ export class TypedCSS extends React.Component {
         return (
             <section>
                 <section className="center">
-                    <h1>Typed CSS</h1>
-                    <h4>
-                        Components as Types
-                    </h4>
-                    <h4>
-                        Stylesheets as Interfaces // change me?
-                    </h4>
+                    <h1>Stylesheets as Interfaces</h1>
 
                     <SpeakerNotes markdown> 
                         {`

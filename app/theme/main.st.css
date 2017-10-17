@@ -128,12 +128,22 @@ font-weight: inherit; } */
     list-style-type: circle; 
 }
 
+
 .root ul ul,
 .root ul ol,
 .root ol ol,
 .root ol ul {
     display: block;
     margin-left: 40px; 
+}
+
+.root ul li {
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+.root ul ul li {
+    margin-bottom: 12px;
 }
 
 .root dt {
