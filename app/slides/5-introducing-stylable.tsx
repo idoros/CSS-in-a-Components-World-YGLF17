@@ -5,17 +5,17 @@ export class IntroducingStylable extends React.Component {
     render() {
         let index = 0;
         return (
-            <section>
-                <section className="center">
+            <section xdata-background-color="white" x-style={{background:'white', color:'black'}}>
+                <section className="center" >
                     <img src="../assets/stylable-logo-horizontal.svg" alt="Stylable logo"/>
                     <pre>
                         Stylable is a CSS preprocessor for styling components with typed CSS
                     </pre>
-                    <Fragment>
+                    {/* <Fragment>
                         <h4>
                             A Typed CSS Implementation
                         </h4>
-                    </Fragment>
+                    </Fragment> */}
                     
                     <SpeakerNotes markdown> 
                         {`
@@ -26,14 +26,14 @@ export class IntroducingStylable extends React.Component {
                         `}
                     </SpeakerNotes>
                 </section>
-                
                 <section>
                     <h3>State of Stylable</h3>
                         <h4>Currently Available Features:</h4>
                         <ul>
                             <li>Pseudo-Elements & Pseudo-Classes</li>
-                            <li>Theming</li>
+                            <li>Imports</li>
                             <li>Mixins</li>
+                            <li>Theming</li>
                             <li>
                                 VSCode Extension - completions & validations
                             </li>
@@ -75,6 +75,14 @@ export class IntroducingStylable extends React.Component {
                         {`
                         `}
                     </SpeakerNotes>
+                </section>
+
+                <section className="center">
+                    <h1>Definitely Styled</h1>
+                </section>
+
+                <section className="center">
+                    <pre>[ ReavelJS DEMO ]</pre>
                 </section>
 
             </section>

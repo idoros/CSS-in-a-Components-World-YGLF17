@@ -7,7 +7,7 @@ export class TypedCSS extends React.Component {
         return (
             <section>
                 <section className="center">
-                    <h1>Stylesheets as Interfaces</h1>
+                    <h1>Stylesheets<br/>Interfaces</h1>
 
                     <SpeakerNotes markdown> 
                         {`
@@ -23,11 +23,11 @@ export class TypedCSS extends React.Component {
                             <ul>
                                 <li>Inner Parts as Pseudo-Elements</li>
                                 <li>Create Custom Pseudo-Classes</li>
+                                <li>Type Aware Dependencies</li>
                             </ul>
                         </li>
-                        <li>Type Aware Dependencies</li>
-                        <li>IDE & Build - code completions, highlighting & validations</li>
-                        <li>Optimization - ruleset shaking</li>
+                        <li>IDE & Build Support</li>
+                        <li>Optimization - "ruleset shaking"</li>
                     </ul>
 
                     <SpeakerNotes markdown> 
@@ -35,21 +35,11 @@ export class TypedCSS extends React.Component {
                             * CSS Superset
                                 * Inner Parts as Pseudo-Classes 
                                 * Define custom Pseudo-Classes
-                            * Type Aware Dependencies - typed imports, exports
-                            * Type Checking - code hinting, validations
+                                * Type Aware Dependencies
+                            * Type Checking - code completions, highlighting & validations
                             * Optimizations - Ruleset shaking, based on imports, what's not used isn't bundled
-
-                            * Declaration interface // Whats this?
                         `}
                     </SpeakerNotes>
-                </section>
-
-                <section className="center">
-                    <h1>Definitely Styled</h1>
-                </section>
-
-                <section className="center">
-                    <pre>[ ReavelJS DEMO ]</pre>
                 </section>
 
             </section>

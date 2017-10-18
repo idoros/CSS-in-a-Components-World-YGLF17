@@ -29,6 +29,12 @@ const markMap = {
     '.gallery--loading':'loading',
     'gallery--loading':'loading',
     ':loading':'loading',
+
+    '::before':'pseudo-element',
+    '::selection':'pseudo-element',
+
+    ':hover':'pseudo-class',
+    ':focus':'pseudo-class',
 };
 
 export class ComponentsInCSS extends React.Component {
@@ -211,6 +217,20 @@ export class ComponentsInCSS extends React.Component {
                         - Breakdown structure into components: Gallrey -> button -> icon
                     `}</SpeakerNotes>
                 </section>
+                <section>
+                    <h3>What is Relevant?</h3>
+                    <MarkCode lang="css" markMapping={markMap} dimUnmarked unHighlight>{`%.gallery% .gallery__%navBtn% .button__%icon% {}`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap} unHighlight>{`
+                    <div class="%gallery%">
+                        <div class="button %gallery__navBtn%">
+                            <div class="%button__icon%"></div>
+                        </div>
+                    </div>
+                    `}</MarkCode>
+                    <SpeakerNotes markdown>{`
+                    `}</SpeakerNotes>
+                </section>
+
                 <section className="center">
                     <h1>Target State</h1>
                     <SpeakerNotes markdown>{`
@@ -283,6 +303,23 @@ export class ComponentsInCSS extends React.Component {
                 <section>
                     <h3>Hide internals</h3>
                     <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.gallery% %loading% %navBtn% {}`}</MarkCode>
+                    <Fragment>
+                        <h4 style={{marginTop:'3em'}}>Native Syntax</h4>
+                        <div style={{display:'flex'}}>
+                            {/* <Fragment> */}
+                                <div style={{flex:1}}>
+                                    Pseudo-elements
+                                    <MarkCode lang="css" markMapping={markMap}>{`%::before%   %::selection%`}</MarkCode>
+                                </div>
+                            {/* </Fragment> */}
+                            {/* <Fragment> */}
+                                <div style={{flex:1}}>
+                                    Pseudo-classes
+                                    <MarkCode lang="css" markMapping={markMap}>{`%:hover%     %:focus%`}</MarkCode>
+                                </div>
+                            {/* </Fragment> */}
+                        </div>
+                    </Fragment>
                     <SpeakerNotes markdown>{`
                         - Need Abstraction
                         // add native pseudo elements & classes as source

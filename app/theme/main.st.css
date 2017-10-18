@@ -323,11 +323,14 @@ font-weight: inherit; } */
     border-width: 0px 0px 5px 0px;
     background-color:initial;
 }
+
 .customMark * { color:white; font-weight: bold; }
 .root code mark[data-name="icon"] { -st-mixin:customMark; color:#a4c1f4; }
 .root code mark[data-name="navBtn"] { -st-mixin:customMark; color:#b6d7a8; }
 .root code mark[data-name="gallery"] { -st-mixin:customMark; color:#ea9899; }
-.root code mark[data-name="loading"] { -st-mixin:customMark; color:#EA98EA; }
+.root code mark[data-name="loading"] { -st-mixin:customMark; color:#EA98EA; border-style: dashed; }
+.root code mark[data-name="pseudo-element"] { -st-mixin:customMark; color:white; }
+.root code mark[data-name="pseudo-class"] { -st-mixin:customMark; color:white; border-style: dashed; }
 /* .root code mark[data-name]::after {
     content: "x";
     position: absolute;
