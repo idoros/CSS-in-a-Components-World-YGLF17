@@ -329,8 +329,6 @@ font-weight: inherit; } */
 .root code mark[data-name="icon"] { -st-mixin:customMark; color:#a4c1f4; }
 .root code mark[data-name="navBtn"] { -st-mixin:customMark; color:#b6d7a8; }
 .root code mark[data-name="gallery"] { -st-mixin:customMark; color:#ea9899; }
-.root code mark[data-name="nav"] { -st-mixin:customMark; color:#fde8b2; }
-.root code mark[data-name="btn"] { -st-mixin:customMark; color:#5f7b53; }
 .root code mark[data-name="loading"] { -st-mixin:customMark; color:#EA98EA; }
 /* .root code mark[data-name]::after {
     content: "x";

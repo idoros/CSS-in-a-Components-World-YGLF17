@@ -16,8 +16,8 @@ const markMap = {
     '.gallery__navBtn':'navBtn',
     'gallery__navBtn':'navBtn',
     '::navBtn':'navBtn',
-    'a':'btn',
-    'nav':'nav',
+    'a':'navBtn',
+    'nav':'navBtn',
 
     '.gallery':'gallery',
     'gallery':'gallery',
