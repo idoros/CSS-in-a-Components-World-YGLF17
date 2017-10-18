@@ -50,7 +50,7 @@ export class ComponentsInCSS extends React.Component {
                         <li>Performant</li>
                         <li>CSS capabilities</li>
                         <li>Tooling</li>
-                    </ul>     
+                    </ul>
                     <SpeakerNotes markdown>{`
                         # What do we believe we need to write CSS for components
 
@@ -61,11 +61,16 @@ export class ComponentsInCSS extends React.Component {
                         - code completions, highlighting, linting, prefixer...
                     `}</SpeakerNotes> 
                 </section>
-                <section>
-                    <h3>Many Ways to Style HTML</h3>
+                <section className="center">
+                    <h1>Many Ways to Style HTML</h1>
+                </section>
+                <section className="center">
+                    <h1>Target Element</h1>
+                    <SpeakerNotes markdown>{`
+                    `}</SpeakerNotes> 
                 </section>
                 <section>
-                    <h3>Target DOM</h3>
+                    <h3>Target Element</h3>
                     <MarkCode lang="html">{`
                     <div class="gallery">
                         <div class="navBtn">
@@ -206,13 +211,17 @@ export class ComponentsInCSS extends React.Component {
                         - Breakdown structure into components: Gallrey -> button -> icon
                     `}</SpeakerNotes>
                 </section>
-
+                <section className="center">
+                    <h1>Target State</h1>
+                    <SpeakerNotes markdown>{`
+                    `}</SpeakerNotes> 
+                </section>
                 <section>
                     <h3>Target State</h3>
                     <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.gallery% %.gallery__navBtn% {}`}</MarkCode>
                     <MarkCode lang="html" markMapping={markMap} unHighlight>{`
                     <div class="%gallery%">
-                        <div class="%gallery__navBtn%"></div>
+                        <div class="%gallery__navBtn%">...</div>
                     </div>
                     `}</MarkCode>
                     <pre>Hide navBtn while the gallery is loading</pre>
@@ -221,11 +230,11 @@ export class ComponentsInCSS extends React.Component {
                     `}</SpeakerNotes>
                 </section>
                 <section>
-                    <h3>By CSS Class</h3>
+                    <h3>CSS Class?</h3>
                     <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.gallery%%.loading% %.gallery__navBtn% {}`}</MarkCode>
                     <MarkCode lang="html" markMapping={markMap} unHighlight>{`
                     <div class="%gallery% %loading%">
-                        <div class="%gallery__navBtn%"></div>
+                        <div class="%gallery__navBtn%">...</div>
                     </div>
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
@@ -233,11 +242,11 @@ export class ComponentsInCSS extends React.Component {
                     `}</SpeakerNotes>
                 </section>
                 <section>
-                    <h3>Maybe Data Attribute</h3>
+                    <h3>Data Attribute?</h3>
                     <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.gallery%%[data-loading]% %.gallery__navBtn% {}`}</MarkCode>
                     <MarkCode lang="html" markMapping={markMap} unHighlight>{`
                     <div class="%gallery%" %data-loading%>
-                        <div class="%gallery__navBtn%"></div>
+                        <div class="%gallery__navBtn%">...</div>
                     </div>
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
@@ -245,11 +254,11 @@ export class ComponentsInCSS extends React.Component {
                     `}</SpeakerNotes>
                 </section>
                 <section>
-                    <h3>BEM Modifier</h3>
+                    <h3>BEM Modifier?</h3>
                     <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.gallery%%.gallery--loading% %.gallery__navBtn% {}`}</MarkCode>
                     <MarkCode lang="html" markMapping={markMap} unHighlight>{`
                     <div class="%gallery% %gallery--loading%">
-                        <div class="%gallery__navBtn%"></div>
+                        <div class="%gallery__navBtn%">...</div>
                     </div>
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
@@ -261,7 +270,7 @@ export class ComponentsInCSS extends React.Component {
                     <MarkCode lang="css" markMapping={markMap} dimUnmarked unHighlight>{`%.gallery%.gallery--%loading% .gallery__%navBtn% {}`}</MarkCode>
                     <MarkCode lang="html" markMapping={markMap} unHighlight>{`
                     <div class="%gallery% %gallery--loading%">
-                        <div class="%gallery__navBtn%"></div>
+                        <div class="%gallery__navBtn%">...</div>
                     </div>
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
@@ -274,11 +283,6 @@ export class ComponentsInCSS extends React.Component {
                 <section>
                     <h3>Hide internals</h3>
                     <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.gallery% %loading% %navBtn% {}`}</MarkCode>
-                    <MarkCode lang="html" markMapping={markMap} unHighlight>{`
-                    <div class="%gallery% %gallery--loading%">
-                        <div class="%gallery__navBtn%"></div>
-                    </div>
-                    `}</MarkCode>
                     <SpeakerNotes markdown>{`
                         - Need Abstraction
                         // add native pseudo elements & classes as source
@@ -287,11 +291,11 @@ export class ComponentsInCSS extends React.Component {
                 <section>
                     <h3>Abstraction</h3>
                     <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.gallery%%:loading%%::navBtn% { visibility:hidden; }`}</MarkCode>
-                    <MarkCode lang="html" markMapping={markMap} unHighlight>{`
+                    {/* <MarkCode lang="html" markMapping={markMap} unHighlight>{`
                     <div class="%gallery% %gallery--loading%">
-                        <div class="%gallery__navBtn%"></div>
+                        <div class="%gallery__navBtn%">...</div>
                     </div>
-                    `}</MarkCode>
+                    `}</MarkCode> */}
                     <SpeakerNotes markdown>{`
                         - Abstraction
                         // add note abound draft spec ::part() and unknown future for custom pseudo-classes
