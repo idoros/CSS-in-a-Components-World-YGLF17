@@ -26,6 +26,8 @@ const markMap = {
     'loading':'loading',
     'data-loading':'loading',
     '[data-loading]':'loading',
+    '.gallery--loading':'loading',
+    'gallery--loading':'loading',
     ':loading':'loading',
 };
 
@@ -244,7 +246,7 @@ export class ComponentsInCSS extends React.Component {
                 </section>
                 <section>
                     <h3>BEM Modifier</h3>
-                    <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.gallery%%.loading% %.gallery__navBtn% {}`}</MarkCode>
+                    <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.gallery%%.gallery--loading% %.gallery__navBtn% {}`}</MarkCode>
                     <MarkCode lang="html" markMapping={markMap} unHighlight>{`
                     <div class="%gallery% %gallery--loading%">
                         <div class="%gallery__navBtn%"></div>
@@ -256,9 +258,9 @@ export class ComponentsInCSS extends React.Component {
                 </section>
                 <section>
                     <h3>What is Relevant?</h3>
-                    <MarkCode lang="css" markMapping={markMap} dimUnmarked unHighlight>{`%.gallery%[data-%loading%] .gallery__%navBtn% {}`}</MarkCode>
+                    <MarkCode lang="css" markMapping={markMap} dimUnmarked unHighlight>{`%.gallery%.gallery--%loading% .gallery__%navBtn% {}`}</MarkCode>
                     <MarkCode lang="html" markMapping={markMap} unHighlight>{`
-                    <div class="%gallery%" %data-loading%>
+                    <div class="%gallery% %gallery--loading%">
                         <div class="%gallery__navBtn%"></div>
                     </div>
                     `}</MarkCode>
@@ -273,7 +275,7 @@ export class ComponentsInCSS extends React.Component {
                     <h3>Hide internals</h3>
                     <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.gallery% %loading% %navBtn% {}`}</MarkCode>
                     <MarkCode lang="html" markMapping={markMap} unHighlight>{`
-                    <div class="%gallery%" %data-loading%>
+                    <div class="%gallery% %gallery--loading%">
                         <div class="%gallery__navBtn%"></div>
                     </div>
                     `}</MarkCode>
@@ -286,7 +288,7 @@ export class ComponentsInCSS extends React.Component {
                     <h3>Abstraction</h3>
                     <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.gallery%%:loading%%::navBtn% { visibility:hidden; }`}</MarkCode>
                     <MarkCode lang="html" markMapping={markMap} unHighlight>{`
-                    <div class="%gallery%" %data-loading%>
+                    <div class="%gallery% %gallery--loading%">
                         <div class="%gallery__navBtn%"></div>
                     </div>
                     `}</MarkCode>
