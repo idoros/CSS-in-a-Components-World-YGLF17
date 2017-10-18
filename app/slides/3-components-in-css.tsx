@@ -78,8 +78,8 @@ export class ComponentsInCSS extends React.Component {
                     `}</SpeakerNotes>
                 </section>
                 <section>
-                    <MarkCode lang="css" markMapping={markMap}>{`%.icon% {}`}</MarkCode>
-                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.icon% {}`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap} unHighlight>{`
                     <div class="gallery">
                         <div class="navBtn">
                             <div class="%icon%"></div>
@@ -91,8 +91,8 @@ export class ComponentsInCSS extends React.Component {
                     `}</SpeakerNotes>
                 </section>
                 <section>
-                    <MarkCode lang="css" markMapping={markMap}>{`%.icon% {}`}</MarkCode>
-                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.icon% {}`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap} unHighlight>{`
                     <div class="gallery">
                         <div class="navBtn">
                             <div class="%icon%"></div>
@@ -105,8 +105,8 @@ export class ComponentsInCSS extends React.Component {
                     `}</SpeakerNotes>
                 </section>
                 <section>
-                    <MarkCode lang="css" markMapping={markMap}>{`%.navBtn% %.icon% {}`}</MarkCode>
-                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.navBtn% %.icon% {}`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap} unHighlight>{`
                     <div class="gallery">
                         <div class="%navBtn%">
                             <div class="%icon%"></div>
@@ -119,8 +119,8 @@ export class ComponentsInCSS extends React.Component {
                     `}</SpeakerNotes>
                 </section>
                 <section>
-                    <MarkCode lang="css" markMapping={markMap}>{`%.navBtn% %.icon% {}`}</MarkCode>
-                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.navBtn% %.icon% {}`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap} unHighlight>{`
                     <div class="gallery">
                         <div class="%navBtn%">
                             <div class="%icon%"></div>
@@ -138,8 +138,8 @@ export class ComponentsInCSS extends React.Component {
                     `}</SpeakerNotes>
                 </section>
                 <section>
-                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery% %.navBtn% %.icon% {}`}</MarkCode>
-                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.gallery% %.navBtn% %.icon% {}`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap} unHighlight>{`
                     <div class="%gallery%">
                         <div class="%navBtn%">
                             <div class="%icon%"></div>
@@ -158,8 +158,8 @@ export class ComponentsInCSS extends React.Component {
                 </section>
                 <section>
                     <h3>Semantic elements</h3>
-                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery% %nav% %a% %.icon% {}`}</MarkCode>
-                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.gallery% %nav% %a% %.icon% {}`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap} unHighlight>{`
                     <div class="%gallery%">
                         <%nav%>
                             <%a%>
@@ -171,8 +171,8 @@ export class ComponentsInCSS extends React.Component {
                 </section>
                 <section>
                     <h3>BEM - namespacing convention</h3>
-                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery% %.gallery__navBtn% %.gallery__icon% {}`}</MarkCode>
-                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.gallery% %.gallery__navBtn% %.gallery__icon% {}`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap} unHighlight>{`
                     <div class="%gallery%">
                         <div class="%gallery__navBtn%">
                             <div class="%gallery__icon%"></div>
@@ -187,8 +187,8 @@ export class ComponentsInCSS extends React.Component {
                 </section>
                 <section>
                     <h3>BEM - namespacing convention for components</h3>
-                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery% %.gallery__navBtn% %.button__icon% {}`}</MarkCode>
-                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.gallery% %.gallery__navBtn% %.button__icon% {}`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap} unHighlight>{`
                     <div class="%gallery%">
                         <div class="button %gallery__navBtn%">
                             <div class="%button__icon%"></div>
@@ -201,8 +201,8 @@ export class ComponentsInCSS extends React.Component {
                 </section>
 
                 <section>
-                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery% %.gallery__navBtn% {}`}</MarkCode>
-                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.gallery% %.gallery__navBtn% {}`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap} unHighlight>{`
                     <div class="%gallery%">
                         <div class="%gallery__navBtn%"></div>
                     </div>
@@ -213,8 +213,8 @@ export class ComponentsInCSS extends React.Component {
                     `}</SpeakerNotes>
                 </section>
                 <section>
-                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery%%.loading% %.gallery__navBtn% {}`}</MarkCode>
-                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.gallery%%.loading% %.gallery__navBtn% {}`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap} unHighlight>{`
                     <div class="%gallery% %loading%">
                         <div class="%gallery__navBtn%"></div>
                     </div>
@@ -224,8 +224,8 @@ export class ComponentsInCSS extends React.Component {
                     `}</SpeakerNotes>
                 </section>
                 <section>
-                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery%%[data-loading]% %.gallery__navBtn% {}`}</MarkCode>
-                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.gallery%%[data-loading]% %.gallery__navBtn% {}`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap} unHighlight>{`
                     <div class="%gallery%" %data-loading%>
                         <div class="%gallery__navBtn%"></div>
                     </div>
@@ -235,8 +235,8 @@ export class ComponentsInCSS extends React.Component {
                     `}</SpeakerNotes>
                 </section>
                 <section>
-                    <MarkCode lang="css" markMapping={markMap} dimUnmarked>{`%.gallery%[data-%loading%] .gallery__%navBtn% {}`}</MarkCode>
-                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <MarkCode lang="css" markMapping={markMap} dimUnmarked unHighlight>{`%.gallery%[data-%loading%] .gallery__%navBtn% {}`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap} unHighlight>{`
                     <div class="%gallery%" %data-loading%>
                         <div class="%gallery__navBtn%"></div>
                     </div>
@@ -250,8 +250,8 @@ export class ComponentsInCSS extends React.Component {
                 </section>
                 <section>
                     {/* <h3>xxx</h3> */}
-                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery% %loading% %navBtn% {}`}</MarkCode>
-                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.gallery% %loading% %navBtn% {}`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap} unHighlight>{`
                     <div class="%gallery%" %data-loading%>
                         <div class="%gallery__navBtn%"></div>
                     </div>
@@ -263,8 +263,8 @@ export class ComponentsInCSS extends React.Component {
                 </section>
                 <section>
                     {/* <h3>Abstraction</h3> */}
-                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery%%:loading%%::navBtn% { visibility:hidden; }`}</MarkCode>
-                    <MarkCode lang="html" markMapping={markMap}>{`
+                    <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.gallery%%:loading%%::navBtn% { visibility:hidden; }`}</MarkCode>
+                    <MarkCode lang="html" markMapping={markMap} unHighlight>{`
                     <div class="%gallery%" %data-loading%>
                         <div class="%gallery__navBtn%"></div>
                     </div>

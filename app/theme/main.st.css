@@ -11,9 +11,8 @@
 }
 /* .root::headings { color:purple; } */
 
-.dimUnmarked {
-    -st-scoped: dimUnmarked;
-} 
+.dimUnmarked { -st-scoped: dimUnmarked; } 
+.unHighlight { -st-scoped: unHighlight; } 
 .root code.dimUnmarked *:not(mark) {
     color:rgba(141, 137, 137, 0.61);
 }
@@ -30,7 +29,7 @@
 .root code mark[data-name="btn"] { -st-mixin:customMark; color:#5f7b53; }
 .root code mark[data-name="loading"] { -st-mixin:customMark; color:#EA98EA; }
 
-.root code * {
+.root code.unHighlight * {
     color:rgb(206, 206, 206);
 }
 .root code.dimUnmarked mark * {
