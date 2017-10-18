@@ -315,9 +315,7 @@ font-weight: inherit; } */
 
 .dimUnmarked { -st-scoped: dimUnmarked; } 
 .unHighlight { -st-scoped: unHighlight; } 
-.root code.dimUnmarked *:not(mark) {
-    color:rgba(141, 137, 137, 0.61);
-}
+
 .customMark {
     position:relative;
     line-height: 100%;
@@ -347,6 +345,9 @@ font-weight: inherit; } */
 }
 .root pre code.unHighlight *:not(mark) {
     color:rgb(206, 206, 206);
+}
+.root pre code.dimUnmarked *:not(mark) {
+    color:rgba(141, 137, 137, 0.61);
 }
 .root pre code.dimUnmarked mark * {
     color:inherit;
