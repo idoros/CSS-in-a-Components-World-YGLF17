@@ -1,9 +1,9 @@
 .root {
-    -st-scoped: slides;
+    -st-global: ".slides";
 }
 
 @custom-selector :--background .root + :global(.backgrounds) > .background:not([data-background-hash]);
 .background {
-    -st-scoped: slide-background;
+    -st-global: ".slide-background";
     -st-states: past(".past"), present(".present"), future(".future")
 }

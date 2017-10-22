@@ -1,5 +1,5 @@
 .root {
-    -st-scoped: progress;
+    -st-global: ".progress";
 }
 
 @custom-selector :--bar :global(.progress span);

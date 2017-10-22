@@ -1,23 +1,23 @@
 .root {
-    -st-scoped: controls;
+    -st-global: ".controls";
 }
 
 .navigateUp {
-    -st-scoped: navigate-up;
+    -st-global: ".navigate-up";
     -st-states: enabled(".enabled");
 }
 
 .navigateRight {
-    -st-scoped: navigate-right;
+    -st-global: ".navigate-right";
     -st-states: enabled(".enabled");
 }
 
 .navigateDown {
-    -st-scoped: navigate-down;
+    -st-global: ".navigate-down";
     -st-states: enabled(".enabled");
 }
 
 .navigateLeft {
-    -st-scoped: navigate-left;
+    -st-global: ".navigate-left";
     -st-states: enabled(".enabled");
 }

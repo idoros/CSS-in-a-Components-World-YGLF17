@@ -313,8 +313,8 @@ font-weight: inherit; } */
 }
 
 
-.dimUnmarked { -st-scoped: dimUnmarked; } 
-.unHighlight { -st-scoped: unHighlight; } 
+.dimUnmarked { -st-global: ".dimUnmarked"; } 
+.unHighlight { -st-global: ".unHighlight"; } 
 
 .customMark {
     position:relative;
