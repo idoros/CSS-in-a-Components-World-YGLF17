@@ -306,18 +306,14 @@ export class ComponentsInCSS extends React.Component {
                     <Fragment>
                         <h4 style={{marginTop:'3em'}}>Native Syntax</h4>
                         <div style={{display:'flex'}}>
-                            {/* <Fragment> */}
-                                <div style={{flex:1}}>
-                                    Pseudo-elements
-                                    <MarkCode lang="css" markMapping={markMap}>{`%::before%   %::selection%`}</MarkCode>
-                                </div>
-                            {/* </Fragment> */}
-                            {/* <Fragment> */}
-                                <div style={{flex:1}}>
-                                    Pseudo-classes
-                                    <MarkCode lang="css" markMapping={markMap}>{`%:hover%     %:focus%`}</MarkCode>
-                                </div>
-                            {/* </Fragment> */}
+                            <Fragment style={{flex:1}}>
+                                Pseudo-elements
+                                <MarkCode lang="css" markMapping={markMap}>{`%::before%   %::selection%`}</MarkCode>
+                            </Fragment>
+                            <Fragment style={{flex:1}}>
+                                Pseudo-classes
+                                <MarkCode lang="css" markMapping={markMap}>{`%:hover%     %:focus%`}</MarkCode>
+                            </Fragment>
                         </div>
                     </Fragment>
                     <SpeakerNotes markdown>{`
@@ -336,6 +332,12 @@ export class ComponentsInCSS extends React.Component {
                     <SpeakerNotes markdown>{`
                         - Abstraction
                         // add note abound draft spec ::part() and unknown future for custom pseudo-classes
+                    `}</SpeakerNotes>
+                </section>
+                <section>
+                    <h3>Abstraction</h3>
+                    <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.gallery%%:loading%%::spinner% { background:url("./bruce-head.png"); }`}</MarkCode>
+                    <SpeakerNotes markdown>{`
                     `}</SpeakerNotes>
                 </section>   
 

@@ -7,6 +7,7 @@ type FragmentProps = {
     children:React.ReactNode;
     index?:number;
     tagName?:string;
+    style?:React.CSSProperties;
     fade?:fragmentFade;
     animation?:fragmentAnimation|fragmentAnimation[];
     highlight?:fragmentHighlight;
@@ -22,7 +23,7 @@ const classMap = {
     left:'fade-left',
     right:'fade-right'
 };
-export const Fragment = ({tagName, children, index, fade, animation, highlight}:FragmentProps) => {
+export const Fragment = ({tagName, style, children, index, fade, animation, highlight}:FragmentProps) => {
     const ElType = tagName || 'div';
     const classNames = ['fragment']
     fade && classNames.push(fade);
@@ -30,6 +31,7 @@ export const Fragment = ({tagName, children, index, fade, animation, highlight}:
     highlight && classNames.push(highlight);
     return React.createElement(ElType, {
         'data-fragment-index': index,
-        className: classNames.map(name => classMap[name] || name).join(' ')
+        className: classNames.map(name => classMap[name] || name).join(' '),
+        style
     }, children);
 }
