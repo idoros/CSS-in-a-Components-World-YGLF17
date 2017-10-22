@@ -160,7 +160,7 @@ export class StylingToday extends React.Component {
                     <h1>Being Dynamic is Awesome</h1>
                     <div>
                         <GooglyEye pupilPercent={50}/>
-                        <GooglyEye pupilPercent={50}/>
+                        <GooglyEye pupilPercent={50} style={{marginLeft:'10px'}}/>
                     </div>
                     <SpeakerNotes markdown>{`
                         - CSS alone is static
