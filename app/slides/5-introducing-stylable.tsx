@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SpeakerNotes, Fragment } from '../reveal-react';
+import { SpeakerNotes, Fragment, MarkCode } from '../reveal-react';
 
 export class IntroducingStylable extends React.Component {
     render() {
@@ -25,6 +25,40 @@ export class IntroducingStylable extends React.Component {
                             
                         `}
                     </SpeakerNotes>
+                </section>
+                <section>
+                    <MarkCode lang="css">{`.gallery:loading::navBtn {}`}</MarkCode>
+                    <MarkCode lang="css">{`
+                        /* page.st.css */
+                        :import {
+                            -st-from: "./gallery.st.css";
+                            -st-default: Gallery;
+                        }
+                        .gallery {
+                            -st-extends: Gallery;
+                        }
+                    `}</MarkCode>
+                    <MarkCode lang="css">{`
+                        /* gallery.st.css */
+                        :import {
+                            -st-from: "./icon-button.st.css";
+                            -st-default: IconButton;
+                        }
+                        .root {
+                            -st-states: loading;
+                        }
+                        .navBtn {
+                            -st-extends: IconButton;
+                        }
+                    `}</MarkCode>
+                </section>
+                <section>
+                    <ul>
+                        <li>.st.css extension</li>
+                        <li>CSS compatible syntax</li>
+                        <li>.root</li>
+                        <li>Build directives & vendor prefixes</li>
+                    </ul>
                 </section>
                 <section>
                     <h3>State of Stylable</h3>
@@ -64,13 +98,13 @@ export class IntroducingStylable extends React.Component {
                 <section>
                     <pre>Roadmap</pre>
                     <ul>
-                        <li>Dynamicness! (Soon. ™)</li>
                         <li>Custom Pseudo-Classes with parameters</li>
                         <li>Formatters - Custom modifiers for CSS declarations</li>
                         <li>Restrictions - CSS declarations whitelist / blacklist</li>
+                        <li>Dynamicness! (Soon. ™)</li>
                         <li>Generics</li>
                     </ul>
-                    
+                    <pre>Some of those are more for ... then end users</pre>
                     <SpeakerNotes markdown> 
                         {`
                         `}
