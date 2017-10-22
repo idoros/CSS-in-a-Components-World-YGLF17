@@ -1,0 +1,14 @@
+.root {
+    display: inline-block;
+    position: relative;
+    border-radius: 100%;
+    background: white;
+    transform-origin: 50% 50%;
+}
+
+.pupil {
+    position: absolute; 
+    border-radius: 100%;
+    background: black;
+    bottom: 0; 
+}

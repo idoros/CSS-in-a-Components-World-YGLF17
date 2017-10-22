@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Markdown, SpeakerNotes, MarkCode } from '../reveal-react';
+import { GooglyEye } from '../assets/googly-eye';
 
 export class StylingToday extends React.Component {
     render() {
@@ -10,7 +11,7 @@ export class StylingToday extends React.Component {
                     <h1>Taking a look at Stylin’</h1>
                     <SpeakerNotes markdown>{`
                         # State of CSS
-                    `}</SpeakerNotes>   
+                    `}</SpeakerNotes>       
                 </section>
                 <section>
                     <h3>In the Beginning ...</h3>
@@ -157,7 +158,10 @@ export class StylingToday extends React.Component {
                 </section>
                 <section className="center">
                     <h1>Being Dynamic is Awesome</h1>
-                    <span>ToDo: make live example for dynamic css in slide</span>
+                    <div>
+                        <GooglyEye pupilPercent={50}/>
+                        <GooglyEye pupilPercent={50}/>
+                    </div>
                     <SpeakerNotes markdown>{`
                         - CSS alone is static
                         - Generating and manipulating CSS in runtime                                
