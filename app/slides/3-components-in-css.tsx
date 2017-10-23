@@ -5,13 +5,13 @@ import { markMap } from '../assets/gallery-syntax-data';
 
 export class ComponentsInCSS extends React.Component {
     render() {
-        let index = 0;
         return (
             <section>
                 <section className="center">
                     <h1>CSS<br/>💘<br/>Components</h1>
                     <SpeakerNotes markdown>{`
-                        # What do we believe we need in order to write Component friendly CSS
+                        - styling components using CSS
+                        - what would it take
                     `}</SpeakerNotes> 
                 </section>
                 <section>
@@ -26,19 +26,23 @@ export class ComponentsInCSS extends React.Component {
                     <SpeakerNotes markdown>{`
                         # What do we believe we need to write CSS for components
 
-                        - breakdown and manage styling as a modules
-                        - modify style at runtime
-                        - fast! minimal runtime & caching
-                        - Complex selectors / media queries / pseudo…
-                        - code completions, highlighting, linting, prefixer...
+                        - break down styles into manageable modules, reflecting our project structure
+                        - modify style dynamically 
+                        - fast and performant, with minimal runtime, and caching
+                        - capabilities CSS selectors, media queries and more 
+                        - we want tooling
                     `}</SpeakerNotes> 
                 </section>
                 <section className="center">
                     <h1>Many Ways to Style HTML</h1>
+                    <SpeakerNotes markdown>{`
+                        # many ways to style an HTML structure using CSS
+                    `}</SpeakerNotes> 
                 </section>
                 <section className="center">
                     <h1>Target Element</h1>
                     <SpeakerNotes markdown>{`
+                    - targeting a specific element
                     `}</SpeakerNotes> 
                 </section>
                 <section>
@@ -53,8 +57,10 @@ export class ComponentsInCSS extends React.Component {
                     {/* <pre>Style the icon in the navigation button of a gallery</pre> */}
                     {/* <GalleryExample style={{width:'300px', height:'300px', margin:'0 auto'}} /> */}
                     <SpeakerNotes markdown>{`
-                        - Potential HTML markup for a Gallery with a navigation button that has or contains an icon
-                        - Lets style that icon!
+                    - three nested divs
+                    - marked by a different CSS class, gallery, navBtn and icon
+                    - Potential HTML markup for a Gallery
+                    - try styling that inner icon
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -68,7 +74,9 @@ export class ComponentsInCSS extends React.Component {
                     </div>
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
-                        - Target the icon CSS class works
+                    - icon CSS class
+                    - *pause*
+                    - just not that simple
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -83,7 +91,8 @@ export class ComponentsInCSS extends React.Component {
                     </div>
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
-                        - Icon class might not be unique to the navigation button
+                    - not unique to our navBtn
+                    - *pause*
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -98,7 +107,9 @@ export class ComponentsInCSS extends React.Component {
                     </div>
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
-                        - Need to make our selector more specific
+                    - making our selector more specific
+                    - *pause*
+                    - just not that simple
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -117,8 +128,8 @@ export class ComponentsInCSS extends React.Component {
                     </div>
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
-                        - Navigation button may also be reused outside of gallery
-                        - need to make selector more specific
+                    - not specific enough
+                    - *pause*
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -137,8 +148,9 @@ export class ComponentsInCSS extends React.Component {
                     </div>
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
-                        - Markup can indicate structure in many ways - not restricted to CSS classes
-                        - For example:
+                    - make our selector more specific
+                    - *pause*
+                    - just not that simple
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -153,6 +165,10 @@ export class ComponentsInCSS extends React.Component {
                         </%nav%>
                     </div>
                     `}</MarkCode>
+                    <SpeakerNotes markdown>{`
+                    - Maybe our structure is built with semantic elements
+                    - *pause*
+                    `}</SpeakerNotes>
                 </section>
                 <section>
                     <h3>BEM - namespacing convention</h3>
@@ -167,7 +183,15 @@ export class ComponentsInCSS extends React.Component {
                     <SpeakerNotes markdown>{`
                         BEM - Block, Element, Modifiers (component, inner part, state)
 
-                        - Namespacing convention for styling components
+                        - with a BEM conventions
+                        - Block, Element, Modifier
+                        - convention 
+                        - create reusable components, known as blocks
+                        - gallery block with 2 inner elements, navBtn and icon
+                        - Icon is contained inside the navBtn
+                        - we talked about this as flat HTML structure
+                        - now let’s talk about components
+                        - decide that the icon is part of the button block
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -181,7 +205,9 @@ export class ComponentsInCSS extends React.Component {
                     </div>
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
-                        - Breakdown structure into components: Gallrey -> button -> icon
+                    - our navBtn is a block itself
+                    - icon is part of it
+                    - not just contained by it
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -195,12 +221,16 @@ export class ComponentsInCSS extends React.Component {
                     </div>
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
+                    - parts of the selector contains implementation details
+                    - only, care about the: gallery - navBtn - icon
                     `}</SpeakerNotes>
                 </section>
 
                 <section className="center">
                     <h1>Target State</h1>
                     <SpeakerNotes markdown>{`
+                    - put the elements aside
+                    - talk about targeting state
                     `}</SpeakerNotes> 
                 </section>
                 <section>
@@ -213,7 +243,9 @@ export class ComponentsInCSS extends React.Component {
                     `}</MarkCode>
                     <pre>Hide navBtn while the gallery is loading</pre>
                     <SpeakerNotes markdown>{`
-                        - 
+                    - focus only on the gallery and the navBtn
+                    - hide our navBtn while our gallery is loading
+                    - How can such a state be expressed
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -225,7 +257,8 @@ export class ComponentsInCSS extends React.Component {
                     </div>
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
-                        - maybe as classes?
+                    - a CSS class like loading
+                    - *pause*
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -237,7 +270,8 @@ export class ComponentsInCSS extends React.Component {
                     </div>
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
-                        - maybe as attributes?
+                    - perhaps using a data-attribute
+                    - *pause*
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -249,7 +283,7 @@ export class ComponentsInCSS extends React.Component {
                     </div>
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
-                        - maybe as classes?
+                        - maybe using a BEM convention
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -261,10 +295,8 @@ export class ComponentsInCSS extends React.Component {
                     </div>
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
-                        - Minimum interface
-                        - Why do we need to know the internal implementation
-                        - What if it changes?
-                        - lets remove!
+                        - selector has implementation details
+                        - only care: gallery is in its loading state, the navBtn inner element is targeted
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -284,8 +316,14 @@ export class ComponentsInCSS extends React.Component {
                         </div>
                     </Fragment>
                     <SpeakerNotes markdown>{`
-                        - Need Abstraction
-                        // add native pseudo elements & classes as source
+                    - Removing the implementation
+                    - leaves us with missing information
+                    - what is the relationship between these parts
+                        - class gallery is a CSS class representing a gallery component
+                        - loading - a state of the gallery component
+                        - navBtn should represent an internal part
+                    - *CLICK*
+                    - what syntax can we borrow from native css
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -297,16 +335,15 @@ export class ComponentsInCSS extends React.Component {
                     </div>
                     `}</MarkCode> */}
                     <SpeakerNotes markdown>{`
-                        - Abstraction
-                        // add note abound draft spec ::part() and unknown future for custom pseudo-classes
+                        # Abstraction
+                        
+                        - adding pseudo-selectors syntax
+                        - reconcile the missing information about relationships
+                        - big question -  what gives the gallery class the traits of a gallery component
+                        - This doesn't work. This is not CSS.
+                        - How can we make this work?
                     `}</SpeakerNotes>
                 </section>
-                <section>
-                    <h3>Abstraction</h3>
-                    <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.gallery%%:loading%%::spinner% { background:url("./bruce-head.png"); }`}</MarkCode>
-                    <SpeakerNotes markdown>{`
-                    `}</SpeakerNotes>
-                </section>   
 
             </section>
         );

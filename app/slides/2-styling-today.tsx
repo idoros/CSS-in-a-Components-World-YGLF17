@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Markdown, SpeakerNotes, MarkCode } from '../reveal-react';
+import { Markdown, SpeakerNotes, MarkCode, Fragment } from '../reveal-react';
 import { GooglyEye } from '../assets/googly-eye';
 
 export class StylingToday extends React.Component {
@@ -11,44 +11,52 @@ export class StylingToday extends React.Component {
                     <h1>Taking a look at Stylin’</h1>
                     <SpeakerNotes markdown>{`
                         # State of CSS
+
+                        - Let's take a look at how we style.
                     `}</SpeakerNotes>       
                 </section>
                 <section>
                     <h3>In the Beginning ...</h3>
-                    <MarkCode lang="javascript">
-                        {`document.tags.H1.fontSize = "20pt"`}
-                    </MarkCode>
-                    <MarkCode lang="html">{`
-                    <font face="Comic Sans MS" color="lime">
-                        ...
-                    </font>`}
-                    </MarkCode>
-
-                    <h3>... and Later on</h3>
-                    <MarkCode lang="html">{`
-                    <div style="font-family: 'Comic Sans MS'; color: lime">
-                        ...
-                    </div>`}
-                    </MarkCode>
-                    
-
-                    <pre>Scriptable from JavaScript</pre>
+                    <Fragment>
+                        <MarkCode lang="javascript">
+                            {`document.tags.H1.fontSize = "20pt"`}
+                        </MarkCode>
+                    </Fragment>
+                    <Fragment>
+                        <MarkCode lang="html">{`
+                        <font face="Comic Sans MS" color="lime">
+                            ...
+                        </font>`}
+                        </MarkCode>
+                    </Fragment>
+                    <Fragment>
+                        <h3>... and Later on</h3>
+                        <MarkCode lang="html">{`
+                        <div style="font-family: 'Comic Sans MS'; color: lime">
+                            ...
+                        </div>`}
+                        </MarkCode>
+                    </Fragment>
+                    <Fragment>
+                        <pre>Scriptable from JavaScript</pre>
+                    </Fragment>
                     <SpeakerNotes markdown>{`
-                        # Presentational Markup and then inline style                        
+                    # Inline style                        
 
-                        - Back then sites where looking GOOD!
-                        - At the beginning we styled only from JS
-                        - presentational markup
-                        - inline style that we know today
-
-                        Styling on the web started with ___________, but HTML### introduced a new way to do styling. 
+                    - Sites were looking GOOD!
+                    - Netscape Navigator - styling using a javascript API
+                    - and then, Presentational markup like the font tag and the bgColor
+                    - only later on, Inline styling as we know today
+                    - Styling was always accessible through JS
                     `}</SpeakerNotes>                  
                 </section>
                 <section className="center">
                     <h1>Stylesheets</h1>
                     <span>Separation of presentation and content</span>
                     <SpeakerNotes markdown>{`
-                        Style sheets were added in HTML 4.0
+                    - "Style sheets were added in HTML 4.0"
+                    - Separation of presentation and content
+                    - Flexibility compared to inline styles, allowing for the reuse of style definitions
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -61,20 +69,19 @@ export class StylingToday extends React.Component {
                         ...
                     </ul>
                     <SpeakerNotes markdown>{`
-                        # CSS Stylesheets
+                    # CSS Stylesheets
 
-                        CSS offered us a way to separate the structure from the style, and introduced new features to our styling arsenal. We could create complex selectors (class, id, etc) that target specific part or parts of our applications and pages. We could target pseudo-classes like :hover and :active, and pseudo-elements like ::before. This gave us a lot more freedom, and could scale much better than inline styling.
-                        
-                        In addition, by separating the styling to a different, fault-tolerant file and syntax, we get much better caching.
-                        
-                        Style sheets were added in HTML 4.0 by the class and id attributes. Spec has a note "Before the advent of style sheets, authors had limited control over rendering. HTML 3.2 included a number of attributes and elements offering control over alignment, font size, and text color. Authors also exploited tables and images as a means for laying out pages."
+                    - allows the targeting of specific elements
+                    - pseudo-classes and pseudo-elements to style the look and feel of native elements
+                    - media queries - modify the style according to the conditions
                     `}</SpeakerNotes>       
                 </section>
                 <section className="center">
                     <h1>CSS</h1>
                     <h4>More Than Syntax</h4>
                     <SpeakerNotes markdown>{`      
-                        - CSS is a mature format with lots of support we don’t want to give up                         
+                    - CSS is not only a syntax. It is a mature format
+                    - [with...]                       
                     `}</SpeakerNotes> 
                 </section>
                 <section>
@@ -82,15 +89,15 @@ export class StylingToday extends React.Component {
                     <h4></h4>
                     IDE support, syntax highlighting, code completions, validations, CSS generators, online materials / examples, etc...
                     <SpeakerNotes markdown>{`
-                        # So What’s Still Missing?
-
-                        ...So keeping all that in mind...
+                    - Tooling and a rich ecosystem.
+                    - IDE support, syntax highlighting, code completions
+                    - Despite all of these features
                     `}</SpeakerNotes> 
                 </section>
                 <section className="center">
                     <h1>CSS is Easy to Write & Hard to Manage</h1>
                     <SpeakerNotes markdown>{`
-                        ... BUT ...
+                    - CSS easy to write, it is still hard to manage
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -99,12 +106,20 @@ export class StylingToday extends React.Component {
                         <li>Everything is global</li>
                         <li>CSS order Affects cascade</li>
                         <li>No reasonable dependency system - @import</li>
+                        <li>HTML doesn't need to know about CSS, but CSS must know the HTML</li>
                     </ul>
+                    <SpeakerNotes markdown>{`
+                    - everything is global
+                    - one stylesheet can affect and conflict with other
+                    - multiple stylesheets, order of loading, impacts the cascade
+                    - no reasonable dependency system, personally I don't know anyone using it
+                    `}</SpeakerNotes>
                 </section>
                 <section className="center">
                     <h1>Preprocessors</h1>
                     <SpeakerNotes markdown>{`
-                        - Added build pipeline for CSS 
+                    - use preprocessors, like LESS and SASS
+                    - Added build pipeline for CSS 
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -115,13 +130,10 @@ export class StylingToday extends React.Component {
                         <li>Stylesheet dependencies</li>
                     </ul>
                     <SpeakerNotes markdown>{`
-                        # CSS superset 
-
-                        - added to CSS
-                            - scripting
-                            - templating
-                            - sugar
-                        - Breakdown CSS to manageable files
+                    - CSS superset, they add scripting, logic and sugar
+                    - break down our stylesheets
+                    - assure the correct file order
+                    - don’t solve the original issue of CSS being global
                     `}</SpeakerNotes>  
                 </section>
                 <section>
@@ -132,19 +144,22 @@ export class StylingToday extends React.Component {
                         <li>Stylesheet exports locals to JS</li>
                     </ul>     
                     <SpeakerNotes markdown>{`
-                        - treat every stylesheet as module
-                        - Everything in a stylesheet is local - prevents stylesheets from effecting each other
-                        - Exposed an API from stylesheets to JS
+                    - treat every stylesheet as module
+                    - the stylesheet is localized and namespaced
+                    - original class names are changed
+                    - map and export them to our JS
                     `}</SpeakerNotes>     
                 </section>
                 <section className="center">
                     <h1>CSS-in-JS</h1>
                     <h4>new?</h4>
                     <SpeakerNotes markdown>{`
-                        - Exists since CSS was released
-                        - Wix sites CSS was generated from JS since 2010
-                        - Renewed interest because of React and JSX
-                        - Not a spec - lots of solutions out there                 
+                    - surge of solutions, based on CSS-in-JS
+                    - 1 in 5 chance you’ve written a CSS-in-JS
+                    - CSS-in-JS has always been around
+                    - at Wix we’ve been generating CSS from JS since 2010
+                    - adoption of React and JSX has opened up the interest in this concept
+                    - CSS-in-JS is not a spec, not a single solution
                     `}</SpeakerNotes> 
                 </section>
                 <section>
@@ -155,6 +170,10 @@ export class StylingToday extends React.Component {
                         <li>Coupling of view and style</li>
                         <li>... But the big thing is ...</li>
                     </ul>
+                    <SpeakerNotes markdown>{`
+                    - solves ordering and namespacing of CSS
+                    - big thing is...              
+                    `}</SpeakerNotes> 
                 </section>
                 <section className="center">
                     <h1>Being Dynamic is Awesome</h1>
@@ -163,12 +182,17 @@ export class StylingToday extends React.Component {
                         <GooglyEye pupilPercent={50} style={{marginLeft:'10px'}}/>
                     </div>
                     <SpeakerNotes markdown>{`
-                        - CSS alone is static
-                        - Generating and manipulating CSS in runtime                                
+                    - dynamic is AWESOME!!!
+                    - CSS is static, cannot be modified during run-time
+                    - makes being dynamic easy
+                    - generates and manipulates CSS during run-time   
                     `}</SpeakerNotes> 
                 </section>
                 <section className="center">
                     <h1>...But There's a Cost!</h1>
+                    <SpeakerNotes markdown>{`
+                    - But as always, there’s a cost 
+                    `}</SpeakerNotes> 
                 </section>
                 <section>
                     <h3>The cost of being dynamic</h3>
@@ -180,9 +204,9 @@ export class StylingToday extends React.Component {
                     <SpeakerNotes markdown>{`
                         # Performance costs
 
-                        - Add JS code to handle CSS creation
-                        - Generate CSS at runtime. reflow, repaint...
-                        - SSR means loading CSS twice (JS and generated CSS)
+                        - a JS library to our dependencies
+                        - creating and modifying CSS at runtime, browser reflow and repaint
+                        - SSR we are serving the same CSS twice, first time as CSS and then again as JS
                     `}</SpeakerNotes>      
                 </section>
                 <section>
@@ -194,8 +218,10 @@ export class StylingToday extends React.Component {
                     <SpeakerNotes markdown>{`
                         ## Where solutions are going
 
-                        - A lot of CSS-in-JS libs offer export to CSS
-                        - Some even allow extraction of static CSS and just keep minimal runtime for dynamic
+                        - community is aware of these issues
+                        - working to solve them
+                        - most libraries can output vanilla CSS from JS
+                        - some extract only the static CSS, leaving minimal run-time adapter
                     `}</SpeakerNotes>      
                 </section>
             </section>

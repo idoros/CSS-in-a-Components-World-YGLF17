@@ -10,7 +10,9 @@ export class Intro extends React.Component {
                     <h1>CSS in a Components’ World</h1>                    
                     <SpeakerNotes>
                         <Markdown>{`
-                            # Intro
+                        - Hello...
+                        - Ido Rosenthal
+                        - Welcome to...
                         `}</Markdown>
                     </SpeakerNotes>
                 </section>
@@ -23,14 +25,23 @@ export class Intro extends React.Component {
                         <li>Developer tools, layout and styling</li>
                         <li>Father to a 1.5 Year Old</li>
                     </ul>
+                    <SpeakerNotes>
+                        <Markdown>{`
+                        `}</Markdown>
+                    </SpeakerNotes>
                 </section>
                 <section>
                     <h4>CSS in a Components’ World</h4> 
                     <ul>
                         <li>Styling solutions</li>
-                        <li>What's missing</li>
+                        <li>What’s missing</li>
                         <li>What have we have been up to</li>
                     </ul>
+                    <SpeakerNotes>
+                        <Markdown>{`
+                        What are we going to talk about
+                        `}</Markdown>
+                    </SpeakerNotes>
                 </section>
             </section>
         );
