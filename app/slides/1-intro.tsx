@@ -16,8 +16,8 @@ export class Intro extends React.Component {
                         `}</Markdown>
                     </SpeakerNotes>
                 </section>
-                <section>
-                <h4>About Me</h4>
+                <section data-background-image="../assets/images/ido.jpg">
+                    <h4>About Me</h4>
                     <ul>
                         <li>Frontend Developer since 2001</li>
                         <li>Joined Wix in 2010</li>
