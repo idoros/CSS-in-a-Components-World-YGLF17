@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Fragment, MarkCode, SpeakerNotes } from '../reveal-react';
-import GalleryExample from '../assets/gallery';
+// import GalleryExample from '../assets/gallery';
 import { markMap } from '../assets/gallery-syntax-data';
 
 export class ComponentsInCSS extends React.Component {

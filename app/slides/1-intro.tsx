@@ -27,6 +27,10 @@ export class Intro extends React.Component {
                     </ul>
                     <SpeakerNotes>
                         <Markdown>{`
+                        - Frontend long time
+                        - Joined Wix 8 years ago, originally flash, lead the move to HTML5
+                        - passionate for dev tools, solving layout, styling issues
+                        - tired father, 1.5 year old, doesn't care about any of this
                         `}</Markdown>
                     </SpeakerNotes>
                 </section>
@@ -40,6 +44,9 @@ export class Intro extends React.Component {
                     <SpeakerNotes>
                         <Markdown>{`
                         What are we going to talk about
+                        - how we style today
+                        - what's missing for styling components
+                        - what we've been up to, solve these problems
                         `}</Markdown>
                     </SpeakerNotes>
                 </section>
