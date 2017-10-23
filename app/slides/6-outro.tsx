@@ -12,11 +12,16 @@ export class Outro extends React.Component {
 
                     <SpeakerNotes markdown>
                         {`
-                            * Resources
-                                * Repo
-                                * Doc center
-                                * Presentation
-                                * Social
+                        - thank you
+                            - all
+                            - organizers
+                            - bruce for bruce
+                        - hope i ... think about styling and components in a different light
+                        - Stylable docs, stylable.io
+                        - repo on github.com/wix/stylable
+                        - take a look, give us your input, help bring css and components together
+                        - slides at, TBD, tweet
+                        - talk to me, @idoros, wix booth during the break
                         `}
                     </SpeakerNotes>
                 </section>
