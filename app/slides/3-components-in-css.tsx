@@ -1,41 +1,7 @@
 import * as React from 'react';
 import { Fragment, MarkCode, SpeakerNotes } from '../reveal-react';
-
-const markMap = {
-    '.icon':'icon',
-    'icon':'icon',
-    '.gallery__icon':'icon',
-    'gallery__icon':'icon',
-    '.button__icon':'icon',
-    'button__icon':'icon',
-    '::icon':'icon',
-    '::navIcon':'icon',
-    
-    '.navBtn':'navBtn',
-    'navBtn':'navBtn',
-    '.gallery__navBtn':'navBtn',
-    'gallery__navBtn':'navBtn',
-    '::navBtn':'navBtn',
-    'a':'navBtn',
-    'nav':'navBtn',
-
-    '.gallery':'gallery',
-    'gallery':'gallery',
-
-    '.loading':'loading',
-    'loading':'loading',
-    'data-loading':'loading',
-    '[data-loading]':'loading',
-    '.gallery--loading':'loading',
-    'gallery--loading':'loading',
-    ':loading':'loading',
-
-    '::before':'pseudo-element',
-    '::selection':'pseudo-element',
-
-    ':hover':'pseudo-class',
-    ':focus':'pseudo-class',
-};
+import GalleryExample from '../assets/gallery';
+import { markMap } from '../assets/gallery-syntax-data';
 
 export class ComponentsInCSS extends React.Component {
     render() {
@@ -80,11 +46,12 @@ export class ComponentsInCSS extends React.Component {
                     <MarkCode lang="html">{`
                     <div class="gallery">
                         <div class="navBtn">
-                            <div class="icon"></div>
+                            <div class="icon"></div> /* style the icon */
                         </div>
                     </div>
                     `}</MarkCode>
-                    <pre>Style the icon in the navigation button of a gallery</pre>
+                    {/* <pre>Style the icon in the navigation button of a gallery</pre> */}
+                    {/* <GalleryExample style={{width:'300px', height:'300px', margin:'0 auto'}} /> */}
                     <SpeakerNotes markdown>{`
                         - Potential HTML markup for a Gallery with a navigation button that has or contains an icon
                         - Lets style that icon!

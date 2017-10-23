@@ -173,8 +173,8 @@ export class StylingToday extends React.Component {
                 <section>
                     <h3>The cost of being dynamic</h3>
                     <ul>
-                        <li>Creating / modifying stylsheets at runtime</li>
                         <li>Load JS Library to handle CSS creation at runtime</li>
+                        <li>Creating / modifying stylsheets at runtime</li>
                         <li>SSR = CSS X 2</li>
                     </ul>   
                     <SpeakerNotes markdown>{`
