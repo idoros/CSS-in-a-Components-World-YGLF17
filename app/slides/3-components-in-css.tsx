@@ -24,13 +24,12 @@ export class ComponentsInCSS extends React.Component {
                         <li>Tooling</li>
                     </ul>
                     <SpeakerNotes markdown>{`
-                        # What do we believe we need to write CSS for components
-
-                        - break down styles into manageable modules, reflecting our project structure
+                        What do we believe we need to write CSS for components:
+                        - break down styles into manageable modules, reflecting project structure
                         - modify style dynamically 
                         - fast and performant, with minimal runtime, and caching
-                        - capabilities CSS selectors, media queries and more 
-                        - we want tooling
+                        - capabilities CSS - selectors, media queries, more 
+                        - same tooling the rich ecosystem offers
                     `}</SpeakerNotes> 
                 </section>
                 <section className="center">
@@ -93,6 +92,7 @@ export class ComponentsInCSS extends React.Component {
                     <SpeakerNotes markdown>{`
                     - not unique to our navBtn
                     - *pause*
+                    - just not that simple
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -107,7 +107,7 @@ export class ComponentsInCSS extends React.Component {
                     </div>
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
-                    - making our selector more specific
+                    - making our selector more specific, adding navBtn to parent
                     - *pause*
                     - just not that simple
                     `}</SpeakerNotes>
@@ -166,7 +166,7 @@ export class ComponentsInCSS extends React.Component {
                     </div>
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
-                    - Maybe our structure is built with semantic elements
+                    - Maybe our structure is built with semantic elements, such as
                     - *pause*
                     `}</SpeakerNotes>
                 </section>
@@ -181,17 +181,14 @@ export class ComponentsInCSS extends React.Component {
                     </div>
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
-                        BEM - Block, Element, Modifiers (component, inner part, state)
-
-                        - with a BEM conventions
-                        - Block, Element, Modifier
-                        - convention 
-                        - create reusable components, known as blocks
-                        - gallery block with 2 inner elements, navBtn and icon
-                        - Icon is contained inside the navBtn
-                        - we talked about this as flat HTML structure
-                        - now let’s talk about components
-                        - decide that the icon is part of the button block
+                    - with a BEM conventions
+                    - Block, Element, Modifier
+                    - convention - create reusable components, known as blocks
+                    - gallery block with 2 inner elements, navBtn and icon
+                    - Icon is contained inside the navBtn
+                    - we talked about this as flat HTML structure
+                    - now let’s talk about this structure with components
+                    - decide that the icon is part of the button block
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -205,7 +202,7 @@ export class ComponentsInCSS extends React.Component {
                     </div>
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
-                    - our navBtn is a block itself
+                    - our navBtn is a block and a component itself
                     - icon is part of it
                     - not just contained by it
                     `}</SpeakerNotes>
@@ -283,7 +280,8 @@ export class ComponentsInCSS extends React.Component {
                     </div>
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
-                        - maybe using a BEM convention
+                    - maybe using a BEM convention
+                    - *pause*
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -295,8 +293,8 @@ export class ComponentsInCSS extends React.Component {
                     </div>
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
-                        - selector has implementation details
-                        - only care: gallery is in its loading state, the navBtn inner element is targeted
+                    - selector has implementation details
+                    - only care: when gallery is loading, navBtn inner element is targeted
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -324,6 +322,9 @@ export class ComponentsInCSS extends React.Component {
                         - navBtn should represent an internal part
                     - *CLICK*
                     - what syntax can we borrow from native css
+                    - *click*
+                    - pseudo-elements
+                    - pseudo-classes
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -335,13 +336,12 @@ export class ComponentsInCSS extends React.Component {
                     </div>
                     `}</MarkCode> */}
                     <SpeakerNotes markdown>{`
-                        # Abstraction
-                        
-                        - adding pseudo-selectors syntax
-                        - reconcile the missing information about relationships
-                        - big question -  what gives the gallery class the traits of a gallery component
-                        - This doesn't work. This is not CSS.
-                        - How can we make this work?
+                    - by adding pseudo-selectors
+                    - reconcile the missing information about relationships
+                    - left with the resulting selector
+                    - big question - what gives the gallery class the traits of a gallery component
+                    - this doesn't work. This is not CSS.
+                    - How can we make this work?
                     `}</SpeakerNotes>
                 </section>
 
