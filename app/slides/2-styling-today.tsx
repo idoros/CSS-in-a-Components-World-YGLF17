@@ -77,7 +77,7 @@ export class StylingToday extends React.Component {
                 <section className="center">
                     <h1>CSS</h1>
                     <h4>More Than Syntax</h4>
-                    <SpeakerNotes markdown>{`      
+                    <SpeakerNotes markdown>{`
                     - CSS is not only a syntax. It is a mature format
                     - [with...] *click*                 
                     `}</SpeakerNotes> 

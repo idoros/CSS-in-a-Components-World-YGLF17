@@ -11,8 +11,9 @@ export class TypedCSS extends React.Component {
 
                     <SpeakerNotes markdown> 
                         {`
-                            * Components as types - Gallery example
-                            * Styles as interfaces
+                        - possible solution, introducing an interface
+                        - allows describing relations and definitions of inner parts and state
+                        - starting to sound like a type system
                         `}
                     </SpeakerNotes>
                 </section>
@@ -32,12 +33,15 @@ export class TypedCSS extends React.Component {
 
                     <SpeakerNotes markdown> 
                         {`
-                            * CSS Superset
-                                * Inner Parts as Pseudo-Classes 
-                                * Define custom Pseudo-Classes
-                                * Type Aware Dependencies
-                            * Type Checking - code completions, highlighting & validations
-                            * Optimizations - Ruleset shaking, based on imports, what's not used isn't bundled
+                        - why the hell not
+                        - talk about typed CSS
+                        - css superset with syntax for internals parts, their relationship
+                        - export them for reuse
+                        - static analysis recognizes syntax, provides IDE support
+                        - code completions, validations, highlighting
+                        - in the build pipeline, identify CSS definitions not used
+                        - ruleset shaking, like tree shaking
+                        - show you a project...
                         `}
                     </SpeakerNotes>
                 </section>
