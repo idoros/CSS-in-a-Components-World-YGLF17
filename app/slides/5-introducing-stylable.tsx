@@ -9,43 +9,41 @@ export class IntroducingStylable extends React.Component {
             <section xdata-background-color="white" x-style={{background:'white', color:'black'}}>
                 <section className="center" >
                     <img src="../assets/stylable-logo-horizontal.svg" alt="Stylable logo"/>
-                    <pre>
-                        Stylable is a CSS preprocessor for styling components with typed CSS
-                    </pre>
+                    <Fragment>
+                        <pre>
+                            Stylable is a CSS preprocessor for styling components with typed CSS
+                        </pre>
+                    </Fragment>
                     <SpeakerNotes markdown>{`
+                    - Stylable is a CSS preprocessor for styling components with typed CSS
                     - Typed CSS Implementation 
                     - A result of multiple PoCs, revolving around styling components
-                    - Sticks to the spirit of CSS for new features syntax
+                    - Sticks to the spirit, and what we've extended, we've been in dicussion members of the CSS working group
                     `}</SpeakerNotes>
                 </section>
                 <section>
                     <h3>Back to the Gallery</h3>
                     <MarkCode lang="css" markMapping={markMap}>{`%.gallery%%:loading%%::navBtn% {}`}</MarkCode>
-                    <MarkCode lang="html" markMapping={markMap} unHighlight>{`
-                    <div class="%gallery% %gallery--loading%">
-                        <div class="%gallery__navBtn%">...</div>
-                    </div>
-                    `}</MarkCode>
                     <SpeakerNotes markdown>{`
                     - How does Stylable make our ".gallery" CSS class into a Gallery component?
                     `}</SpeakerNotes>
                 </section>
                 <section>
                     <h3>Define the Gallery Class</h3>
-                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery%%:loading%%::navBtn% {}`}</MarkCode>
+                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery%:loading::navBtn {}`}</MarkCode>
                     <MarkCode lang="css" markMapping={markMap}>{`
                     %/* page.st.css */%
                     %.gallery% {}
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
+                    - Stylable uses the .st.css filename suffix                                        
                     - CSS compatible syntax (goal)
                     - define a normal gallery CSS class in our page CSS
-                    - Stylable uses the .st.css filename suffix
                     `}</SpeakerNotes>
                 </section>
                 <section>
                     <h3>Import & Extend</h3>
-                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery%%:loading%%::navBtn% {}`}</MarkCode>
+                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery%:loading::navBtn {}`}</MarkCode>
                     <MarkCode lang="css" markMapping={markMap}>{`
                     %/* page.st.css */%
                     :import {
@@ -72,6 +70,7 @@ export class IntroducingStylable extends React.Component {
                     }
                     %.gallery% {
                         -st-extends: Gallery;
+                        background-color: gold;
                     }
                     %.gallery%%:loading%%::navBtn% {
                         visibility: hidden;
@@ -108,8 +107,8 @@ export class IntroducingStylable extends React.Component {
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
                     - "-st-states" declaration, define custom pseudo-classes
-                    - not limited to the root class
                     - can accept multiple values - e.g. "loading, empty"
+                    - not limited to the root class
                     - how we define the navBtn...
                     `}</SpeakerNotes>
                 </section>
@@ -146,10 +145,11 @@ export class IntroducingStylable extends React.Component {
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
                     - like with the gallery class before
-                    - import The "IconButton" component, extend it on ".navBtn"
+                    - import the "IconButton" component, extend it on ".navBtn"
                     `}</SpeakerNotes>
                 </section>
                 <section>
+                    <h3>Recap</h3>
                     <ul>
                         <li>.st.css extension</li>
                         <li>CSS compatible syntax</li>
@@ -157,6 +157,7 @@ export class IntroducingStylable extends React.Component {
                         <li>Build directives & vendor prefixes</li>
                     </ul>
                     <SpeakerNotes markdown>{`
+                    So, a quick recap...
                     - compatible with CSS 
                     - ".root" class is reserved
                     - CSS superset
@@ -194,7 +195,7 @@ export class IntroducingStylable extends React.Component {
                 </section>
                 
                 <section>
-                    <pre>Roadmap</pre>
+                    <h3>Roadmap</h3>
                     <ul>
                         <li>Custom Pseudo-Classes with parameters</li>
                         <li>Formatters - Custom modifiers for CSS declarations</li>

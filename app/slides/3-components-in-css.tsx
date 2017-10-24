@@ -35,7 +35,7 @@ export class ComponentsInCSS extends React.Component {
                 <section className="center">
                     <h1>Many Ways to Style HTML</h1>
                     <SpeakerNotes markdown>{`
-                        # many ways to style an HTML structure using CSS
+                        - many ways to style an HTML structure using CSS
                     `}</SpeakerNotes> 
                 </section>
                 <section className="center">

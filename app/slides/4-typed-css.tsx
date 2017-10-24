@@ -35,7 +35,7 @@ export class TypedCSS extends React.Component {
                         {`
                         - why the hell not
                         - talk about typed CSS
-                        - css superset with syntax for internals parts, their relationship
+                        - css superset with syntax describing internals parts, states & their implementation
                         - export them for reuse
                         - static analysis recognizes syntax, provides IDE support
                         - code completions, validations, highlighting

@@ -39,8 +39,7 @@ export class StylingToday extends React.Component {
                         <pre>Scriptable from JavaScript</pre>
                     </Fragment>
                     <SpeakerNotes markdown>{`
-                    # Inline style                        
-
+                    Inline style:
                     - In the beginning, sites were looking GOOD!
                     - Netscape Navigator - styling using a javascript API
                     - Presentational markup - font tag, bgColor
@@ -67,8 +66,7 @@ export class StylingToday extends React.Component {
                         ...
                     </ul>
                     <SpeakerNotes markdown>{`
-                    # CSS Stylesheets
-
+                    CSS Stylesheets:
                     - allows the targeting of specific elements, class/id/attr, more
                     - pseudo-classes / pseudo-elements to style native elements
                     - media queries - modify the document style according to the conditions
