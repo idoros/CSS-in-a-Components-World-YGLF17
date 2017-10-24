@@ -16,7 +16,7 @@ export class Outro extends React.Component {
                             - all
                             - organizers
                             - bruce for bruce
-                        - hope i ... think about styling and components in a different light
+                        - i hope ... think about styling and components in a different light
                         - Stylable docs, stylable.io
                         - repo on github.com/wix/stylable
                         - take a look, give us your input, help bring css and components together

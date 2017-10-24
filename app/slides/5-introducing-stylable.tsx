@@ -18,7 +18,8 @@ export class IntroducingStylable extends React.Component {
                     - Stylable is a CSS preprocessor for styling components with typed CSS
                     - Typed CSS Implementation 
                     - A result of multiple PoCs, revolving around styling components
-                    - Sticks to the spirit, and what we've extended, we've been in dicussion members of the CSS working group
+                    - Sticks to the spirit of CSS
+                    - and we've discussed features we've added/extended, with *members* of the CSS working group
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -55,7 +56,8 @@ export class IntroducingStylable extends React.Component {
                     }
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
-                    - Import the gallery.st.css, containing gallery component CSS type definition
+                    - Import the stylesheet interface fromgallery.st.css, 
+                    - containing gallery component CSS type definition
                     - -st-extends to declare that the ".gallery" class is a Gallery component
                     `}</SpeakerNotes>
                 </section>
@@ -108,6 +110,7 @@ export class IntroducingStylable extends React.Component {
                     <SpeakerNotes markdown>{`
                     - "-st-states" declaration, define custom pseudo-classes
                     - can accept multiple values - e.g. "loading, empty"
+                    - this does not set the state value, only exposes possible states to design
                     - not limited to the root class
                     - how we define the navBtn...
                     `}</SpeakerNotes>
@@ -158,6 +161,7 @@ export class IntroducingStylable extends React.Component {
                     </ul>
                     <SpeakerNotes markdown>{`
                     So, a quick recap...
+                    - st-css suffix
                     - compatible with CSS 
                     - ".root" class is reserved
                     - CSS superset
@@ -221,7 +225,7 @@ export class IntroducingStylable extends React.Component {
                     <SpeakerNotes markdown>{`
                     - those not familiar with TypeScript, Typescript is a typed superset of Javascript
                     - compiles to plain Javascript
-                    - provides static analysis
+                    - uses static analysis => code completion, highlighting, validation => developer experience
                     - Typescript community maintains  “DefinitelyTyped”
                     - type interfaces for many of the plain Javascript projects
                     - Definitely Styled, similar opportunity, better styling tools and capabilities, existing component libraries
