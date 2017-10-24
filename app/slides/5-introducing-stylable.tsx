@@ -2,6 +2,8 @@ import * as React from 'react';
 import { SpeakerNotes, Fragment, MarkCode } from '../reveal-react';
 import { markMap } from '../assets/gallery-syntax-data';
 
+const markMapWithGalleryRoot = {...markMap, '.root':'gallery'};
+
 export class IntroducingStylable extends React.Component {
     render() {
         let index = 0;
@@ -64,7 +66,7 @@ export class IntroducingStylable extends React.Component {
                 <section>
                     <h3>Styling the Gallery</h3>
                     <MarkCode lang="css" markMapping={markMap}>{`%.gallery%%:loading%%::navBtn% {}`}</MarkCode>
-                    <MarkCode lang="css" markMapping={markMap} unHighlight>{`
+                    <MarkCode lang="css" markMapping={markMap}>{`
                     %/* page.st.css */%
                     :import {
                         -st-from: "./gallery.st.css";
@@ -89,9 +91,9 @@ export class IntroducingStylable extends React.Component {
                 <section>
                     <h3>Define the Gallery Internals</h3>
                     <MarkCode lang="css" markMapping={markMap}>{`%Gallery%%:loading%`}</MarkCode>
-                    <MarkCode lang="css" markMapping={markMap} unHighlight>{`
+                    <MarkCode lang="css" markMapping={markMapWithGalleryRoot}>{`
                     %/* gallery.st.css */%
-                    .root {}
+                    %.root% {}
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
                     - ".root" class is reserved, root element
@@ -101,10 +103,10 @@ export class IntroducingStylable extends React.Component {
                 <section>
                     <h3>Define Gallery Loading State</h3>
                     <MarkCode lang="css" markMapping={markMap}>{`%Gallery%%:loading%`}</MarkCode>
-                    <MarkCode lang="css" markMapping={markMap} unHighlight>{`
+                    <MarkCode lang="css" markMapping={markMapWithGalleryRoot}>{`
                     %/* gallery.st.css */%
-                    .root {
-                        -st-states: loading, empty;
+                    %.root% {
+                        -st-states: %loading%, empty;
                     }
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
@@ -118,9 +120,9 @@ export class IntroducingStylable extends React.Component {
                 <section>
                     <h3>Define the Gallery Inner navBtn</h3>
                     <MarkCode lang="css" markMapping={markMap}>{`%Gallery%%::navBtn%`}</MarkCode>
-                    <MarkCode lang="css" markMapping={markMap} unHighlight>{`
+                    <MarkCode lang="css" markMapping={markMapWithGalleryRoot}>{`
                     %/* gallery.st.css */%
-                    .root {
+                    %.root% {
                         -st-states: loading;
                     }
                     %.navBtn% {}
@@ -133,13 +135,13 @@ export class IntroducingStylable extends React.Component {
                 <section>
                     <h3>Define the Gallery Inner navBtn</h3>
                     <MarkCode lang="css" markMapping={markMap}>{`%Gallery%%::navBtn%%::icon%`}</MarkCode>
-                    <MarkCode lang="css" markMapping={markMap} unHighlight>{`
+                    <MarkCode lang="css" markMapping={markMapWithGalleryRoot}>{`
                     %/* gallery.st.css */%
                     :import {
                         -st-from: "./icon-button.st.css";
                         -st-default: IconButton;
                     }
-                    .root {
+                    %.root% {
                         -st-states: loading;
                     }
                     %.navBtn% {

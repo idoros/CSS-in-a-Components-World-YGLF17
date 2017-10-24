@@ -1,0 +1,1 @@
+export { default as FullScreenTitle } from './title-full';

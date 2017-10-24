@@ -21,16 +21,16 @@ should change to custom pseudo-classes with parameters
 https://github.com/wix/stylable/issues/12
 for example - Reveal::code::mark:name('icon')
 */
-Reveal code mark[data-name="icon"] { -st-mixin:customMark; color:#a4c1f4; }
-Reveal code mark[data-name="navBtn"] { -st-mixin:customMark; color:#b6d7a8; }
-Reveal code mark[data-name="gallery"] { -st-mixin:customMark; color:#ea9899; }
-Reveal code mark[data-name="loading"] { -st-mixin:customMark; color:#EA98EA; border-style: dashed; }
-Reveal code mark[data-name="pseudo-element"] { -st-mixin:customMark; color:white; }
-Reveal code mark[data-name="pseudo-class"] { -st-mixin:customMark; color:white; border-style: dashed; }
-Reveal code mark[data-name="filename"] {
+Reveal pre code mark[data-name="icon"] { -st-mixin:customMark; color:#a4c1f4; }
+Reveal pre code mark[data-name="navBtn"] { -st-mixin:customMark; color:#b6d7a8; }
+Reveal pre code mark[data-name="gallery"] { -st-mixin:customMark; color:#ea9899; }
+Reveal pre code mark[data-name="loading"] { -st-mixin:customMark; color:#EA98EA; font-style: italic; }
+Reveal pre code mark[data-name="pseudo-element"] { -st-mixin:customMark; color:white; }
+Reveal pre code mark[data-name="pseudo-class"] { -st-mixin:customMark; color:white; font-style: italic; }
+Reveal pre code mark[data-name="filename"] {
     text-align: center;
     display: block;
     background-color:initial;
     text-decoration: none;
  }
- Reveal code mark[data-name="filename"] * { color:darkgrey; font-weight: bold; }
+ Reveal pre code mark[data-name="filename"] * { color:darkgrey; font-weight: bold; }

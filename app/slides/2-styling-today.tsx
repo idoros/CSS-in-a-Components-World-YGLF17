@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Markdown, SpeakerNotes, MarkCode, Fragment } from '../reveal-react';
+import {FullScreenTitle} from '../layout/';
 import { GooglyEye } from '../assets/googly-eye';
 
 export class StylingToday extends React.Component {
@@ -8,7 +9,7 @@ export class StylingToday extends React.Component {
         return (
             <section>
                 <section className="center">
-                    <h1>Taking a look at Stylin’</h1>
+                    <FullScreenTitle>Taking a look at Stylin’</FullScreenTitle>
                     <SpeakerNotes markdown>{`
                         - Let's take a look at how we style.
                     `}</SpeakerNotes>       

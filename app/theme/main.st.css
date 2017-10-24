@@ -4,9 +4,19 @@
     -st-named: navigateColor;
 }
 
+@font-face {
+    src: url('../assets/fonts/DejaVuSansMono.ttf');
+    font-family: 'DejaVu Sans Mono';
+}
+@font-face {
+    src: url('../assets/fonts/Oxygen/Oxygen-Bold.ttf');
+    font-family: 'TitleFont';
+}
+
 :vars {
-    color1:#222;
-    color2:#FFF;
+    color1:#273A61;
+    color2:#BCEFFA;
+
     color3:#42affa;
     color4:#bee4fd;
     
@@ -53,10 +63,10 @@ font-weight: inherit; } */
    margin: 0 0 20px 0;
    color: value(textColor);
    font-family: "Source Sans Pro", Helvetica, sans-serif;
-   font-weight: 600;
+   font-weight: 400;
    line-height: 1.2;
    letter-spacing: normal;
-   text-transform: uppercase;
+   text-transform: none;
    text-shadow: none;
    word-wrap: break-word; 
 }
@@ -83,9 +93,6 @@ Reveal iframe {
 
 Reveal strong,
 Reveal b {
-    font-weight: bold; 
-}
-Reveal h1 {
     font-weight: bold; 
 }
 
@@ -176,21 +183,24 @@ Reveal pre {
     text-align: left;
     font-size: 0.55em;
     font-family: monospace;
-    line-height: 1.2em;
+    line-height: 1.3em;
     word-wrap: break-word;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); 
 }
 
-Reveal code {
-    font-family: monospace; 
+
+Reveal pre code, Reveal pre code * {
+    font-family: "DejaVu Sans Mono", monospace;
 }
 
 Reveal pre code {
+    background-color: #26292E;
+    padding: 18px;
     display: block;
-    padding: 5px;
     overflow: auto;
     /* max-height: 400px; */
     word-wrap: normal; 
+    line-height: 1.3em;
 }
 
 Reveal table {
@@ -303,7 +313,7 @@ Reveal::navigateBtn:hover {
 * PROGRESS BAR
 *********************************************/
 Reveal::progress {
-    height:20px;
+    height:5px;
     background: rgba(0, 0, 0, 0.2);
 }
 Reveal::progress::bar {
@@ -321,11 +331,11 @@ Reveal::progress::bar {
 .customMark {
     position:relative;
     line-height: 100%;
-    border: 5px solid currentColor;
-    border-width: 0px 0px 5px 0px;
+    /* border: 5px solid currentColor;
+    border-width: 0px 0px 5px 0px; */
     background-color:initial;
 }
-.customMark * { color:white; font-weight: bold; }
+/* .customMark * { color:white; font-weight: bold; } */
 
 /* Reveal code mark[data-name]::after {
     content: "x";
@@ -336,18 +346,24 @@ Reveal::progress::bar {
     background: currentColor;
 } */
 Reveal pre:global(.css) code {
-    font-size: 30px;
+    font-size: 25px;
 }
 Reveal pre code {
     overflow: visible;
-    /* line-height: 85px; */
 }
-Reveal pre code.unHighlight *:not(mark) {
+Reveal pre code.unHighlight > *:not(mark) {
     color:rgb(206, 206, 206);
+}
+Reveal pre code.unHighlight > * *  {
+    color:inherit;
+}
+Reveal pre code > mark *  {
+    color:inherit;
 }
 Reveal pre code.dimUnmarked *:not(mark) {
     color:rgba(141, 137, 137, 0.61);
 }
+
 Reveal pre code.dimUnmarked mark * {
     color:inherit;
 }
@@ -356,3 +372,18 @@ Reveal pre code.dimUnmarked mark * {
     line-height: 100%;
     overflow-y:visible!important;
 } */
+
+/*********************************************
+* CUSTOM LAYOUT
+*********************************************/
+* {
+    box-sizing: border-box;
+}
+:import {
+    -st-from: '../layout/title-full.st.css';
+    -st-default: TitleFull;
+}
+
+TitleFull::title {
+    font-family: "TitleFont";
+}
