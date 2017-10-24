@@ -301,13 +301,13 @@ export class ComponentsInCSS extends React.Component {
                     <h3>Hide internals</h3>
                     <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.gallery% %loading% %navBtn% {}`}</MarkCode>
                     <Fragment>
-                        <h4 style={{marginTop:'3em'}}>Native Syntax</h4>
+                        <h4 style={{margin:'3em 0 2em'}}>Native Syntax</h4>
                         <div style={{display:'flex'}}>
-                            <Fragment style={{flex:1}}>
+                            <Fragment style={{flex:1, textAlign:'center'}}>
                                 Pseudo-elements
                                 <MarkCode lang="css" markMapping={markMap}>{`%::before%   %::selection%`}</MarkCode>
                             </Fragment>
-                            <Fragment style={{flex:1}}>
+                            <Fragment style={{flex:1, textAlign:'center'}}>
                                 Pseudo-classes
                                 <MarkCode lang="css" markMapping={markMap}>{`%:hover%     %:focus%`}</MarkCode>
                             </Fragment>

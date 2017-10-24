@@ -10,11 +10,9 @@ export class IntroducingStylable extends React.Component {
         return (
             <section xdata-background-color="white" x-style={{background:'white', color:'black'}}>
                 <section className="center" >
-                    <img src="../assets/stylable-logo-horizontal.svg" alt="Stylable logo"/>
+                    <img style={{background:'#FFFFFF'}} src="../assets/stylable-logo-horizontal.svg" alt="Stylable logo"/>
                     <Fragment>
-                        <pre>
                             Stylable is a CSS preprocessor for styling components with typed CSS
-                        </pre>
                     </Fragment>
                     <SpeakerNotes markdown>{`
                     - Stylable is a CSS preprocessor for styling components with typed CSS
