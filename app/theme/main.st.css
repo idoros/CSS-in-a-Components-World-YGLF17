@@ -1,4 +1,5 @@
 :import {
+    -st-theme: true;
     -st-from: '../revealjs/reveal.st.css';
     -st-default: Reveal;
     -st-named: navigateColor;
@@ -189,11 +190,11 @@ Reveal pre {
 }
 
 
-Reveal pre code, Reveal pre code * {
+Reveal::code, Reveal::code * {
     font-family: "DejaVu Sans Mono", monospace;
 }
 
-Reveal pre code {
+Reveal::code {
     background-color: #26292E;
     padding: 18px;
     display: block;
@@ -320,58 +321,6 @@ Reveal::progress::bar {
     background: value(progressColor);
     transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); 
 }
-
-/*********************************************
-* CUSTOM CODE HIGHLIGHT
-*********************************************/
-
-.dimUnmarked { -st-global: ".dimUnmarked"; } 
-.unHighlight { -st-global: ".unHighlight"; } 
-
-.customMark {
-    position:relative;
-    line-height: 100%;
-    /* border: 5px solid currentColor;
-    border-width: 0px 0px 5px 0px; */
-    background-color:initial;
-}
-/* .customMark * { color:white; font-weight: bold; } */
-
-/* Reveal code mark[data-name]::after {
-    content: "x";
-    position: absolute;
-    bottom: -1em;
-    right: 0;
-    left: 0;
-    background: currentColor;
-} */
-Reveal pre:global(.css) code {
-    font-size: 25px;
-}
-Reveal pre code {
-    overflow: visible;
-}
-Reveal pre code.unHighlight > *:not(mark) {
-    color:rgb(206, 206, 206);
-}
-Reveal pre code.unHighlight > * *  {
-    color:inherit;
-}
-Reveal pre code > mark *  {
-    color:inherit;
-}
-Reveal pre code.dimUnmarked *:not(mark) {
-    color:rgba(141, 137, 137, 0.61);
-}
-
-Reveal pre code.dimUnmarked mark * {
-    color:inherit;
-}
-/* Reveal code[data-size="medium"] {
-    font-size: 42px;
-    line-height: 100%;
-    overflow-y:visible!important;
-} */
 
 /*********************************************
 * CUSTOM LAYOUT

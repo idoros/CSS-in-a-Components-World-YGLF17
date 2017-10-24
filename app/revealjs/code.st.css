@@ -1,0 +1,23 @@
+:import {
+    -st-from: "./highlight.st.css";
+    -st-default: Highlight;
+}
+
+.root {
+    -st-global: "code";
+    -st-states: unHighlight('.unHighlight'), dimUnmarked('.dimUnmarked');
+}
+
+@custom-selector :--mark .root > .mark;
+.mark {
+    -st-global: "mark"
+}
+
+/* 
+bug: https://github.com/wix/stylable/issues/186
+should be: 
+@custom-selector :--highlight .root:not(:unHighlight) Highlight;  
+*/
+@custom-selector :--highlight .root Highlight;
+Highlight{};
+

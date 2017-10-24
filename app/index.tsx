@@ -11,7 +11,6 @@ import { Outro } from './slides/6-outro';
 
 import {stylable} from 'wix-react-tools/dist/src/react-component-features/stylable-feature';
 
-import './revealjs/reveal.st.css';
 import presentationCSS from './index.st.css';
 
 @stylable(presentationCSS)

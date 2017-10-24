@@ -1,9 +1,16 @@
+/*
+Reveal represent a none stylable html structure.
+
+This file is NOT just an interface. It contains initializing values to help with better API.
+
+ToDo: import and include reveal js base CSS.
+*/
 :vars {
     navigateColor: currentColor;
 }
 
 .root {
-    -st-global: '.reveal';
+    -st-global: ' .reveal';
 }
 
 /*********************************************
@@ -21,14 +28,44 @@
 @custom-selector :--headings h1, h2, h3, h4, h5, h6;
 
 /*********************************************
-* LINKS
-*********************************************/
-/* check */
+ * Code
+ *********************************************/
+ :import {
+    -st-theme:true;
+    -st-from: "./Code.st.css";
+    -st-default: Code;
+}
+
+@custom-selector :--code .root pre Code;
+Code{}
 
 /*********************************************
-* IMAGES
+* CUSTOM CODE HIGHLIGHT
 *********************************************/
-/* check */
+
+.root pre:global(.css) code {
+    font-size: 25px;
+}
+:--code {
+    overflow: visible;
+}
+:--code:unHighlight > *:not(mark) {
+    color:rgb(206, 206, 206);
+}
+:--code:unHighlight > * *  {
+    color:inherit;
+}
+:--code::mark *, :--code::mark [class*="hljs-"]  {
+    color:inherit;
+}
+:--code::mark *
+:--code:dimUnmarked *:not(mark) {
+    color:rgba(141, 137, 137, 0.61);
+}
+
+:--code:dimUnmarked mark * {
+    color:inherit;
+}
 
 /*********************************************
  * SLIDES

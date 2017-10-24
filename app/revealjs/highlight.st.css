@@ -1,0 +1,59 @@
+.root {
+    -st-global: "span";
+    -st-states: /* General-purpose */
+                keyword('.hljs-keyword'),	/*keyword in a regular Algol-style language */
+                built_in('.hljs-built_in'),	/*built-in or library object (constant, class, function) */
+                type('.hljs-type'),	/*user-defined type in a language with first-class syntactically significant types, like Haskell */
+                literal('.hljs-literal'),	/*special identifier for a built-in value (“true”, “false”, “null”) */
+                number('.hljs-number'),	/*number, including units and modifiers, if any. */
+                regexp('.hljs-regexp'),	/*literal regular expression */
+                string('.hljs-string'),	/*literal string, character */
+                subst('.hljs-subst'),	/*parsed section inside a literal string */
+                symbol('.hljs-symbol'),	/*symbolic constant, interned string, goto label */
+                class('.hljs-class'),	/*class or class-level declaration (interfaces, traits, modules, etc) */
+                function('.hljs-function'),	/*function or method declaration */
+                title('.hljs-title'),	/*name of a class or a function at the place of declaration */
+                params('.hljs-params'),	/*block of function arguments (parameters) at the place of declaration */
+                /* meta */
+                comment('.hljs-comment'),	/*comment */
+                doctag('.hljs-doctag'),	/*documentation markup within comments */
+                meta('.hljs-meta'),	/*flags, modifiers, annotations, processing instructions, preprocessor directive, etc */
+                meta-keyword('.hljs-meta-keyword'),	/* keyword or built-in within meta construct */
+                meta-string('.hljs-meta-string'),	/* string within meta construct */
+                /* Tags, attributes, configs */
+                section('.hljs-section'),	/* heading of a section in a config file, heading in text markup */
+                tag('.hljs-tag'),	/* XML/HTML tag */
+                name('.hljs-name'),	/* name of an XML tag, the first word in an s-expression */
+                builtin-name('.hljs-builtin-name'),	/* s-expression name from the language standard library */
+                attr('.hljs-attr'),	/* name of an attribute with no language defined semantics (keys in JSON, setting names in .ini), also sub-attribute within another highlighted object, like XML tag */
+                attribute('.hljs-attribute'),	/*name of an attribute followed by a structured value part, like CSS properties */
+                variable('.hljs-variable'),	/*variable in a config or a template file, environment var expansion in a script */
+                /* Markup */
+                bullet('.hljs-bullet'),	/*list item bullet in text markup */
+                code('.hljs-code'),	/*code block in text markup */
+                emphasis('.hljs-emphasis'),	/*emphasis in text markup */
+                strong('.hljs-strong'),	/*strong emphasis in text markup */
+                formula('.hljs-formula'),	/*mathematical formula in text markup */
+                link('.hljs-link'),	/*hyperlink in text markup */
+                quote('.hljs-quote'),	/*quotation in text markup */
+                /* CSS */
+                selector-tag('.hljs-selector-tag')	/* tag selector in CSS */
+                selector-id('.hljs-selector-id')	/* #id selector in CSS */
+                selector-class('.hljs-selector-class')	/* .class selector in CSS */
+                selector-attr('.hljs-selector-attr')	/* [attr] selector in CSS */
+                selector-pseudo('.hljs-selector-pseudo')	/* :pseudo selector in CSS */
+                /* Templates */
+                template-tag('.hljs-template-tag')	/* tag of a template language */
+                template-variable('.hljs-template-variable')	/* variable in a template language */
+                /* diff */
+                addition('.hljs-addition'),	/*added or changed line in a diff */
+                deletion('.hljs-deletion'),	/*deleted line in a diff */
+}
+
+/*
+highligh part might contain anther part:
+<span class="hljs-tag">
+    <span class="hljs-string"></span>
+</span>
+*/
+@custom-selector :--highlight .root .root;

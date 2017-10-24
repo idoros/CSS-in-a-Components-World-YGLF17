@@ -1,7 +1,6 @@
 :import {
     -st-theme: true;
     -st-from: './theme/main.st.css';
-    -st-named: customMark;
 }
 :import {
     -st-from: './revealjs/reveal.st.css';
@@ -11,26 +10,44 @@
     height:100%;
 }
 
+/*********************************************
+ * REVEAL UI
+ *********************************************/
+
 Reveal::controls {
     top:10px;
 }
 
+
+/*********************************************
+ * CODE HIGHLIGHTING
+ *********************************************/
+
+Reveal::code:not(:unHighlight)::highlight:attribute { color:rgb(206, 206, 206); }
+/* Reveal::code::highlight:tag::highlight:string { color:green; } */
+/* Reveal::code::highlight:tag { color:#FFFFFF; } */
+Reveal::code:not(:unHighlight)::highlight:name { color:rgb(172, 172, 172); }
+Reveal::code:not(:unHighlight)::highlight:attr { color:#a3ceeb; }
+Reveal::code:not(:unHighlight)::highlight:string { color:#9fa1e4; } 
 
 /*
 should change to custom pseudo-classes with parameters
 https://github.com/wix/stylable/issues/12
 for example - Reveal::code::mark:name('icon')
 */
-Reveal pre code mark[data-name="icon"] { -st-mixin:customMark; color:#a4c1f4; }
-Reveal pre code mark[data-name="navBtn"] { -st-mixin:customMark; color:#b6d7a8; }
-Reveal pre code mark[data-name="gallery"] { -st-mixin:customMark; color:#ea9899; }
-Reveal pre code mark[data-name="loading"] { -st-mixin:customMark; color:#EA98EA; font-style: italic; }
-Reveal pre code mark[data-name="pseudo-element"] { -st-mixin:customMark; color:white; }
-Reveal pre code mark[data-name="pseudo-class"] { -st-mixin:customMark; color:white; font-style: italic; }
-Reveal pre code mark[data-name="filename"] {
+
+.customMark { background-color:transparent; }
+Reveal::code::mark[data-name="icon"] { -st-mixin:customMark; color:#a4c1f4; }
+Reveal::code::mark[data-name="navBtn"] { -st-mixin:customMark; color:#b6d7a8; }
+Reveal::code::mark[data-name="gallery"] { -st-mixin:customMark; color:#ea9899; }
+Reveal::code::mark[data-name="loading"] { -st-mixin:customMark; color:#EA98EA; font-style: italic; }
+Reveal::code::mark[data-name="pseudo-element"] { -st-mixin:customMark; color:white; }
+Reveal::code::mark[data-name="pseudo-class"] { -st-mixin:customMark; color:white; font-style: italic; }
+Reveal::code::mark[data-name="filename"] {
+    width: 100%;
+    display: inline-block;
     text-align: center;
-    display: block;
     background-color:initial;
     text-decoration: none;
  }
- Reveal pre code mark[data-name="filename"] * { color:darkgrey; font-weight: bold; }
+ Reveal::code::mark[data-name="filename"] * { color:darkgrey; font-weight: bold; }
