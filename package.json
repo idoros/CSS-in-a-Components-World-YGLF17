@@ -27,7 +27,7 @@
     "react": "^15.5.0",
     "react-dom": "^15.6.1",
     "reveal.js": "^3.3.0",
-    "stylable": "git://github.com/wix/stylable.git#ido/manual-class-mapping",
+    "stylable": "^4.0.22",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.1",
     "wix-react-tools": "^3.1.0-1"
