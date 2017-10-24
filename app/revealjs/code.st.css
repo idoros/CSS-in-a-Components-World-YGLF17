@@ -19,5 +19,4 @@ should be:
 @custom-selector :--highlight .root:not(:unHighlight) Highlight;  
 */
 @custom-selector :--highlight .root Highlight;
-Highlight{};
 

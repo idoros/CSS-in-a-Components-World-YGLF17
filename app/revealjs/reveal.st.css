@@ -21,6 +21,7 @@ ToDo: import and include reveal js base CSS.
     -st-from: "./fragment.st.css";
     -st-named: Fragment;
 }
+@custom-selector :--fragment .Fragment;
 
  /*********************************************
  * HEADERS
@@ -36,8 +37,10 @@ ToDo: import and include reveal js base CSS.
     -st-default: Code;
 }
 
+/*
+pre should be part of Code somehow and allow language selection: Code:lang("css")
+*/
 @custom-selector :--code .root pre Code;
-Code{}
 
 /*********************************************
 * CUSTOM CODE HIGHLIGHT
@@ -115,4 +118,3 @@ Controls::navigateLeft {
 }
 
 @custom-selector :--progress Progress;
-Progress{}
