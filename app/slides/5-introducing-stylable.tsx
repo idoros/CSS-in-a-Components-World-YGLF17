@@ -37,9 +37,11 @@ export class IntroducingStylable extends React.Component {
                     %.gallery% {}
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
-                    - Stylable uses the .st.css filename suffix                                        
-                    - CSS compatible syntax (goal)
-                    - define a normal gallery CSS class in our page CSS
+                    - Stylable uses the .st.css filename suffix
+                    - in our case: page.st.css               
+                    - aims at CSS compatible syntax - working with any css tool
+                    - define a normal CSS class for our gallery
+                    - make the ".gallery" CSS class a gallery component
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -56,9 +58,10 @@ export class IntroducingStylable extends React.Component {
                     }
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
-                    - Import the stylesheet interface fromgallery.st.css, 
-                    - containing gallery component CSS type definition
-                    - -st-extends to declare that the ".gallery" class is a Gallery component
+                    - Stylable Import rule 
+                    - import gallery stylesheet: gallery.st.css
+                    - -st-extends directive - make gallery CSS class a gallery component
+                    - access to gallery component style API
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -82,8 +85,10 @@ export class IntroducingStylable extends React.Component {
                     }
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
-                    - possible to access, gallery component style API
-                    - how does gallery.st.css and stylable, define this style API?
+                    - we can express the selector we talk about
+                        - hide navBtn while gallery is loading
+                        - color the inner icon of the navigation button of our gallery 
+                    - gallery.st.css ?
                     `}</SpeakerNotes>
                 </section>
                 <section>
