@@ -61,7 +61,6 @@ pre should be part of Code somehow and allow language selection: Code:lang("css"
 :--code::mark *, :--code::mark [class*="hljs-"]  {
     color:inherit;
 }
-:--code::mark *
 :--code:dimUnmarked *:not(mark) {
     color:rgba(141, 137, 137, 0.61);
 }
