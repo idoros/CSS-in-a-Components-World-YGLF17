@@ -204,24 +204,51 @@ export class IntroducingStylable extends React.Component {
                 </section>
                 
                 <section>
-                    <h3>Roadmap</h3>
+                    <h3>Up Ahead...</h3>
                     <ul>
-                        <li>Custom Pseudo-Classes with parameters</li>
-                        <li>Formatters - Custom modifiers for CSS declarations</li>
-                        <li>Restrictions - CSS declarations whitelist / blacklist</li>
-                        <li>Dynamicness! (Soon. ™)</li>
-                        <li>Generics</li>
+                        <Fragment>
+                            <li>Custom Pseudo-Classes with parameters</li>
+                        </Fragment>
+                        <Fragment>
+                            <li>Formatters - Custom modifiers for CSS declarations</li>
+                        </Fragment>
+                        <Fragment>
+                            <li>Declaration Interfaces - Blacklist / Whitelist</li>
+                        </Fragment>
+                        <Fragment>
+                            <li>Dynamicness! (Soon. ™)</li>
+                        </Fragment>
+                        <Fragment>
+                            <li>Utilizing the Type System</li>
+                        </Fragment>
                     </ul>
-                    <pre>Some of those are more for ... then end users</pre>
+                        <Fragment>
+                            <pre>Some of those are more for ... then end users</pre>
+                        </Fragment>
                     <SpeakerNotes markdown>{`
-                    - what's ahead?
-                    - Dynamicness - want it, know how, currently working on it. To be available soon
+                    - what's ahead? there's so much we can do...
                     - Custom pseudo-classes with parameters
+                        - previously saw gallery with loading
+                        - sometimes, you want to target an element according to state that is not boolean
+                        - example
+                            - in native CSS we can utilize :nth-child(number), 
+                            - allowing us to target a specific element, based on its containment order
+                            - we can offer a similar custom capability that would allow us to define and accept custom (not limited to boolean) parameters
+                            - allowing us to target our DOM more specifically
                     - custom modifiers for CSS declaration values
-                    - specific rule whitelist / blacklist
-                    - generics
+                        - give you the ability to have custom value functions for your rules
+                        - example
+                            - if i want to change a specific shade of color to a darker one, i can use
+                            - color: darken(red)
+                            - these features exist in other solutions as well, and we'd like to be compatible to them
+                            - and give you the ability to create custom ones of your own
+                    - declaration interface
+                        - going back to the gallery, styling the navBtn custom pseudo-element
+                        - allow us to style how it looks, restricts changing its positioning
+                    - Dynamicness - want it, know how, currently working on it. To be available soon *TALK WITH BARAK & NADAV IF SOON IS TRUE*
                     - more integrations
-                    - one last thing... *click*
+                    - Utilizing the Type System - many things we can borrow from the world of typing
+                    - ties into this one last thing... *click*
                     `}</SpeakerNotes>
                 </section>
 
