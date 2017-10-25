@@ -100,7 +100,7 @@ export class IntroducingStylable extends React.Component {
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
                     - ".root" class is reserved, root element
-                    - lets see how we define the loading state...
+                    - lets see how we define the gallery's custom states...
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -159,19 +159,19 @@ export class IntroducingStylable extends React.Component {
                 <section>
                     <h3>Recap</h3>
                     <ul>
-                        <li>.st.css extension</li>
+                        <li>.st.css filename suffix</li>
                         <li>CSS compatible syntax</li>
-                        <li>.root</li>
-                        <li>Build directives & vendor prefixes</li>
+                        <li>:import - import CSS & JS</li>
+                        <li>:extend - extend another stylesheet </li>
+                        <li>Pseudo-Selectors - expose internal parts & states as style API </li>
                     </ul>
                     <SpeakerNotes markdown>{`
                     So, a quick recap...
-                    - st-css suffix
+                    - st-css filename suffix
                     - compatible with CSS 
-                    - ".root" class is reserved
-                    - CSS superset
-                        - import other CSS or JS
-                        - define custom pseudo-states and pseudo-elements
+                    - :import - allowing bringing in definitions from other CSS or JS files 
+                    - :extend - indicates a CSS class extends another style definition, with all of its capabilities
+                    - pseudo-selector - allows exposing inner parts and states of our component
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -213,13 +213,13 @@ export class IntroducingStylable extends React.Component {
                             <li>Formatters - Custom modifiers for CSS declarations</li>
                         </Fragment>
                         <Fragment>
-                            <li>Declaration Interfaces - Blacklist / Whitelist</li>
+                            <li>Declaration Interfaces - Blacklist & Whitelist</li>
                         </Fragment>
                         <Fragment>
                             <li>Dynamicness! (Soon. ™)</li>
                         </Fragment>
                         <Fragment>
-                            <li>Utilizing the Type System</li>
+                            <li>Type System</li>
                         </Fragment>
                     </ul>
                         <Fragment>
@@ -238,16 +238,17 @@ export class IntroducingStylable extends React.Component {
                     - custom modifiers for CSS declaration values
                         - give you the ability to have custom value functions for your rules
                         - example
-                            - if i want to change a specific shade of color to a darker one, i can use
+                            - if we want to change a specific shade of color to a darker one, we can use
                             - color: darken(red)
                             - these features exist in other solutions as well, and we'd like to be compatible to them
-                            - and give you the ability to create custom ones of your own
                     - declaration interface
                         - going back to the gallery, styling the navBtn custom pseudo-element
                         - allow us to style how it looks, restricts changing its positioning
                     - Dynamicness - want it, know how, currently working on it. To be available soon *TALK WITH BARAK & NADAV IF SOON IS TRUE*
                     - more integrations
-                    - Utilizing the Type System - many things we can borrow from the world of typing
+                    - Type System
+                        - starting to see our styling system as a type system
+                        - and there are many things we can borrow from that domain
                     - ties into this one last thing... *click*
                     `}</SpeakerNotes>
                 </section>
@@ -260,6 +261,7 @@ export class IntroducingStylable extends React.Component {
                     - uses static analysis => code completion, highlighting, validation => developer experience
                     - Typescript community maintains  “DefinitelyTyped”
                     - type interfaces for many of the plain Javascript projects
+                    - similar developer experience for non-typed projects
                     - Definitely Styled, similar opportunity, better styling tools and capabilities, existing component libraries
                     `}</SpeakerNotes>
                 </section>
