@@ -83,8 +83,9 @@ export class StylingToday extends React.Component {
                 </section>
                 <section>
                     <h3>Tooling & Ecosystem</h3>
-                    <h4></h4>
-                    IDE support, syntax highlighting, code completions, validations, CSS generators, online materials / examples, etc...
+                    <h4>
+                        IDE support, syntax highlighting, code completions, validations, CSS generators, online materials, examples, etc...
+                    </h4>
                     <SpeakerNotes markdown>{`
                     - Tooling and a rich ecosystem.
                     - IDE support, syntax highlighting, code completions
@@ -101,10 +102,9 @@ export class StylingToday extends React.Component {
                     <h3>CSS Stylesheets</h3>
                     <ul>
                         <li>Everything is global</li>
-                        <li>CSS order Affects cascade</li>
+                        <li>Order affects cascade</li>
                         <li>No reasonable dependency system - @import</li>
-                        <li>HTML doesn't need to know about CSS, but CSS must know the HTML</li>
-                        <li>seperation of presentation and content, bit misleading, CSS coupled to HTML</li>
+                        <li>Relies on markup structure</li>
                     </ul>
                     <SpeakerNotes markdown>{`
                     - everything is global
@@ -123,7 +123,7 @@ export class StylingToday extends React.Component {
                 <section>
                     <h3>Preprocessors</h3>
                     <ul>
-                        <li>Vars / mixins / Loops...</li>
+                        <li>Vars / Mixins / Loops...</li>
                         <li>CSS nesting</li>
                         <li>Stylesheet dependencies</li>
                     </ul>
@@ -137,7 +137,7 @@ export class StylingToday extends React.Component {
                 <section>
                     <h3>CSS Modules</h3>
                     <ul>
-                        <li>Treat your style as a module</li>
+                        <li>Style as a module</li>
                         <li>Scope stylesheet</li>
                         <li>Stylesheet exports locals to JS</li>
                     </ul>     
@@ -151,7 +151,9 @@ export class StylingToday extends React.Component {
                 </section>
                 <section className="center">
                     <h1>CSS-in-JS</h1>
-                    <h4>new?</h4>
+                    <Fragment>
+                        <h4>new?</h4>
+                    </Fragment>
                     <SpeakerNotes markdown>{`
                     - surge of solutions, based on CSS-in-JS
                     - 1 in 5 chance you’ve written a CSS-in-JS
@@ -164,11 +166,10 @@ export class StylingToday extends React.Component {
                 </section>
                 <section>
                     <h3>CSS-in-JS</h3>
-                    <h4>Common Solution Features:</h4>
                     <ul>
-                        <li>Stylesheet Namespacing & Ordering</li>
+                        <li>Stylesheet namespacing & ordering</li>
                         <li>Coupling of view and style</li>
-                        <li>... But the big thing is ...</li>
+                        <li>... but the big thing is ...</li>
                     </ul>
                     <SpeakerNotes markdown>{`
                     common solutions solve:
@@ -200,9 +201,9 @@ export class StylingToday extends React.Component {
                 <section>
                     <h3>The cost of being dynamic</h3>
                     <ul>
-                        <li>Load JS Library to handle CSS creation at runtime</li>
+                        <li>Load JS library to handle CSS creation at runtime</li>
                         <li>Creating / modifying stylsheets at runtime</li>
-                        <li>SSR = CSS X 2</li>
+                        <li>Server-Side Rendering = CSS X 2</li>
                     </ul>   
                     <SpeakerNotes markdown>{`
                         Performance costs:

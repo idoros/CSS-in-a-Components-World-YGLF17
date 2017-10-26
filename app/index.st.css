@@ -44,10 +44,15 @@ Reveal::code::mark[data-name="loading"] { -st-mixin:customMark; color:#EA98EA; f
 Reveal::code::mark[data-name="pseudo-element"] { -st-mixin:customMark; color:white; }
 Reveal::code::mark[data-name="pseudo-class"] { -st-mixin:customMark; color:white; font-style: italic; }
 Reveal::code::mark[data-name="filename"] {
-    width: 100%;
+    /* width: 100%;
     display: inline-block;
     text-align: center;
-    background-color:initial;
+    background-color:initial; */
     text-decoration: none;
+
+    position: absolute;
+    top:0;
+    right:0;
+    background:purple
  }
  Reveal::code::mark[data-name="filename"] * { color:darkgrey; font-weight: bold; }

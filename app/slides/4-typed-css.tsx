@@ -7,7 +7,7 @@ export class TypedCSS extends React.Component {
         return (
             <section>
                 <section className="center">
-                    <h1>Stylesheets<br/>Interfaces</h1>
+                    <h1>Stylesheet<br/>Interface</h1>
 
                     <SpeakerNotes markdown> 
                         {`
@@ -22,12 +22,12 @@ export class TypedCSS extends React.Component {
                     <ul>
                         <li>CSS Superset
                             <ul>
-                                <li>Inner Parts as Pseudo-Elements</li>
-                                <li>Create Custom Pseudo-Classes</li>
-                                <li>Type Aware Dependencies</li>
+                                <li>Inner parts as Pseudo-Elements</li>
+                                <li>Create custom Pseudo-Classes</li>
+                                <li>Type aware wependencies</li>
                             </ul>
                         </li>
-                        <li>IDE & Build Support</li>
+                        <li>IDE & Build support</li>
                         <li>Optimization - "ruleset shaking"</li>
                     </ul>
 

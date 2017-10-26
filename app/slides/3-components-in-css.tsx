@@ -79,7 +79,7 @@ export class ComponentsInCSS extends React.Component {
                     `}</SpeakerNotes>
                 </section>
                 <section>
-                    <h3>Conflict</h3>
+                    <h3>Conflict!</h3>
                     <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.icon% {}`}</MarkCode>
                     <MarkCode lang="html" markMapping={markMap} unHighlight>{`
                     <div class="gallery">
@@ -171,7 +171,7 @@ export class ComponentsInCSS extends React.Component {
                     `}</SpeakerNotes>
                 </section>
                 <section>
-                    <h3>BEM - namespacing convention</h3>
+                    <h3>BEM - Namespacing Convention</h3>
                     <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.gallery% %.gallery__navBtn% %.gallery__icon% {}`}</MarkCode>
                     <MarkCode lang="html" markMapping={markMap} unHighlight>{`
                     <div class="%gallery%">
@@ -192,7 +192,7 @@ export class ComponentsInCSS extends React.Component {
                     `}</SpeakerNotes>
                 </section>
                 <section>
-                    <h3>BEM - for components</h3>
+                    <h3>BEM - For Components</h3>
                     <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.gallery% %.gallery__navBtn% %.button__icon% {}`}</MarkCode>
                     <MarkCode lang="html" markMapping={markMap} unHighlight>{`
                     <div class="%gallery%">

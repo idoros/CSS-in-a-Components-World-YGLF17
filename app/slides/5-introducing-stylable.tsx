@@ -157,13 +157,13 @@ export class IntroducingStylable extends React.Component {
                     `}</SpeakerNotes>
                 </section>
                 <section>
-                    <h3>Recap</h3>
+                    <h3>Quick Recap</h3>
                     <ul>
                         <li>.st.css filename suffix</li>
                         <li>CSS compatible syntax</li>
                         <li>:import - import CSS & JS</li>
-                        <li>:extend - extend another stylesheet </li>
-                        <li>Pseudo-Selectors - expose internal parts & states as style API </li>
+                        <li>-st-extend - extend another stylesheet </li>
+                        <li>Pseudo-Selectors - Internal parts & states as style API </li>
                     </ul>
                     <SpeakerNotes markdown>{`
                     So, a quick recap...
@@ -172,23 +172,25 @@ export class IntroducingStylable extends React.Component {
                     - :import - allowing bringing in definitions from other CSS or JS files 
                     - :extend - indicates a CSS class extends another style definition, with all of its capabilities
                     - pseudo-selector - allows exposing inner parts and states of our component
+                    - basic understanding of how to use Stylable
+                    - what is the state of Stylable *click*
                     `}</SpeakerNotes>
                 </section>
                 <section>
                     <h3>State of Stylable</h3>
-                        <h4>Currently Available Features:</h4>
-                        <ul>
-                            <li>Pseudo-Elements & Pseudo-Classes</li>
-                            <li>Imports</li>
-                            <li>Mixins</li>
-                            <li>Theming</li>
-                            <li>
-                                VSCode Extension - completions & validations
-                            </li>
-                            <li>
-                                Integration - React, Webpack
-                            </li>
-                        </ul>
+                    <h4>Currently Available Features:</h4>
+                    <ul>
+                        <li>Pseudo-Elements & Pseudo-Classes</li>
+                        <li>Imports</li>
+                        <li>Mixins</li>
+                        <li>Theming</li>
+                        <li>
+                            VSCode Extension - completions & validations
+                        </li>
+                        <li>
+                            Integration - React, Webpack
+                        </li>
+                    </ul>
                     
                     <SpeakerNotes markdown>{`
                     - evaluating replacing the style-system of ALL Wix websites
@@ -222,11 +224,10 @@ export class IntroducingStylable extends React.Component {
                             <li>Type System</li>
                         </Fragment>
                     </ul>
-                        <Fragment>
-                            <pre>Some of those are more for ... then end users</pre>
-                        </Fragment>
                     <SpeakerNotes markdown>{`
-                    - what's ahead? there's so much we can do...
+                    - what's ahead? there's so much potential...
+                    - Some features for developers consuming UI libraries
+                    - Others for the developers who make them
                     - Custom pseudo-classes with parameters
                         - previously saw gallery with loading
                         - sometimes, you want to target an element according to state that is not boolean
@@ -254,20 +255,26 @@ export class IntroducingStylable extends React.Component {
                 </section>
 
                 <section className="center">
-                    <h1>Definitely Styled</h1>
+                    <h1>Definitely <span>Typed</span></h1>
                     <SpeakerNotes markdown>{`
                     - those not familiar with TypeScript, Typescript is a typed superset of Javascript
                     - compiles to plain Javascript
-                    - uses static analysis => code completion, highlighting, validation => developer experience
+                    - uses static analysis => completion, validation, highlighting => developer experience
                     - Typescript community maintains  “DefinitelyTyped”
                     - type interfaces for many of the plain Javascript projects
                     - similar developer experience for non-typed projects
+                    - *click*
+                    `}</SpeakerNotes>
+                </section>
+                <section className="center">
+                    <h1>Definitely Styled</h1>
+                    <SpeakerNotes markdown>{`
                     - Definitely Styled, similar opportunity, better styling tools and capabilities, existing component libraries
                     `}</SpeakerNotes>
                 </section>
 
                 <section className="center">
-                    <pre>[ ReavelJS DEMO ]</pre>
+                    <pre>[ RevealJS DEMO ]</pre>
                 </section>
 
             </section>
