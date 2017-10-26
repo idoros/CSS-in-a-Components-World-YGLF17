@@ -105,12 +105,20 @@ export class StylingToday extends React.Component {
                         <li>Order affects cascade</li>
                         <li>No reasonable dependency system - @import</li>
                         <li>Relies on markup structure</li>
+                        <li>Breaks silently</li>
                     </ul>
                     <SpeakerNotes markdown>{`
                     - everything is global
                     - one stylesheet can affect and conflict with other
                     - multiple stylesheets, order of loading, impacts the cascade
                     - no reasonable dependency system, personally I don't know anyone using it
+                    - No errors, no validations - hard to predict when something would break
+                    `}</SpeakerNotes>
+                </section>
+                <section className="center">
+                    <h1>Enter the Community</h1>
+                    <SpeakerNotes markdown>{`
+                    - CSS is nice and all, but the community wanted more
                     `}</SpeakerNotes>
                 </section>
                 <section className="center">

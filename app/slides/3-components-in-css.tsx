@@ -7,29 +7,31 @@ export class ComponentsInCSS extends React.Component {
     render() {
         return (
             <section>
+                    <section>
+                        <h3>Our Shopping List</h3>
+                        <ul>
+                            <li>Modular</li>
+                            <li>Dynamic</li>
+                            <li>Performant</li>
+                            <li>CSS capabilities</li>
+                            <li>External customizations</li>
+                            <li>Tooling</li>
+                        </ul>
+                        <SpeakerNotes markdown>{`
+                            What do we believe we need to write CSS for components:
+                            - break down styles into manageable modules, reflecting project structure
+                            - modify style dynamically 
+                            - fast and performant, with minimal runtime, and caching
+                            - capabilities CSS - selectors, media queries, more 
+                            - style components externally, support multiple 'looks', separate functionality and style
+                            - same tooling the rich ecosystem offers
+                        `}</SpeakerNotes> 
+                    </section>
                 <section className="center">
                     <h1>CSS<br/>💘<br/>Components</h1>
                     <SpeakerNotes markdown>{`
                         - styling components using CSS
                         - what would it take
-                    `}</SpeakerNotes> 
-                </section>
-                <section>
-                    <h3>Styling Components</h3>
-                    <ul>
-                        <li>Modular</li>
-                        <li>Dynamic</li>
-                        <li>Performant</li>
-                        <li>CSS capabilities</li>
-                        <li>Tooling</li>
-                    </ul>
-                    <SpeakerNotes markdown>{`
-                        What do we believe we need to write CSS for components:
-                        - break down styles into manageable modules, reflecting project structure
-                        - modify style dynamically 
-                        - fast and performant, with minimal runtime, and caching
-                        - capabilities CSS - selectors, media queries, more 
-                        - same tooling the rich ecosystem offers
                     `}</SpeakerNotes> 
                 </section>
                 <section className="center">

@@ -193,7 +193,7 @@ export class IntroducingStylable extends React.Component {
                     </ul>
                     
                     <SpeakerNotes markdown>{`
-                    - evaluating replacing the style-system of ALL Wix websites
+                    - battle testing on back office, evaluating integrating to wix sites
                     - not yet a full or final implementation, features all of the concepts today
                     - number of features we didn't have time, already implemented
                         - dependency system
@@ -218,7 +218,7 @@ export class IntroducingStylable extends React.Component {
                             <li>Declaration Interfaces - Blacklist & Whitelist</li>
                         </Fragment>
                         <Fragment>
-                            <li>Dynamicness! (Soon. ™)</li>
+                            <li>Dynamicness!</li>
                         </Fragment>
                         <Fragment>
                             <li>Type System</li>
@@ -261,7 +261,7 @@ export class IntroducingStylable extends React.Component {
                     - compiles to plain Javascript
                     - uses static analysis => completion, validation, highlighting => developer experience
                     - Typescript community maintains  “DefinitelyTyped”
-                    - type interfaces for many of the plain Javascript projects
+                    - type interfaces for any non-typed project
                     - similar developer experience for non-typed projects
                     - *click*
                     `}</SpeakerNotes>
