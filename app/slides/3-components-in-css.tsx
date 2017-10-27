@@ -15,8 +15,8 @@ export class ComponentsInCSS extends React.Component {
                         <li>Dynamic</li>
                         <li>Performant</li>
                         <li>CSS capabilities</li>
-                        <li>External customizations</li>
                         <li>Tooling</li>
+                        <li>External customizations</li>
                     </ul>
                     <SpeakerNotes markdown>{`
                         What do we believe we need to write CSS for components:
@@ -24,8 +24,8 @@ export class ComponentsInCSS extends React.Component {
                         - modify style dynamically 
                         - fast and performant, with minimal runtime, and caching
                         - capabilities CSS - selectors, media queries, more 
-                        - style components externally, support multiple 'looks', separate functionality and style
                         - same tooling the rich ecosystem offers
+                        - style components externally, support multiple 'looks', separate functionality and style
                     `}</SpeakerNotes> 
                 </section>
                 <FullScreenTitle title="CSS💘Components">

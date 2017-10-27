@@ -39,7 +39,7 @@ export class DefinitlyStyledDemo extends React.Component {
                 <section className="center">
                     <h1>[ Reveal JS DEMO ]</h1>
                     <SpeakerNotes markdown>{`
-                        - this presentation use RevealJS
+                        - this presentation uses RevealJS
                         - open source presentation framework based
                         - added stylable style interface
                     `}</SpeakerNotes>

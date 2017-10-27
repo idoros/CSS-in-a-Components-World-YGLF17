@@ -104,7 +104,7 @@ export class StylingToday extends React.Component {
                     <ul>
                         <li>Everything is global</li>
                         <li>Order affects cascade</li>
-                        <li>No reasonable dependency system - @import</li>
+                        <li>Dependency system - @import</li>
                         <li>Relies on markup structure</li>
                         <li>Breaks silently</li>
                     </ul>
