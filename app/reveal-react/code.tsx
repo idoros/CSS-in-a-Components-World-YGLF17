@@ -42,7 +42,6 @@ export class MarkCode extends React.Component<MarkCodeProps> {
     static caret = '$$$CARET$$$';
     render(){
         const {children, lang, markSymbol, markMapping, dimUnmarked, unHighlight} = this.props;
-        if(children.indexOf('index.st.css')!==-1){debugger;}
         // format
         const code = deindent(children)
                     .trim()

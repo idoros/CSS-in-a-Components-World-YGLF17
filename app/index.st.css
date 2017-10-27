@@ -61,6 +61,7 @@ Reveal::code::mark[data-name="filename"] {
     position: absolute;
     top:0;
     right:0;
-    background:purple
+    background:#333333;
+    padding: 0.3em;
  }
- Reveal::code::mark[data-name="filename"] * { color:darkgrey; font-weight: bold; }
+ Reveal::code::mark[data-name="filename"] * { color:#FFFFFF; font-weight: bold; }

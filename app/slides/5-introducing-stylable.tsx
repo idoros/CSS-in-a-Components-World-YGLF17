@@ -35,7 +35,7 @@ export class IntroducingStylable extends React.Component {
                     <h3>Define the Gallery Class</h3>
                     <MarkCode lang="css" markMapping={markMap}>{`%.gallery%:loading::navBtn {}`}</MarkCode>
                     <MarkCode lang="css" markMapping={markMap}>{`
-                    %/* page.st.css */%
+                    %page.st.css%
                     %.gallery% {}
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
@@ -50,7 +50,7 @@ export class IntroducingStylable extends React.Component {
                     <h3>Import & Extend</h3>
                     <MarkCode lang="css" markMapping={markMap}>{`%.gallery%:loading::navBtn {}`}</MarkCode>
                     <MarkCode lang="css" markMapping={markMap}>{`
-                    %/* page.st.css */%
+                    %page.st.css%
                     :import {
                         -st-from: "./gallery.st.css";
                         -st-default: Gallery;
@@ -70,7 +70,7 @@ export class IntroducingStylable extends React.Component {
                     <h3>Styling the Gallery</h3>
                     <MarkCode lang="css" markMapping={markMap}>{`%.gallery%%:loading%%::navBtn% {}`}</MarkCode>
                     <MarkCode lang="css" markMapping={markMap}>{`
-                    %/* page.st.css */%
+                    %page.st.css%
                     :import {
                         -st-from: "./gallery.st.css";
                         -st-default: Gallery;
@@ -97,7 +97,7 @@ export class IntroducingStylable extends React.Component {
                     <h3>Define the Gallery Internals</h3>
                     <MarkCode lang="css" markMapping={markMap}>{`%Gallery%%:loading%`}</MarkCode>
                     <MarkCode lang="css" markMapping={markMapWithGalleryRoot}>{`
-                    %/* gallery.st.css */%
+                    %gallery.st.css%
                     %.root% {}
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
@@ -109,7 +109,7 @@ export class IntroducingStylable extends React.Component {
                     <h3>Define Gallery Loading State</h3>
                     <MarkCode lang="css" markMapping={markMap}>{`%Gallery%%:loading%`}</MarkCode>
                     <MarkCode lang="css" markMapping={markMapWithGalleryRoot}>{`
-                    %/* gallery.st.css */%
+                    %gallery.st.css%
                     %.root% {
                         -st-states: %loading%, empty;
                     }
@@ -126,7 +126,7 @@ export class IntroducingStylable extends React.Component {
                     <h3>Define the Gallery Inner navBtn</h3>
                     <MarkCode lang="css" markMapping={markMap}>{`%Gallery%%::navBtn%`}</MarkCode>
                     <MarkCode lang="css" markMapping={markMapWithGalleryRoot}>{`
-                    %/* gallery.st.css */%
+                    %gallery.st.css%
                     %.root% {
                         -st-states: loading;
                     }
@@ -141,7 +141,7 @@ export class IntroducingStylable extends React.Component {
                     <h3>Define the Gallery Inner navBtn</h3>
                     <MarkCode lang="css" markMapping={markMap}>{`%Gallery%%::navBtn%%::icon%`}</MarkCode>
                     <MarkCode lang="css" markMapping={markMapWithGalleryRoot}>{`
-                    %/* gallery.st.css */%
+                    %gallery.st.css%
                     :import {
                         -st-from: "./icon-button.st.css";
                         -st-default: IconButton;
