@@ -274,15 +274,20 @@ export class IntroducingStylable extends React.Component {
                 <section>
                     <h3>Up Ahead...</h3>
                     <ul>
-                        <li>Declaration Interfaces - Blacklist & Whitelist</li>
-                        <MarkCode lang="css" markMapping={{'position: fixed':'error'}}>{`
-                        .gallery::navBtn { 
-                            background: salmon;
-                            %position: fixed%; 
-                        }
-                        `}</MarkCode>
+                        <li>
+                            Declaration Interfaces - Blacklist & Whitelist
+                            <MarkCode lang="css" markMapping={{'position: fixed':'error'}}>{`
+                            .gallery::navBtn { 
+                                background: salmon;
+                                %position: fixed%; 
+                            }
+                            `}</MarkCode>
+                        </li>
                         <Fragment>
                             <li>Dynamicness!</li>
+                        </Fragment>
+                        <Fragment>
+                            <li>Integrations</li>
                         </Fragment>
                         <Fragment>
                             <li>Type System</li>
