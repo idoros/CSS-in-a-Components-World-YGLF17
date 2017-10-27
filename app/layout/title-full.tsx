@@ -24,7 +24,6 @@ export default class TitleFull extends React.Component<TitleFullProps> {
 
         let content:React.ReactNode[] = [];
         let speakerNotes:React.ReactNode = null;
-        if(title === 'CSS💘Components'){debugger;}
         React.Children.forEach(children, child => {
             if(isReactNode(child)){
                 if(child.type === SpeakerNotes) { 
