@@ -82,14 +82,32 @@ export class IntroducingStylable extends React.Component {
                     %.gallery%%:loading%%::navBtn% {
                         visibility: hidden;
                     }
+                    `}</MarkCode>
+                    <SpeakerNotes markdown>{`
+                    - we can express the selector we talk about
+                        - hide navBtn while gallery is loading
+                        - and...
+                    `}</SpeakerNotes>
+                </section>
+                <section>
+                    <h3>Styling the Gallery</h3>
+                    <MarkCode lang="css" markMapping={markMap}>{`%.gallery%%:loading%%::navBtn% {}`}</MarkCode>
+                    <MarkCode lang="css" markMapping={markMap}>{`
+                    %page.st.css%
+                    :import {
+                        -st-from: "./gallery.st.css";
+                        -st-default: Gallery;
+                    }
+                    %.gallery% {
+                        -st-extends: Gallery;
+                        background-color: gold;
+                    }
                     %.gallery%%::navBtn%%::icon% {
                         color: green;
                     }
                     `}</MarkCode>
                     <SpeakerNotes markdown>{`
-                    - we can express the selector we talk about
-                        - hide navBtn while gallery is loading
-                        - color the inner icon of the navigation button of our gallery 
+                    - color the inner icon of the navigation button of our gallery 
                     - gallery.st.css ?
                     `}</SpeakerNotes>
                 </section>
