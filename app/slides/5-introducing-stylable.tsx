@@ -200,6 +200,7 @@ export class IntroducingStylable extends React.Component {
                     - number of features we didn't have time, already implemented
                         - dependency system
                         - theming mechanism
+                        - variables
                         - mixins
                         - ...
                     - VSCode extenstion, code intelligence, completions & validations
@@ -211,19 +212,24 @@ export class IntroducingStylable extends React.Component {
                     <h3>Up Ahead...</h3>
                     <ul>
                         <Fragment>
-                            <li>Custom Pseudo-Classes with parameters</li>
+                            <li>
+                                Pseudo-Classes with parameters
+                                <MarkCode lang="css" markMapping={markMapWithGalleryRoot}>{`
+                                .grid::column:name("email") { 
+                                    font-size: 0.8em; 
+                                }
+                                `}</MarkCode>
+                            </li>
                         </Fragment>
                         <Fragment>
-                            <li>Formatters - Custom modifiers for CSS declarations</li>
-                        </Fragment>
-                        <Fragment>
-                            <li>Declaration Interfaces - Blacklist & Whitelist</li>
-                        </Fragment>
-                        <Fragment>
-                            <li>Dynamicness!</li>
-                        </Fragment>
-                        <Fragment>
-                            <li>Type System</li>
+                            <li>
+                                Formatters
+                                <MarkCode lang="css" markMapping={markMapWithGalleryRoot}>{`
+                                .item { 
+                                    color: darker(red); 
+                                }
+                                `}</MarkCode>
+                            </li>
                         </Fragment>
                     </ul>
                     <SpeakerNotes markdown>{`
@@ -238,12 +244,32 @@ export class IntroducingStylable extends React.Component {
                             - allowing us to target a specific element, based on its containment order
                             - we can offer a similar custom capability that would allow us to define and accept custom (not limited to boolean) parameters
                             - allowing us to target our DOM more specifically
-                    - custom modifiers for CSS declaration values
+                    - Formatters - custom modifiers for CSS declaration values
                         - give you the ability to have custom value functions for your rules
                         - example
                             - if we want to change a specific shade of color to a darker one, we can use
                             - color: darken(red)
                             - these features exist in other solutions as well, and we'd like to be compatible to them
+                    `}</SpeakerNotes>
+                </section>
+                <section>
+                    <h3>Up Ahead...</h3>
+                    <ul>
+                        <li>Declaration Interfaces - Blacklist & Whitelist</li>
+                        <MarkCode lang="css" markMapping={{'position: fixed':'error'}}>{`
+                        .gallery::navBtn { 
+                            background: salmon;
+                            %position: fixed%; 
+                        }
+                        `}</MarkCode>
+                        <Fragment>
+                            <li>Dynamicness!</li>
+                        </Fragment>
+                        <Fragment>
+                            <li>Type System</li>
+                        </Fragment>
+                    </ul>
+                    <SpeakerNotes markdown>{`
                     - declaration interface
                         - going back to the gallery, styling the navBtn custom pseudo-element
                         - allow us to style how it looks, restricts changing its positioning
