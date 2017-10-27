@@ -1,22 +1,20 @@
 import * as React from 'react';
 import { SpeakerNotes } from '../reveal-react';
+import { FullScreenTitle } from '../layout/';
 
 export class TypedCSS extends React.Component {
     render() {
         let index = 0;
         return (
             <section>
-                <section className="center">
-                    <h1>Stylesheet<br/>Interface</h1>
-
-                    <SpeakerNotes markdown> 
-                        {`
-                        - possible solution, introducing an interface
-                        - allows describing relations and definitions of inner parts and state
-                        - starting to sound like a type system
-                        `}
-                    </SpeakerNotes>
-                </section>
+                <FullScreenTitle title="target state">
+                    Stylesheet<br/>Interface
+                    <SpeakerNotes markdown>{`
+                    - possible solution, introducing an interface
+                    - allows describing relations and definitions of inner parts and state
+                    - starting to sound like a type system
+                    `}</SpeakerNotes>
+                </FullScreenTitle>
                 <section>
                     <h3>Typed CSS</h3>
                     <ul>

@@ -1,51 +1,52 @@
 import * as React from 'react';
 import { Fragment, MarkCode, SpeakerNotes } from '../reveal-react';
-// import GalleryExample from '../assets/gallery';
+import { FullScreenTitle } from '../layout/';
+
 import { markMap } from '../assets/gallery-syntax-data';
 
 export class ComponentsInCSS extends React.Component {
     render() {
         return (
             <section>
-                    <section>
-                        <h3>Our Shopping List</h3>
-                        <ul>
-                            <li>Modular</li>
-                            <li>Dynamic</li>
-                            <li>Performant</li>
-                            <li>CSS capabilities</li>
-                            <li>External customizations</li>
-                            <li>Tooling</li>
-                        </ul>
-                        <SpeakerNotes markdown>{`
-                            What do we believe we need to write CSS for components:
-                            - break down styles into manageable modules, reflecting project structure
-                            - modify style dynamically 
-                            - fast and performant, with minimal runtime, and caching
-                            - capabilities CSS - selectors, media queries, more 
-                            - style components externally, support multiple 'looks', separate functionality and style
-                            - same tooling the rich ecosystem offers
-                        `}</SpeakerNotes> 
-                    </section>
-                <section className="center">
-                    <h1>CSS<br/>💘<br/>Components</h1>
+                <section>
+                    <h3>Our Shopping List</h3>
+                    <ul>
+                        <li>Modular</li>
+                        <li>Dynamic</li>
+                        <li>Performant</li>
+                        <li>CSS capabilities</li>
+                        <li>External customizations</li>
+                        <li>Tooling</li>
+                    </ul>
                     <SpeakerNotes markdown>{`
-                        - styling components using CSS
-                        - what would it take
+                        What do we believe we need to write CSS for components:
+                        - break down styles into manageable modules, reflecting project structure
+                        - modify style dynamically 
+                        - fast and performant, with minimal runtime, and caching
+                        - capabilities CSS - selectors, media queries, more 
+                        - style components externally, support multiple 'looks', separate functionality and style
+                        - same tooling the rich ecosystem offers
                     `}</SpeakerNotes> 
                 </section>
-                <section className="center">
-                    <h1>Many Ways to Style HTML</h1>
+                <FullScreenTitle title="CSS💘Components">
+                    CSS<br/>💘<br/>Components
                     <SpeakerNotes markdown>{`
-                        - many ways to style an HTML structure using CSS
-                    `}</SpeakerNotes> 
-                </section>
-                <section className="center">
-                    <h1>Target Element</h1>
+                    - styling components using CSS
+                    - what would it take
+                    `}</SpeakerNotes>
+                </FullScreenTitle>
+                <FullScreenTitle title="many ways to style">
+                    Many Ways to Style HTML
+                    <SpeakerNotes markdown>{`
+                    - many ways to style an HTML structure using CSS
+                    `}</SpeakerNotes>
+                </FullScreenTitle>
+                <FullScreenTitle title="target element">
+                    Target Element
                     <SpeakerNotes markdown>{`
                     - targeting a specific element
-                    `}</SpeakerNotes> 
-                </section>
+                    `}</SpeakerNotes>
+                </FullScreenTitle>
                 <section>
                     <h3>Target Element</h3>
                     <MarkCode lang="html">{`
@@ -225,13 +226,13 @@ export class ComponentsInCSS extends React.Component {
                     `}</SpeakerNotes>
                 </section>
 
-                <section className="center">
-                    <h1>Target State</h1>
+                <FullScreenTitle title="target state">
+                    Target State
                     <SpeakerNotes markdown>{`
                     - put the elements aside
                     - talk about targeting state
-                    `}</SpeakerNotes> 
-                </section>
+                    `}</SpeakerNotes>
+                </FullScreenTitle>
                 <section>
                     <h3>Target State</h3>
                     <MarkCode lang="css" markMapping={markMap} unHighlight>{`%.gallery% %.gallery__navBtn% {}`}</MarkCode>

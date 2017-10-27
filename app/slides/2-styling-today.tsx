@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Markdown, SpeakerNotes, MarkCode, Fragment } from '../reveal-react';
-import {FullScreenTitle} from '../layout/';
+import { FullScreenTitle } from '../layout/';
 import { GooglyEye } from '../assets/googly-eye';
 
 export class StylingToday extends React.Component {
@@ -8,12 +8,13 @@ export class StylingToday extends React.Component {
         let index = 0;
         return (
             <section>
-                <section className="center">
-                    <FullScreenTitle>Taking a look at Stylin’</FullScreenTitle>
+                <FullScreenTitle title="how we style">
+                    Taking a look at Stylin’
                     <SpeakerNotes markdown>{`
-                        - Let's take a look at how we style.
-                    `}</SpeakerNotes>       
-                </section>
+                    - Let's take a look at how we style.
+                    `}</SpeakerNotes>
+                </FullScreenTitle>
+
                 <section>
                     <h3>In the Beginning ...</h3>
                     <Fragment>
@@ -92,12 +93,12 @@ export class StylingToday extends React.Component {
                     - Despite all of these features *click*
                     `}</SpeakerNotes> 
                 </section>
-                <section className="center">
-                    <h1>CSS is Easy to Write & Hard to Manage</h1>
+                <FullScreenTitle title="easy write & hard manage">
+                    CSS is Easy to Write & Hard to Manage
                     <SpeakerNotes markdown>{`
                     - make CSS easy to write, it is still hard to manage
                     `}</SpeakerNotes>
-                </section>
+                </FullScreenTitle>
                 <section>
                     <h3>CSS Stylesheets</h3>
                     <ul>
@@ -112,22 +113,23 @@ export class StylingToday extends React.Component {
                     - one stylesheet can affect and conflict with other
                     - multiple stylesheets, order of loading, impacts the cascade
                     - no reasonable dependency system, personally I don't know anyone using it
+                    - separation is misleading
                     - No errors, no validations - hard to predict when something would break
                     `}</SpeakerNotes>
                 </section>
-                <section className="center">
-                    <h1>Enter the Community</h1>
+                <FullScreenTitle title="community">
+                    Enter the Community
                     <SpeakerNotes markdown>{`
                     - CSS is nice and all, but the community wanted more
                     `}</SpeakerNotes>
-                </section>
-                <section className="center">
-                    <h1>Preprocessors</h1>
+                </FullScreenTitle>
+                <FullScreenTitle title="preprocessprs">
+                    Preprocessors
                     <SpeakerNotes markdown>{`
                     - use preprocessors, like LESS and SASS
                     - Added build pipeline for CSS *click*
                     `}</SpeakerNotes>
-                </section>
+                </FullScreenTitle>
                 <section>
                     <h3>Preprocessors</h3>
                     <ul>
@@ -200,12 +202,12 @@ export class StylingToday extends React.Component {
                     - generates and manipulates CSS during run-time   
                     `}</SpeakerNotes> 
                 </section>
-                <section className="center">
-                    <h1>...But There's a Cost!</h1>
+                <FullScreenTitle title="cost!">
+                    ...But There's a Cost!
                     <SpeakerNotes markdown>{`
                     - But as always, there’s a cost 
-                    `}</SpeakerNotes> 
-                </section>
+                    `}</SpeakerNotes>
+                </FullScreenTitle>
                 <section>
                     <h3>The cost of being dynamic</h3>
                     <ul>

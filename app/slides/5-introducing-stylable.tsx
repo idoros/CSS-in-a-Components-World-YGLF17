@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { SpeakerNotes, Fragment, MarkCode } from '../reveal-react';
+import { FullScreenTitle } from '../layout/';
 import { markMap } from '../assets/gallery-syntax-data';
 
 const markMapWithGalleryRoot = {...markMap, '.root':'gallery'};
@@ -299,9 +300,9 @@ export class IntroducingStylable extends React.Component {
                     - ties into this one last thing... *click*
                     `}</SpeakerNotes>
                 </section>
-
-                <section className="center">
-                    <h1>Definitely <span>Typed</span></h1>
+                
+                <FullScreenTitle title="definitly typed">
+                    Definitely Typed
                     <SpeakerNotes markdown>{`
                     - those not familiar with TypeScript, Typescript is a typed superset of Javascript
                     - compiles to plain Javascript
@@ -311,13 +312,13 @@ export class IntroducingStylable extends React.Component {
                     - similar developer experience for non-typed projects
                     - *click*
                     `}</SpeakerNotes>
-                </section>
-                <section className="center">
-                    <h1>Definitely Styled</h1>
+                </FullScreenTitle>
+                <FullScreenTitle title="definitly styled">
+                    Definitely Styled
                     <SpeakerNotes markdown>{`
                     - Definitely Styled, similar opportunity, better styling tools and capabilities, existing component libraries
                     `}</SpeakerNotes>
-                </section>
+                </FullScreenTitle>
 
             </section>
         );

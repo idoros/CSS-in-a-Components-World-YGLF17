@@ -1,22 +1,22 @@
 import * as React from 'react';
 import { Markdown, SpeakerNotes } from '../reveal-react';
-import {FullScreenTitle} from '../layout/';
+import { FullScreenTitle } from '../layout/';
 
 export class Intro extends React.Component {
     render() {
         let index = 0;
         return (
             <section>
-                <section className="center">
-                    <FullScreenTitle>CSS in a Components’ World</FullScreenTitle>                    
-                    <SpeakerNotes>
-                        <Markdown>{`
-                        - Hello...
-                        - Ido Rosenthal
-                        - Welcome to...
-                        `}</Markdown>
-                    </SpeakerNotes>
-                </section>
+
+                <FullScreenTitle title="Intro">
+                    CSS in a Components’ World
+                    <SpeakerNotes markdown>{`
+                    - Hello...
+                    - Ido Rosenthal
+                    - Welcome to...
+                    `}</SpeakerNotes>
+                </FullScreenTitle>
+
                 <section data-background-image="../assets/images/ido.jpg">
                     <h4>About Me</h4>
                     <ul>
