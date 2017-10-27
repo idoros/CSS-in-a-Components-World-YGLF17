@@ -198,7 +198,6 @@ export class IntroducingStylable extends React.Component {
                 </section>
                 <section>
                     <h3>State of Stylable</h3>
-                    <h4>Currently Available Features:</h4>
                     <ul>
                         <li>Pseudo-Elements & Pseudo-Classes</li>
                         <li>Imports</li>
