@@ -3,9 +3,11 @@ import * as RevealJS from 'reveal.js';
 (window as any).Reveal = RevealJS;
 import 'reveal.js/lib/js/head.min';
 
+
 export type RevealCompProps = {
     children:React.ReactNode;
     className?:string;
+    onSlideChange:(event:SlideEvent)=>void;
 };
 
 export default class RevealComp extends React.Component<RevealCompProps> {
@@ -24,7 +26,7 @@ export default class RevealComp extends React.Component<RevealCompProps> {
             </div>
         );
     }
-    componentDidMount(){
+    componentDidMount() {
         // ToDo: move config to props
         RevealJS.initialize({
             history: true,
@@ -41,6 +43,9 @@ export default class RevealComp extends React.Component<RevealCompProps> {
             // Transition speed
             transitionSpeed: 'fast', // default/fast/slow
 
+            // Transition style for full page slide backgrounds
+            backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
+
             // width: "100%",
             // height: "100%",
             // margin: 0,
@@ -54,6 +59,14 @@ export default class RevealComp extends React.Component<RevealCompProps> {
               { src: 'reveal.js/plugin/notes/notes.js', async: true }
             
             ]
-          });          
+          }); 
+          if(this.props.onSlideChange) {
+              RevealJS.addEventListener('slidechanged', this.props.onSlideChange);
+          }   
+    }
+    componentWillUnMount() {
+        if(this.props.onSlideChange) {
+            RevealJS.removeEventListener('slidechanged', this.props.onSlideChange);
+        }
     }
 }
