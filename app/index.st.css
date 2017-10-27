@@ -13,11 +13,18 @@
 /*********************************************
  * REVEAL UI
  *********************************************/
-
-Reveal::controls {
+ 
+ Reveal::controls {
     top:10px;
 }
 
+/*********************************************
+* DEMO
+*********************************************/
+
+.root.demo-modify-controls Reveal::navigateBtn { color:gold; }
+.root.demo-modify-progress Reveal::progress { height:20px; background:red; }
+.root.demo-modify-progress-bar Reveal::progress::bar { background:green; }
 
 /*********************************************
  * CODE HIGHLIGHTING

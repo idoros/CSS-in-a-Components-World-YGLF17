@@ -8,7 +8,8 @@ export class IntroducingStylable extends React.Component {
     render() {
         let index = 0;
         return (
-            <section xdata-background-color="white" x-style={{background:'white', color:'black'}}>
+            <section>
+
                 <section className="center" >
                     <img style={{background:'#FFFFFF'}} src="../assets/stylable-logo-horizontal.svg" alt="Stylable logo"/>
                     <Fragment>
@@ -22,6 +23,7 @@ export class IntroducingStylable extends React.Component {
                     - and we've discussed features we've added/extended, with *members* of the CSS working group
                     `}</SpeakerNotes>
                 </section>
+
                 <section>
                     <h3>Back to the Gallery</h3>
                     <MarkCode lang="css" markMapping={markMap}>{`%.gallery%%:loading%%::navBtn% {}`}</MarkCode>
@@ -271,10 +273,6 @@ export class IntroducingStylable extends React.Component {
                     <SpeakerNotes markdown>{`
                     - Definitely Styled, similar opportunity, better styling tools and capabilities, existing component libraries
                     `}</SpeakerNotes>
-                </section>
-
-                <section className="center">
-                    <pre>[ RevealJS DEMO ]</pre>
                 </section>
 
             </section>

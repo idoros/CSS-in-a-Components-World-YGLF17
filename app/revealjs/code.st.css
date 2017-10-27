@@ -13,6 +13,25 @@
     -st-global: "mark"
 }
 
+.mark[data-name="$$$CARET$$$"] {
+    color:inherit;
+    background: transparent;
+    animation: 1s blink step-end infinite;
+    margin-left: -0.2em;
+}
+.mark[data-name="$$$CARET$$$"]::before {
+    content: "|";
+}
+
+@keyframes blink {
+    from, to {
+      opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+  }
+
 /* 
 bug: https://github.com/wix/stylable/issues/186
 should be: 
