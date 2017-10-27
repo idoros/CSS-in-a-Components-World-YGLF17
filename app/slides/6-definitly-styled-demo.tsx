@@ -74,7 +74,7 @@ Reveal${MarkCode.caret}
 ${filename}
 ${revealImport}
 ${lineSpace}
-Reveal${MarkCode.completions}
+Reveal${MarkCode.caret}${MarkCode.completions}
 `}
                     </MarkCode>
                 </section>
@@ -99,7 +99,7 @@ ${filename}
 ${revealImport}
 ${lineSpace}
 ${controlsStyleRule}
-Reveal${MarkCode.completions}
+Reveal${MarkCode.caret}${MarkCode.completions}
 `}
                     </MarkCode>
                 </section>
@@ -126,7 +126,7 @@ ${revealImport}
 ${lineSpace}
 ${controlsStyleRule}
 ${progressStyleRule}
-Reveal${MarkCode.completions}
+Reveal${MarkCode.caret}${MarkCode.completions}
 `}
                     </MarkCode>
                 </section>
@@ -140,7 +140,7 @@ ${revealImport}
 ${lineSpace}
 ${controlsStyleRule}
 ${progressStyleRule}
-Reveal::progress${MarkCode.completions}
+Reveal::progress${MarkCode.caret}${MarkCode.completions}
 `}
                     </MarkCode>
                 </section>

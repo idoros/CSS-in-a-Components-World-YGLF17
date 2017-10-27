@@ -73,7 +73,7 @@ export class MarkCode extends React.Component<MarkCodeProps> {
             completionsAnchor.style.position = 'relative';
             completionsAnchor.style.display = 'inline-block';
             const options = completions!.map((option, index) => `<div style="${index===completionIndex?'background:#737888':''}">${option}</div>`)
-            completionsAnchor.innerHTML = `<div style="width:240px; background:#505258; position:absolute; top: -1em; color: #d6d9dc;">${options.join('')}</div>`
+            completionsAnchor.innerHTML = `<div style="width:240px; background:#505258; position:absolute; color: #d6d9dc;">${options.join('')}</div>`
         }
     }
 
