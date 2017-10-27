@@ -55,7 +55,7 @@ export class MarkCode extends React.Component<MarkCodeProps> {
                 const isReserved = snip === MarkCode.completions || snip === MarkCode.caret;
                 const name = isReserved ? snip : markMapping![snip];
                 const value = isReserved ? '' : snip;
-                return <mark data-name={name}>{value}</mark>;
+                return <mark data-name={name} key={index}>{value}</mark>;
             }
             return snip;
         });

@@ -253,7 +253,7 @@ Reveal small * {
 * LINKS
 *********************************************/
 Reveal a {
-    color: value(link);
+    color: value(linkColor);
     text-decoration: none;
     transition: color .15s ease; 
 }
@@ -328,5 +328,5 @@ Reveal::progress::bar {
 }
 
 TitleFull::title {
-    font-family: "TitleFont";
+    font-family: "TitleFont", Helvetica, sans-serif;
 }
