@@ -34,6 +34,6 @@ export const markMap = {
     ':hover':'pseudo-class',
     ':focus':'pseudo-class',
     
-    '/* page.st.css */':'filename',
-    '/* gallery.st.css */':'filename',
+    'page.st.css':'filename',
+    'gallery.st.css':'filename',
 };
