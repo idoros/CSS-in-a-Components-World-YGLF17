@@ -199,12 +199,12 @@ export class IntroducingStylable extends React.Component {
                 <section>
                     <h3>State of Stylable</h3>
                     <ul>
-                        <li>Pseudo-Elements & Pseudo-Classes</li>
+                        <li>Pseudo Elements & Classes</li>
                         <li>Imports</li>
                         <li>Mixins</li>
                         <li>Theming</li>
                         <li>
-                            VSCode Extension - completions & validations
+                            VSCode Extension
                         </li>
                         <li>
                             Integration - React, Webpack
