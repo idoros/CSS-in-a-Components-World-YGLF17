@@ -304,7 +304,7 @@ export class IntroducingStylable extends React.Component {
                         <li>Pseudo-Classes with parameters</li>
                         <li>Formatters</li>
                         <li>Declaration Interfaces</li>
-                        <li>Web Components Compatibility - ::part</li>
+                        <li>Web Components Compatibility</li>
                         <Fragment>
                             <li>Integrations</li>
                         </Fragment>
