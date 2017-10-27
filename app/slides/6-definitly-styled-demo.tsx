@@ -99,7 +99,7 @@ Reveal${MarkCode.completions}
                     </MarkCode>
                 </section>
 
-                <section data-custom-class="demo-modify-controls" data-transition="none">
+                <section data-custom-class="demo-modify-controls demo-modify-progress" data-transition="none">
                     <h3>Style Reveal Progress</h3>
                     <MarkCode lang="css" markMapping={markMap}>
 {`
@@ -112,7 +112,7 @@ ${progressStyleRule}
                     </MarkCode>
                 </section>
 
-                <section data-custom-class="demo-modify-controls" data-transition="none">
+                <section data-custom-class="demo-modify-controls demo-modify-progress" data-transition="none">
                     <h3>Style Reveal progress inner bar</h3>
                     <MarkCode lang="css" markMapping={markMap} completions={revealStyleAPI} completionIndex={revealStyleAPI.indexOf('::progress')}>
 {`
