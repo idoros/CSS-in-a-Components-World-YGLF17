@@ -137,7 +137,6 @@ export class IntroducingStylable extends React.Component {
                     - "-st-states" declaration, define custom pseudo-classes
                     - can accept multiple values - e.g. "loading, empty"
                     - this does not set the state value, only exposes possible states to design
-                    - not limited to the root class
                     - how we define the navBtn...
                     `}</SpeakerNotes>
                 </section>
@@ -192,7 +191,7 @@ export class IntroducingStylable extends React.Component {
                     - compatible with CSS 
                     - :import - allowing bringing in definitions from other CSS or JS files 
                     - :extend - indicates a CSS class extends another style definition, with all of its capabilities
-                    - pseudo-selector - allows exposing inner parts and states of our component
+                    - pseudo-elements/classes - allows exposing inner parts and states of our component
                     - basic understanding of how to use Stylable
                     - what is the state of Stylable *click*
                     `}</SpeakerNotes>
@@ -214,7 +213,8 @@ export class IntroducingStylable extends React.Component {
                     </ul>
                     
                     <SpeakerNotes markdown>{`
-                    - battle testing on back office, evaluating integrating to wix sites
+                    - open source, live on github
+                    - battle testing on back office apps, evaluating integrating to wix sites
                     - not yet a full or final implementation, features all of the concepts today
                     - number of features we didn't have time, already implemented
                         - dependency system
@@ -240,16 +240,6 @@ export class IntroducingStylable extends React.Component {
                                 `}</MarkCode>
                             </li>
                         </Fragment>
-                        <Fragment>
-                            <li>
-                                Formatters
-                                <MarkCode lang="css" markMapping={markMapWithGalleryRoot}>{`
-                                .item { 
-                                    color: darker(red); 
-                                }
-                                `}</MarkCode>
-                            </li>
-                        </Fragment>
                     </ul>
                     <SpeakerNotes markdown>{`
                     - what's ahead? there's so much potential...
@@ -263,19 +253,37 @@ export class IntroducingStylable extends React.Component {
                             - allowing us to target a specific element, based on its containment order
                             - we can offer a similar custom capability that would allow us to define and accept custom (not limited to boolean) parameters
                             - allowing us to target our DOM more specifically
-                    - Formatters - custom modifiers for CSS declaration values
+                    `}</SpeakerNotes>
+                </section>
+                <section>
+                    <h3>Up Ahead...</h3>
+                    <ul>
+                        <li>Pseudo-Classes with parameters</li>
+                        <li>
+                            Formatters
+                            <MarkCode lang="css" markMapping={markMapWithGalleryRoot}>{`
+                            .item { 
+                                color: darker(red); 
+                            }
+                            `}</MarkCode>
+                        </li>
+                    </ul>
+                    <SpeakerNotes markdown>{`
+                    - Formatters - custom functions for your declaration values
                         - give you the ability to have custom value functions for your rules
                         - example
                             - if we want to change a specific shade of color to a darker one, we can use
-                            - color: darken(red)
+                            - darken(red)
                             - these features exist in other solutions as well, and we'd like to be compatible to them
                     `}</SpeakerNotes>
                 </section>
                 <section>
                     <h3>Up Ahead...</h3>
                     <ul>
+                        <li>Pseudo-Classes with parameters</li>
+                        <li>Formatters</li>
                         <li>
-                            Declaration Interfaces - Blacklist & Whitelist
+                            Declaration Interfaces
                             <MarkCode lang="css" markMapping={{'position: fixed':'error'}}>{`
                             .gallery::navBtn { 
                                 background: salmon;
@@ -283,9 +291,20 @@ export class IntroducingStylable extends React.Component {
                             }
                             `}</MarkCode>
                         </li>
-                        <Fragment>
-                            <li>Dynamicness!</li>
-                        </Fragment>
+                    </ul>
+                    <SpeakerNotes markdown>{`
+                    - declaration interface - black/white list
+                        - going back to the gallery, styling the navBtn custom pseudo-element
+                        - allow us to style how it looks, restricts changing its positioning
+                    `}</SpeakerNotes>
+                </section>
+                <section>
+                    <h3>Up Ahead...</h3>
+                    <ul>
+                        <li>Pseudo-Classes with parameters</li>
+                        <li>Formatters</li>
+                        <li>Declaration Interfaces</li>
+                        <li>Web Components Compatibility - ::part</li>
                         <Fragment>
                             <li>Integrations</li>
                         </Fragment>
@@ -294,11 +313,9 @@ export class IntroducingStylable extends React.Component {
                         </Fragment>
                     </ul>
                     <SpeakerNotes markdown>{`
-                    - declaration interface
-                        - going back to the gallery, styling the navBtn custom pseudo-element
-                        - allow us to style how it looks, restricts changing its positioning
-                    - Dynamicness - want it, know how, currently working on it. To be available soon *TALK WITH BARAK & NADAV IF SOON IS TRUE*
-                    - more integrations
+                    - currently, web components have no way of styling through CSS
+                    - a draft for ::part exists, and should it be implemented, we could support it
+                    - more integrations, IDEs, build tools
                     - Type System
                         - starting to see our styling system as a type system
                         - and there are many things we can borrow from that domain
@@ -311,7 +328,7 @@ export class IntroducingStylable extends React.Component {
                     <SpeakerNotes markdown>{`
                     - those not familiar with TypeScript, Typescript is a typed superset of Javascript
                     - compiles to plain Javascript
-                    - uses static analysis => completion, validation, highlighting => developer experience
+                    - static analysis => completion, validation, highlighting => developer experience
                     - Typescript community maintains  “DefinitelyTyped”
                     - type interfaces for any non-typed project
                     - similar developer experience for non-typed projects

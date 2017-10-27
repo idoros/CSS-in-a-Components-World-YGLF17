@@ -9,7 +9,7 @@ import titleFullCSS from './title-full.st.css';
 
 interface TitleFullProps extends properties.Props {
     children: React.ReactNode;
-    title: string;
+    title?: string;
 }
 
 function isReactNode(node:any):node is React.ReactElement<any> {

@@ -9,23 +9,26 @@ export class ComponentsInCSS extends React.Component {
         return (
             <section>
                 <section>
-                    <h3>Our Shopping List</h3>
+                    <h3>Shopping List</h3>
                     <ul>
                         <li>Modular</li>
                         <li>Dynamic</li>
                         <li>Performant</li>
                         <li>CSS capabilities</li>
                         <li>Tooling</li>
-                        <li>External customizations</li>
+                        <li>Customization</li>
                     </ul>
                     <SpeakerNotes markdown>{`
-                        What do we believe we need to write CSS for components:
-                        - break down styles into manageable modules, reflecting project structure
-                        - modify style dynamically 
-                        - fast and performant, with minimal runtime, and caching
-                        - capabilities CSS - selectors, media queries, more 
-                        - same tooling the rich ecosystem offers
-                        - style components externally, support multiple 'looks', separate functionality and style
+                    *DRINK*  
+
+                    What do we believe we need to write CSS for components:
+                    - break down styles into manageable modules, reflecting project structure
+                    - modify style dynamically 
+                    - fast and performant, with minimal runtime, and caching
+                    - capabilities CSS - selectors, media queries, more 
+                    - the same tooling that the rich ecosystem offers
+                    - style components externally, separate functionality and style, support multiple 'looks',
+                    - increasing re-usability
                     `}</SpeakerNotes> 
                 </section>
                 <FullScreenTitle title="CSS💘Components">
@@ -35,7 +38,7 @@ export class ComponentsInCSS extends React.Component {
                     - what would it take
                     `}</SpeakerNotes>
                 </FullScreenTitle>
-                <FullScreenTitle title="many ways to style">
+                <FullScreenTitle>
                     Many Ways to Style HTML
                     <SpeakerNotes markdown>{`
                     - many ways to style an HTML structure using CSS
@@ -241,7 +244,6 @@ export class ComponentsInCSS extends React.Component {
                         <div class="%gallery__navBtn%">...</div>
                     </div>
                     `}</MarkCode>
-                    <pre>Hide navBtn while the gallery is loading</pre>
                     <SpeakerNotes markdown>{`
                     - focus only on the gallery and the navBtn
                     - hide our navBtn while our gallery is loading

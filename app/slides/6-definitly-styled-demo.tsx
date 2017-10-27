@@ -37,11 +37,14 @@ export class DefinitlyStyledDemo extends React.Component {
             <section>
 
                 <section className="center">
-                    <h1>[ Reveal JS DEMO ]</h1>
+                    <h1>[ Built-In Demo ]</h1>
                     <SpeakerNotes markdown>{`
-                        - this presentation uses RevealJS
-                        - open source presentation framework based
-                        - added stylable style interface
+                    - Not wanting to anger the demo gods, we've embbed our demo into our presentation
+                    - this presentation uses RevealJS
+                    - open source presentation framework based
+                    - created stylable style interface
+                    - and the modifications you see are the real deal in stylable CSS 
+                    - not a mocked design
                     `}</SpeakerNotes>
                 </section>
 
@@ -53,8 +56,10 @@ ${filename}
 ${revealImport}
 `}
                     </MarkCode>
+                    <SpeakerNotes markdown>{`
+                    - import reveal stylable interface to main stylesheet
+                    `}</SpeakerNotes>
                 </section>
-
                 <section data-transition="none">
                     <h3>Target Reveal as Element</h3>
                     <MarkCode lang="css" markMapping={markMap}>
@@ -65,6 +70,11 @@ ${lineSpace}
 Reveal${MarkCode.caret}
 `}
                     </MarkCode>
+                    <SpeakerNotes markdown>{`
+                    - Similar to what we've seen before,
+                    - This time, target our import as a Tag, similar to native tag selector
+                    - instead of extending 
+                    `}</SpeakerNotes>
                 </section>
 
                 <section data-transition="none">
@@ -77,6 +87,11 @@ ${lineSpace}
 Reveal${MarkCode.caret}${MarkCode.completions}
 `}
                     </MarkCode>
+                    <SpeakerNotes markdown>{`
+                    - Now we get code completions
+                    - In the top right corner, you can see our blue navigateBtn arrows
+                    - let's color them gold
+                    `}</SpeakerNotes>
                 </section>
 
                 <section data-custom-class="demo-modify-controls" data-transition="none">
@@ -89,6 +104,9 @@ ${lineSpace}
 ${controlsStyleRule}
 `}
                     </MarkCode>
+                    <SpeakerNotes markdown>{`
+                    - *DRINK*
+                    `}</SpeakerNotes>
                 </section>
 
                 <section data-custom-class="demo-modify-controls" data-transition="none">
@@ -102,6 +120,10 @@ ${controlsStyleRule}
 Reveal${MarkCode.caret}${MarkCode.completions}
 `}
                     </MarkCode>
+                    <SpeakerNotes markdown>{`
+                    - If you look at the bottom of the screen, you can see reveal's progress bar 
+                    - Let's style that
+                    `}</SpeakerNotes>
                 </section>
 
                 <section data-custom-class="demo-modify-controls demo-modify-progress" data-transition="none">
@@ -115,10 +137,15 @@ ${controlsStyleRule}
 ${progressStyleRule}
 `}
                     </MarkCode>
+                    <SpeakerNotes markdown>{`
+                    - Increased it's height to make it more noticable,
+                    - colored it red
+                    - we're towards the end of the presentation, so our remaining progress bar is small
+                    `}</SpeakerNotes>
                 </section>
 
                 <section data-custom-class="demo-modify-controls demo-modify-progress" data-transition="none">
-                    <h3>Style Reveal progress inner bar</h3>
+                    <h3>Style Reveal Progress Inner Bar</h3>
                     <MarkCode lang="css" markMapping={markMap} completions={revealStyleAPI} completionIndex={revealStyleAPI.indexOf('::progress')}>
 {`
 ${filename}
@@ -129,10 +156,13 @@ ${progressStyleRule}
 Reveal${MarkCode.caret}${MarkCode.completions}
 `}
                     </MarkCode>
+                    <SpeakerNotes markdown>{`
+                    - Now let's style its passed slides progress bar
+                    `}</SpeakerNotes>
                 </section>
 
                 <section data-custom-class="demo-modify-controls demo-modify-progress" data-transition="none">
-                    <h3>Style Reveal progress inner bar</h3>
+                    <h3>Style Reveal Progress Inner Bar</h3>
                     <MarkCode lang="css" markMapping={markMap} completions={revealProgressStyleAPI} completionIndex={revealProgressStyleAPI.indexOf('::bar')}>
 {`
 ${filename}
@@ -143,6 +173,9 @@ ${progressStyleRule}
 Reveal::progress${MarkCode.caret}${MarkCode.completions}
 `}
                     </MarkCode>
+                    <SpeakerNotes markdown>{`
+                    - So again we target the progress part, but this time, going deeper into the bar element
+                    `}</SpeakerNotes>
                 </section>
 
                 <section data-custom-class="demo-modify-controls demo-modify-progress  demo-modify-progress-bar" data-transition="none">
@@ -157,8 +190,10 @@ ${progressStyleRule}
 ${progressBarStyleRule}
 `}
                     </MarkCode>
+                    <SpeakerNotes markdown>{`
+                    - and now, we can color that part specifically
+                    `}</SpeakerNotes>
                 </section>
-
             </section>
         );
     }

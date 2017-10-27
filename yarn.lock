@@ -12,6 +12,10 @@
   version "15.6.5"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-15.6.5.tgz#fb23b8d8b7226313b645b6e84fb178976bbfe587"
 
+"@types/reveal@^3.3.33":
+  version "3.3.33"
+  resolved "https://registry.yarnpkg.com/@types/reveal/-/reveal-3.3.33.tgz#e5448f6b4e6734ec3ea4ee85211bb9313a879044"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"

@@ -120,7 +120,8 @@ export class StylingToday extends React.Component {
                 <FullScreenTitle title="community">
                     Enter the Community
                     <SpeakerNotes markdown>{`
-                    - CSS is nice and all, but the community wanted more
+                    - community wanted more
+                    - so they built
                     `}</SpeakerNotes>
                 </FullScreenTitle>
                 <FullScreenTitle title="preprocessprs">
@@ -166,11 +167,11 @@ export class StylingToday extends React.Component {
                     </Fragment>
                     <SpeakerNotes markdown>{`
                     - surge of solutions, based on CSS-in-JS
-                    - 1 in 5 chance you’ve written a CSS-in-JS
+                    - frontend developer, 1 in 5 chance you’ve written a CSS-in-JS
                     - *click*
                     - CSS-in-JS has always been around 
                     - at Wix we’ve been generating CSS from JS since 2010
-                    - adoption of React and JSX, interest in this concept
+                    - adoption of React and JSX, reignited the interest in this concept
                     - CSS-in-JS is not a spec, not a single solution *click*
                     `}</SpeakerNotes> 
                 </section>
@@ -182,7 +183,7 @@ export class StylingToday extends React.Component {
                         <li>... but the big thing is ...</li>
                     </ul>
                     <SpeakerNotes markdown>{`
-                    common solutions solve:
+                    most solutions solve:
                     - ordering and namespacing of CSS
                     - big thing is... *click*
                     `}</SpeakerNotes> 
