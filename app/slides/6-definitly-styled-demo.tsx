@@ -39,10 +39,11 @@ export class DefinitlyStyledDemo extends React.Component {
                 <section className="center">
                     <h1>[ Built-In Demo ]</h1>
                     <SpeakerNotes markdown>{`
-                    - Not wanting to anger the demo gods, we've embbed our demo into our presentation
+                    - I don't believe in any demo gods, but I trust Murphy... 
+                    - so, I've embbed the demo into the presentation
                     - this presentation uses RevealJS
                     - open source presentation framework based
-                    - created stylable style interface
+                    - created stylable interface for RevealJS
                     - and the modifications you see are the real deal in stylable CSS 
                     - not a mocked design
                     `}</SpeakerNotes>
@@ -57,6 +58,7 @@ ${revealImport}
 `}
                     </MarkCode>
                     <SpeakerNotes markdown>{`
+                    - Similar to what we've seen before
                     - import reveal stylable interface to main stylesheet
                     `}</SpeakerNotes>
                 </section>
@@ -71,9 +73,8 @@ Reveal${MarkCode.caret}
 `}
                     </MarkCode>
                     <SpeakerNotes markdown>{`
-                    - Similar to what we've seen before,
-                    - This time, target our import as a Tag, similar to native tag selector
-                    - instead of extending 
+                    - This time, instead of extending 
+                    - target our import as a Tag, similar to native tag selector
                     `}</SpeakerNotes>
                 </section>
 
@@ -157,7 +158,7 @@ Reveal${MarkCode.caret}${MarkCode.completions}
 `}
                     </MarkCode>
                     <SpeakerNotes markdown>{`
-                    - Now let's style its passed slides progress bar
+                    - Now let's style the internal part that indicate how much has already passed
                     `}</SpeakerNotes>
                 </section>
 
@@ -174,7 +175,9 @@ Reveal::progress${MarkCode.caret}${MarkCode.completions}
 `}
                     </MarkCode>
                     <SpeakerNotes markdown>{`
-                    - So again we target the progress part, but this time, going deeper into the bar element
+                    - again we target the progress part
+                    - but this time, going deeper
+                    - chaining custom pseudo-elements together
                     `}</SpeakerNotes>
                 </section>
 
@@ -192,6 +195,7 @@ ${progressBarStyleRule}
                     </MarkCode>
                     <SpeakerNotes markdown>{`
                     - and now, we can color that part specifically
+                    - my interface - could be broken down differently
                     `}</SpeakerNotes>
                 </section>
             </section>

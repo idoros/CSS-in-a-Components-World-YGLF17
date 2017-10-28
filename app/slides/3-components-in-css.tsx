@@ -98,7 +98,6 @@ export class ComponentsInCSS extends React.Component {
                     <SpeakerNotes markdown>{`
                     - not unique to our navBtn
                     - *pause*
-                    - just not that simple
                     `}</SpeakerNotes>
                 </section>
                 <section>
