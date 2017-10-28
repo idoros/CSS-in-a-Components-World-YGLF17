@@ -45,10 +45,10 @@ for example - Reveal::code::mark:name('icon')
 
 .customMark { background-color:transparent; }
 Reveal::code::mark[data-name="error"] { -st-mixin:customMark; text-decoration: wavy underline red; color:inherit; }
-Reveal::code::mark[data-name="icon"] { -st-mixin:customMark; color:#a4c1f4; }
-Reveal::code::mark[data-name="navBtn"] { -st-mixin:customMark; color:#b6d7a8; }
-Reveal::code::mark[data-name="gallery"] { -st-mixin:customMark; color:#ea9899; }
-Reveal::code::mark[data-name="loading"] { -st-mixin:customMark; color:#EA98EA; font-style: italic; }
+Reveal::code::mark[data-name="icon"] { -st-mixin:customMark; color:rgb(91, 192, 235); }
+Reveal::code::mark[data-name="navBtn"] { -st-mixin:customMark; color:rgb(250, 121, 33); }
+Reveal::code::mark[data-name="gallery"] { -st-mixin:customMark; color:rgb(173, 207, 96); }
+Reveal::code::mark[data-name="loading"] { -st-mixin:customMark; color:rgb(253, 231, 76); font-style: italic; }
 Reveal::code::mark[data-name="pseudo-element"] { -st-mixin:customMark; color:white; }
 Reveal::code::mark[data-name="pseudo-class"] { -st-mixin:customMark; color:white; font-style: italic; }
 Reveal::code::mark[data-name="filename"] {

@@ -12,13 +12,15 @@ export class IntroducingStylable extends React.Component {
             <section>
 
                 <section className="center" >
-                    <img style={{background:'#FFFFFF'}} src="../assets/stylable-logo-horizontal.svg" alt="Stylable logo"/>
-                    <Fragment>
-                            Stylable is a CSS preprocessor for styling components with typed CSS
-                    </Fragment>
+                    <img style={{background:'#FFFFFF', width: '70%'}} src="../assets/stylable-logo-horizontal.svg" alt="Stylable logo"/>
+                    <SpeakerNotes markdown>{`
+                    - Typed CSS Implementation 
+                    `}</SpeakerNotes>
+                </section>
+                <section className="center" >
+                    <h2>CSS Preprocessor <span style={{color: 'rgb(163, 150, 253)'}}>for</span> Styling Components <span style={{color: 'rgb(163, 150, 253)'}}>with</span> Typed CSS</h2>
                     <SpeakerNotes markdown>{`
                     - Stylable is a CSS preprocessor for styling components with typed CSS
-                    - Typed CSS Implementation 
                     - A result of multiple PoCs, revolving around styling components
                     - Sticks to the spirit of CSS
                     - and we've discussed features we've added/extended, with *members* of the CSS working group
@@ -241,7 +243,7 @@ export class IntroducingStylable extends React.Component {
                         </Fragment>
                     </ul>
                     <SpeakerNotes markdown>{`
-                    - what's ahead?
+                    - what's ahead? there's so much potential...
                     - Some features for developers consuming UI libraries
                     - Others for the developers who make them
                     - Custom pseudo-classes with parameters
@@ -250,7 +252,8 @@ export class IntroducingStylable extends React.Component {
                         - example
                             - in native CSS we can utilize :nth-child(number), 
                             - allowing us to target a specific element, based on its containment order
-                            - we can offer a similar custom capability, allowing us to target our DOM more specifically, not just boolean
+                            - we can offer a similar custom capability that would allow us to define and accept custom (not limited to boolean) parameters
+                            - allowing us to target our DOM more specifically
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -267,12 +270,12 @@ export class IntroducingStylable extends React.Component {
                         </li>
                     </ul>
                     <SpeakerNotes markdown>{`
-                    - Formatters
-                        - give you the ability to have custom functions for your CSS declarations
+                    - Formatters - custom functions for your declaration values
+                        - give you the ability to have custom value functions for your rules
                         - example
-                            - if we want to change a specific shade of color to a darker one
-                        - these feature exist in other solutions as well, and we'd like to be compatible to them
-                        - allow you to add your own
+                            - if we want to change a specific shade of color to a darker one, we can use
+                            - darken(red)
+                            - these features exist in other solutions as well, and we'd like to be compatible to them
                     `}</SpeakerNotes>
                 </section>
                 <section>
@@ -292,7 +295,7 @@ export class IntroducingStylable extends React.Component {
                     </ul>
                     <SpeakerNotes markdown>{`
                     - declaration interface - black/white list
-                        - going back to the gallery, access to navBtn custom pseudo-element
+                        - going back to the gallery, styling the navBtn custom pseudo-element
                         - allow us to style how it looks, restricts changing its positioning
                     `}</SpeakerNotes>
                 </section>
@@ -303,18 +306,13 @@ export class IntroducingStylable extends React.Component {
                         <li>Formatters</li>
                         <li>Declaration Interfaces</li>
                         <li>Web Components Compatibility</li>
-                        <Fragment>
-                            <li>Integrations</li>
-                        </Fragment>
-                        <Fragment>
-                            <li>Type System</li>
-                        </Fragment>
+                        <Fragment tagName="li">Integrations</Fragment>
+                        <Fragment tagName="li">Type System</Fragment>
                     </ul>
                     <SpeakerNotes markdown>{`
                     - currently, web components have no way of styling through CSS
-                    - several depracated specs 
-                    - the latest draft is for ::part, and should it be implemented, we could support it
-                    - more integrations, IDEs, build tools & libs
+                    - a draft for ::part exists, and should it be implemented, we could support it
+                    - more integrations, IDEs, build tools
                     - Type System
                         - starting to see our styling system as a type system
                         - and there are many things we can borrow from that domain
@@ -330,7 +328,7 @@ export class IntroducingStylable extends React.Component {
                     - static analysis => completion, validation, highlighting => developer experience
                     - Typescript community maintains  “DefinitelyTyped”
                     - type interfaces for any non-typed project
-                    - similar developer experience when using non-typed projects
+                    - similar developer experience for non-typed projects
                     - *click*
                     `}</SpeakerNotes>
                 </FullScreenTitle>

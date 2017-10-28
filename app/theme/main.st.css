@@ -14,12 +14,20 @@
     font-family: 'TitleFont';
 }
 
-:vars {
-    color1:#273A61;
-    color2:#BCEFFA;
+/* 
+$color1: rgba(1, 22, 39, 1);
+$color2: rgba(253, 255, 252, 1);
+$color3: rgba(46, 196, 182, 1);
+$color4: rgba(231, 29, 54, 1);
+$color5: rgba(255, 159, 28, 1); */
 
-    color3:#42affa;
-    color4:#bee4fd;
+:vars {
+    color1:rgba(1, 22, 39, 1);
+    color2:rgba(253, 255, 252, 1);
+
+    color3:rgb(42, 179, 166);
+    color4:rgb(163, 150, 253);
+    color5:rgba(255, 159, 28, 1);
     
     bgColor: value(color1);
     textColor: value(color2);
@@ -29,6 +37,7 @@
     mediaBorderColor:value(color2);
     mediaBorderHoverColor:value(color3);
     progressColor: value(color3);
+    progressBackgroundColor: value(color5);
 }
 
 /*********************************************
@@ -66,9 +75,16 @@ Reveal :global(::selection) {
    text-shadow: none;
    word-wrap: break-word; 
 }
-Reveal h1 { font-size: 2.5em; text-shadow: none; }
+Reveal h1 { 
+    font-size: 2.5em; 
+    text-shadow: none; 
+    color: value(color2);
+}
 Reveal h2 { font-size: 1.6em; }
-Reveal h3 { font-size: 1.3em; }
+Reveal h3 { 
+    font-size: 1.3em; 
+    color: value(color4)
+}
 Reveal h4 { font-size: 1em; }
 
 /*********************************************
@@ -101,7 +117,7 @@ Reveal dl,
 Reveal ul {
     display: inline-block;
     text-align: left;
-    margin: 0 0 0 1em; 
+    /* margin: 0 0 0 1em;  */
 }
 
 Reveal ol {
@@ -109,7 +125,9 @@ Reveal ol {
 }
 
 Reveal ul {
-    list-style-type: disc; 
+    list-style-type: square;
+    width: 100%;
+    margin-top: 10px; 
 }
 
 Reveal ul ul {
@@ -131,6 +149,11 @@ Reveal ol ul {
 
 Reveal ul li {
     margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+Reveal ul li:last-child {
+    margin-bottom: 0px;
     margin-left: 30px;
 }
 
@@ -309,7 +332,6 @@ Reveal::navigateBtn:hover {
 *********************************************/
 Reveal::progress {
     height:5px;
-    background: rgba(0, 0, 0, 0.2);
 }
 Reveal::progress::bar {
     background: value(progressColor);

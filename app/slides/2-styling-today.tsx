@@ -65,7 +65,6 @@ export class StylingToday extends React.Component {
                         <li>Pseudo Classes (:hover)</li>
                         <li>Pseudo Elements (::before)</li>
                         <li>Media Queries</li>
-                        ...
                     </ul>
                     <SpeakerNotes markdown>{`
                     CSS Stylesheets:

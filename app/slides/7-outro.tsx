@@ -7,7 +7,7 @@ export class Outro extends React.Component {
         return (
             <section>
                 <section>
-                    <h3>Thank You For Listening</h3>
+                    <h3>Thank You for Listening</h3>
                     <ul>
                         <li>Stylable Docs - Stylable.io</li>
                         <li>github.com/wix/stylable</li>

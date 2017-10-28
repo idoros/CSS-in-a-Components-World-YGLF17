@@ -18,13 +18,11 @@ export class Intro extends React.Component {
                 </FullScreenTitle>
 
                 <section data-background-image="../assets/images/ido.jpg">
-                    <h4>About Me</h4>
-                    <ul>
+                    <ul style={{backgroundColor: 'rgba(0,0,0,0.5)', padding: '25px'}}>
                         <li>Frontend Developer since 2001</li>
                         <li>Joined Wix in 2010</li>
                         <li>Lead the move from Flash to HTML at Wix</li>
                         <li>Developer tools, layout and styling</li>
-                        <li>Father to a 1.5 Year Old</li>
                     </ul>
                     <SpeakerNotes>
                         <Markdown>{`
@@ -36,7 +34,7 @@ export class Intro extends React.Component {
                     </SpeakerNotes>
                 </section>
                 <section>
-                    <h4>CSS in a Components’ World</h4> 
+                    <h3>CSS in a Components’ World</h3> 
                     <ul>
                         <li>Styling solutions</li>
                         <li>What’s missing</li>
