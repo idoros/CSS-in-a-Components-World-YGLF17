@@ -302,9 +302,11 @@ Reveal section img {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); 
 }
 
-Reveal section img.plain {
+Reveal section img:global(.plain) {
     border: 0;
     box-shadow: none; 
+    background: transparent;
+    margin: 0;
 }
 
 Reveal a img {
