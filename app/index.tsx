@@ -10,7 +10,7 @@ import { IntroducingStylable } from './slides/5-introducing-stylable';
 import { DefinitlyStyledDemo } from './slides/6-definitly-styled-demo';
 import { Outro } from './slides/7-outro';
 
-import {stylable} from 'wix-react-tools/dist/src/react-component-features/stylable-feature';
+import {stylable} from 'wix-react-tools';
 
 import presentationCSS from './index.st.css';
 

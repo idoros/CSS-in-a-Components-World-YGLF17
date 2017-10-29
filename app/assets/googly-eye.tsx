@@ -1,8 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import {stylable} from 'wix-react-tools/dist/src/react-component-features/stylable-feature';
-import {properties} from 'wix-react-tools/dist/src/react-component-features/properties-feature';
+import {stylable, properties} from 'wix-react-tools';
 
 import googlyEyeCSS from './googly-eye.st.css';
 

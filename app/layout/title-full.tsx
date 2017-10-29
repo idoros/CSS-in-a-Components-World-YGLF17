@@ -2,8 +2,7 @@ import * as React from 'react';
 import { SpeakerNotes } from '../reveal-react';
 import * as deindent from 'deindent';
 
-import {stylable} from 'wix-react-tools/dist/src/react-component-features/stylable-feature';
-import {properties} from 'wix-react-tools/dist/src/react-component-features/properties-feature';
+import {stylable, properties} from 'wix-react-tools';
 
 import titleFullCSS from './title-full.st.css';
 
