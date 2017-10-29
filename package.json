@@ -5,39 +5,41 @@
   "description": "",
   "main": "index.js",
   "author": "Ido Rosenthal",
-  "license": "UNLICENSED",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack -p --display-modules --progress --colors",
+    "start": "webpack-dev-server --hot",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d public"
+  },
+  "dependencies": {
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
+    "reveal.js": "^3.3.0",
+    "stylable": "^4.0.26",
+    "wix-react-tools": "^3.1.1"
+  },
   "devDependencies": {
+    "@types/react": "^15.0.0",
+    "@types/react-dom": "^15.0.0",
+    "@types/reveal": "^3.3.33",
+    "copy-webpack-plugin": "^4.1.1",
     "css-loader": "^0.23.1",
     "deindent": "^0.1.0",
     "file-loader": "^0.9.0",
-    "html-loader": "^0.4.3",
+    "gh-pages": "^1.0.0",
+    "html-webpack-plugin": "^2.30.1",
     "path": "^0.12.7",
     "raw-loader": "^0.5.1",
     "stylable-integration": "^5.1.7",
     "style-loader": "^0.13.0",
     "ts-loader": "^2.3.7",
     "typescript": "^2.5.3",
-    "url-loader": "^0.5.5"
-  },
-  "dependencies": {
-    "@types/react": "^15.0.0",
-    "@types/react-dom": "^15.0.0",
-    "@types/reveal": "^3.3.33",
-    "copy-webpack-plugin": "^4.1.1",
-    "lodash": "^4.13.1",
-    "react": "^15.5.0",
-    "react-dom": "^15.6.1",
-    "reveal.js": "^3.3.0",
-    "stylable": "^4.0.26",
+    "url-loader": "^0.5.5",
     "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.1",
-    "wix-react-tools": "^3.1.1"
+    "webpack-dev-server": "^2.9.1"
   },
   "engines": {
-    "node": ">=5.0"
-  },
-  "scripts": {
-    "serve": "webpack-dev-server --hot",
-    "build": "webpack -p --display-modules --progress --colors"
+    "node": ">=6.0"
   }
 }

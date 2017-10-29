@@ -2,6 +2,7 @@ var path = require('path');
 
 const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const StylablePlugin = require('stylable-integration/webpack-plugin');
 const stylableOptions = { injectBundleCss: true, nsDelimiter:'--' };
@@ -14,7 +15,7 @@ module.exports = {
     presentation: './index.tsx'
   },
   output: {
-    path: path.join(__dirname, "dist"),
+    path: path.join(__dirname, "public"),
     publicPath: "/",
     filename: "[name].js"
   },
@@ -26,10 +27,17 @@ module.exports = {
       {
         test: /\.tsx?$/,
         loader: 'ts-loader',
+      },
+      {
+        test: /\.js$/,
+        include: [
+            path.join(__dirname, 'node_modules', 'deindent')
+        ],
+        loader: 'ts-loader',
         options: {
-          compilerOptions: {
-              "declaration": false
-          }
+            // needed so it has a separate transpilation instance
+            instance: 'lib-compat',
+            transpileOnly: true
         }
       },
       {
@@ -62,20 +70,12 @@ module.exports = {
         loader: "url-loader?limit=10000&mimetype=image/svg+xml"
       },
       {
-        test: /\.html$/,
-        loader: 'html-loader'
-      },
-      {
         test: /\.jpg$/,
         loader: "file-loader"
       },
       {
         test: /\.png$/,
         loader: "url-loader?mimetype=image/png"
-      },
-      {
-        test: /index\.html/,
-        loader: "file-loader?name=[name].[ext]"
       }
     ]
   },
@@ -84,6 +84,22 @@ module.exports = {
     new StylablePlugin(stylableOptions),
     // use for development time hot-swap of only modified modules that the webpack client will load up
     new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: path.join(__dirname, 'app', 'index.html'),
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        keepClosingSlash: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true,
+      },
+    }),
     new CopyWebpackPlugin([
       { from: path.join(__dirname, 'node_modules/reveal.js/css'), to:'reveal.js/css' },
       { from: path.join(__dirname, 'node_modules/reveal.js/lib'), to:'reveal.js/lib' },
