@@ -472,9 +472,11 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); 
 }
 
-.main1801270504--root .reveal section img.main1801270504--plain {
+.main1801270504--root .reveal section img.plain {
     border: 0;
     box-shadow: none; 
+    background: transparent;
+    margin: 0;
 }
 
 .main1801270504--root .reveal a img {
