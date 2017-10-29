@@ -195,7 +195,7 @@ pre should be part of Code somehow and allow language selection: Code:lang("css"
  * PROGRESS BAR
  *********************************************/
 @font-face {
-    src: url('/c2356fc49835b1870dcc5b07799b4920.ttf');
+    src: url('./c2356fc49835b1870dcc5b07799b4920.ttf');
     font-family: 'DejaVu Sans Mono';
 }
 @font-face {
