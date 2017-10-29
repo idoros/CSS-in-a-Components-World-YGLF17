@@ -2,6 +2,7 @@ import * as React from 'react';
 import { SpeakerNotes, Fragment, MarkCode } from '../reveal-react';
 import { FullScreenTitle } from '../layout/';
 import { markMap } from '../assets/gallery-syntax-data';
+import stylableLogo = require('../assets/stylable-logo-horizontal.svg');
 
 const markMapWithGalleryRoot = {...markMap, '.root':'gallery'};
 
@@ -12,7 +13,7 @@ export class IntroducingStylable extends React.Component {
             <section>
 
                 <section className="center" >
-                    <img style={{background:'#FFFFFF', width: '70%'}} src="../assets/stylable-logo-horizontal.svg" alt="Stylable logo"/>
+                    <img style={{background:'#FFFFFF', width: '70%'}} src={stylableLogo} alt="Stylable logo"/>
                     <SpeakerNotes markdown>{`
                     - Typed CSS Implementation 
                     `}</SpeakerNotes>

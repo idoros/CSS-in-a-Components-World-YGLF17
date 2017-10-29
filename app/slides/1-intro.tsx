@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Markdown, SpeakerNotes } from '../reveal-react';
 import { FullScreenTitle } from '../layout/';
+import me = require('../assets/images/ido.jpg');
 
 export class Intro extends React.Component {
     render() {
@@ -17,7 +18,7 @@ export class Intro extends React.Component {
                     `}</SpeakerNotes>
                 </FullScreenTitle>
 
-                <section data-background-image="../assets/images/ido.jpg">
+                <section data-background-image={me}>
                     <ul style={{backgroundColor: 'rgba(0,0,0,0.5)', padding: '25px'}}>
                         <li>Frontend Developer since 2001</li>
                         <li>Joined Wix in 2010</li>
