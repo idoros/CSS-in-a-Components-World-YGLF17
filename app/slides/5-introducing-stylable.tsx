@@ -149,7 +149,7 @@ export class IntroducingStylable extends React.Component {
                     <MarkCode lang="css" markMapping={markMapWithGalleryRoot}>{`
                     %gallery.st.css%
                     %.root% {
-                        -st-states: loading;
+                        -st-states: %loading%, empty;
                     }
                     %.navBtn% {}
                     `}</MarkCode>
@@ -168,7 +168,7 @@ export class IntroducingStylable extends React.Component {
                         -st-default: IconButton;
                     }
                     %.root% {
-                        -st-states: loading;
+                        -st-states: %loading%, empty;
                     }
                     %.navBtn% {
                         -st-extends: IconButton;
