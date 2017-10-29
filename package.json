@@ -9,7 +9,7 @@
   "scripts": {
     "build": "webpack -p --display-modules --progress --colors",
     "start": "webpack-dev-server --hot",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build -- --output-public-path ./",
     "deploy": "gh-pages -d public"
   },
   "dependencies": {
