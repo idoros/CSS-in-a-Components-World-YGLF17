@@ -3,6 +3,7 @@ import { SpeakerNotes, Fragment, MarkCode } from '../reveal-react';
 import { FullScreenTitle } from '../layout/';
 import { markMap } from '../assets/gallery-syntax-data';
 import stylableLogo = require('../assets/stylable-logo-horizontal.svg');
+import frames = require('../assets/images/frames.jpg');
 
 const markMapWithGalleryRoot = {...markMap, '.root':'gallery'};
 
@@ -13,7 +14,7 @@ export class IntroducingStylable extends React.Component {
             <section>
 
                 <section className="center" >
-                    <img style={{background:'#FFFFFF', width: '70%'}} src={stylableLogo} alt="Stylable logo"/>
+                    <img style={{background:'#FFFFFF', width: '70%', padding: '30px'}} src={stylableLogo} alt="Stylable logo"/>
                     <SpeakerNotes markdown>{`
                     - Typed CSS Implementation 
                     `}</SpeakerNotes>
@@ -333,7 +334,7 @@ export class IntroducingStylable extends React.Component {
                     - *click*
                     `}</SpeakerNotes>
                 </FullScreenTitle>
-                <FullScreenTitle title="definitly styled">
+                <FullScreenTitle title="definitly styled" data-background-image={frames} titleStyle={{'text-shadow': '8px 2px 9px rgba(0, 0, 0, 0.8)'}}>
                     Definitely Styled
                     <SpeakerNotes markdown>{`
                     - Definitely Styled, similar opportunity, better styling tools and capabilities, existing component libraries

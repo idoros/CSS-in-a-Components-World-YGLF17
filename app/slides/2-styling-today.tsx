@@ -2,6 +2,10 @@ import * as React from 'react';
 import { Markdown, SpeakerNotes, MarkCode, Fragment } from '../reveal-react';
 import { FullScreenTitle } from '../layout/';
 import { GooglyEye } from '../assets/googly-eye';
+import hardRock = require('../assets/images/hard-rock.jpg');
+import playa = require('../assets/images/playa.jpg');
+import frustration = require('../assets/images/frustration.jpg');
+import apple = require('../assets/images/apple.png');
 
 export class StylingToday extends React.Component {
     render() {
@@ -16,12 +20,18 @@ export class StylingToday extends React.Component {
                 </FullScreenTitle>
 
                 <section>
-                    <h3>In the Beginning ...</h3>
-                    <Fragment>
-                        <MarkCode lang="javascript">
-                            {`document.tags.H1.fontSize = "20pt"`}
-                        </MarkCode>
-                    </Fragment>
+                    <h3>In the Beginning...</h3>
+                    <img src={apple} alt="apple-site"/>
+                    <SpeakerNotes markdown>{`
+                    - In the beginning, sites were looking GOOD!                    
+                    `}</SpeakerNotes>
+                </section>
+
+                <section>
+                    <h3>In the Beginning...</h3>
+                    <MarkCode lang="javascript">
+                        {`document.tags.H1.fontSize = "20pt"`}
+                    </MarkCode>
                     <Fragment>
                         <MarkCode lang="html">{`
                         <font face="Comic Sans MS" color="lime">
@@ -42,7 +52,6 @@ export class StylingToday extends React.Component {
                     </Fragment>
                     <SpeakerNotes markdown>{`
                     Inline style:
-                    - In the beginning, sites were looking GOOD!
                     - Netscape Navigator - styling using a javascript API
                     - Presentational markup - font tag, bgColor
                     - only later on, Inline styling as we know today
@@ -92,7 +101,7 @@ export class StylingToday extends React.Component {
                     - Despite all of these features *click*
                     `}</SpeakerNotes> 
                 </section>
-                <FullScreenTitle title="easy write & hard manage">
+                <FullScreenTitle title="easy write & hard manage" data-background-image={hardRock} titleStyle={{'text-shadow': '4px 2px 40px rgba(0, 0, 0, 0.7)'}}>
                     CSS is Easy to Write & Hard to Manage
                     <SpeakerNotes markdown>{`
                     - make CSS easy to write, it is still hard to manage
@@ -116,7 +125,7 @@ export class StylingToday extends React.Component {
                     - No errors, no validations - hard to predict when something would break
                     `}</SpeakerNotes>
                 </section>
-                <FullScreenTitle title="community">
+                <FullScreenTitle title="community" data-background-image={playa} titleStyle={{'text-shadow': '4px 2px 8px rgba(0, 0, 0, 0.3)'}}>
                     Enter the Community
                     <SpeakerNotes markdown>{`
                     - community wanted more
@@ -202,7 +211,7 @@ export class StylingToday extends React.Component {
                     - generates and manipulates CSS during run-time   
                     `}</SpeakerNotes> 
                 </section>
-                <FullScreenTitle title="cost!">
+                <FullScreenTitle title="cost!" data-background-image={frustration} titleStyle={{'text-shadow': '4px 2px 30px rgba(0, 0, 0, 0.7)'}}>
                     ...But There's a Cost!
                     <SpeakerNotes markdown>{`
                     - But as always, there’s a cost 

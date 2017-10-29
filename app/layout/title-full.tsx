@@ -9,6 +9,7 @@ import titleFullCSS from './title-full.st.css';
 interface TitleFullProps extends properties.Props {
     children: React.ReactNode;
     title?: string;
+    titleStyle?: any;
 }
 
 function isReactNode(node:any):node is React.ReactElement<any> {
@@ -46,7 +47,7 @@ export default class TitleFull extends React.Component<TitleFullProps> {
         // const roleMap = childByType(this.props.children);
         return (
             <section className="center">
-                <h1 className="title">{content}</h1>
+                <h1 className="title" style={this.props.titleStyle}>{content}</h1>
                 {speakerNotes}
             </section>                    
         );

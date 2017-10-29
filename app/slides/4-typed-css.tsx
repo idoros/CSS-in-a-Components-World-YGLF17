@@ -1,13 +1,15 @@
 import * as React from 'react';
 import { SpeakerNotes } from '../reveal-react';
 import { FullScreenTitle } from '../layout/';
+import console = require('../assets/images/console.jpg');
+
 
 export class TypedCSS extends React.Component {
     render() {
         let index = 0;
         return (
             <section>
-                <FullScreenTitle >
+                <FullScreenTitle data-background-image={console} titleStyle={{'text-shadow': '8px 2px 9px rgba(0, 0, 0, 0.8)'}}>
                     Stylesheet<br/>Interface
                     <SpeakerNotes markdown>{`
                     - possible solution, introducing an interface

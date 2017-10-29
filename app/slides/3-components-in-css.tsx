@@ -3,6 +3,7 @@ import { Fragment, MarkCode, SpeakerNotes } from '../reveal-react';
 import { FullScreenTitle } from '../layout/';
 
 import { markMap } from '../assets/gallery-syntax-data';
+import stars = require('../assets/images/stars.jpg');
 
 export class ComponentsInCSS extends React.Component {
     render() {
@@ -38,7 +39,7 @@ export class ComponentsInCSS extends React.Component {
                     - what would it take
                     `}</SpeakerNotes>
                 </FullScreenTitle>
-                <FullScreenTitle>
+                <FullScreenTitle data-background-image={stars}>
                     Many Ways to Style HTML
                     <SpeakerNotes markdown>{`
                     - many ways to style an HTML structure using CSS

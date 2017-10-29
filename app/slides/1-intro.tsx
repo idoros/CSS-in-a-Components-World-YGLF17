@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { Markdown, SpeakerNotes } from '../reveal-react';
 import { FullScreenTitle } from '../layout/';
+
+import sprayCans = require('../assets/images/spray-cans.jpg');
 import me = require('../assets/images/ido.jpg');
 
 export class Intro extends React.Component {
@@ -9,7 +11,7 @@ export class Intro extends React.Component {
         return (
             <section>
 
-                <FullScreenTitle title="Intro">
+                <FullScreenTitle title="Intro" data-background-image={sprayCans} titleStyle={{'text-shadow': '4px 2px 40px rgb(0, 0, 0)'}}>
                     CSS in a Components’ World
                     <SpeakerNotes markdown>{`
                     - Hello...

@@ -13,3 +13,8 @@ declare module '*.jpg' {
     const urlToAsset: string;
     export = urlToAsset;
 }
+
+declare module '*.png' {
+    const urlToAsset: string;
+    export = urlToAsset;
+}
