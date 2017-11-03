@@ -1,5 +1,7 @@
 import * as React from 'react';
+
 import { Markdown, SpeakerNotes } from '../reveal-react';
+
 import { FullScreenTitle } from '../layout/';
 
 import sprayCans = require('../assets/images/spray-cans.jpg');
@@ -15,24 +17,23 @@ export class Intro extends React.Component {
                     CSS in a Components’ World
                     <SpeakerNotes markdown>{`
                     - Hello...
-                    - Ido Rosenthal
+                    - bruce lawson
                     - Welcome to...
                     `}</SpeakerNotes>
                 </FullScreenTitle>
 
                 <section data-background-image={me}>
                     <ul style={{backgroundColor: 'rgba(0,0,0,0.5)', padding: '25px'}}>
-                        <li>Frontend Developer since 2001</li>
-                        <li>Joined Wix in 2010</li>
-                        <li>Lead the move from Flash to HTML at Wix</li>
-                        <li>Developer tools, layout and styling</li>
+                        <li>Frontend since 2002</li>
+                        <li>HTML5 WG, Deputy CTO Opera, consultant Wix engineering</li>
+                        <li>passionate about developing standards, tools to keep web relevant, open and free</li>
+                        <li>likes vodka</li>
                     </ul>
                     <SpeakerNotes>
                         <Markdown>{`
-                        - Frontend long time
-                        - Joined Wix 8 years ago, originally flash, lead the move to HTML5
-                        - passionate for dev tools, solving layout, styling issues
-                        - tired father, 1.5 year old, doesn't care about any of this
+                        - Frontend since 2002
+                        - HTML5 WG, Feputy CTO Opera, consultant Wix engineering
+                        - passionate about developing standards, tools to keep web relevant, open and free
                         `}</Markdown>
                     </SpeakerNotes>
                 </section>

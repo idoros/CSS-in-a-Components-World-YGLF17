@@ -1,11 +1,15 @@
 import * as React from 'react';
-import { Markdown, SpeakerNotes, MarkCode, Fragment } from '../reveal-react';
+
+import { Fragment, MarkCode, Markdown, SpeakerNotes } from '../reveal-react';
+
 import { FullScreenTitle } from '../layout/';
 import { GooglyEye } from '../assets/googly-eye';
+
 import hardRock = require('../assets/images/hard-rock.jpg');
 import playa = require('../assets/images/playa.jpg');
 import frustration = require('../assets/images/frustration.jpg');
 import apple = require('../assets/images/apple.png');
+
 
 export class StylingToday extends React.Component {
     render() {
@@ -92,9 +96,12 @@ export class StylingToday extends React.Component {
                 </section>
                 <section>
                     <h3>Tooling & Ecosystem</h3>
-                    <h4>
-                        IDE support, syntax highlighting, code completions, validations, CSS generators, online materials, examples, etc...
-                    </h4>
+                    <ul>
+                        <li>IDE support, syntax highlighting</li>
+                        <li>code completions, validation</li>
+                        <li>huge community</li>
+                        <li>CSS generators, online materials, examples, etc...</li>
+                    </ul>
                     <SpeakerNotes markdown>{`
                     - Tooling and a rich ecosystem.
                     - IDE support, syntax highlighting, code completions
@@ -112,8 +119,7 @@ export class StylingToday extends React.Component {
                     <ul>
                         <li>Everything is global</li>
                         <li>Order affects cascade</li>
-                        <li>Dependency system - @import</li>
-                        <li>Relies on markup structure</li>
+                        <li>Dependency system - on markup structure</li>
                         <li>Breaks silently</li>
                     </ul>
                     <SpeakerNotes markdown>{`
@@ -125,6 +131,7 @@ export class StylingToday extends React.Component {
                     - No errors, no validations - hard to predict when something would break
                     `}</SpeakerNotes>
                 </section>
+
                 <FullScreenTitle title="community" data-background-image={playa} titleStyle={{'text-shadow': '4px 2px 8px rgba(0, 0, 0, 0.3)'}}>
                     Enter the Community
                     <SpeakerNotes markdown>{`

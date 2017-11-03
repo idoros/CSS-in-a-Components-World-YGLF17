@@ -1,5 +1,7 @@
 import * as React from 'react';
+
 import { SpeakerNotes } from '../reveal-react/';
+
 import twitterLogo = require('../assets/twitter.svg');
 
 export class Outro extends React.Component {
@@ -10,10 +12,10 @@ export class Outro extends React.Component {
                 <section>
                     <h3>Thank You for Listening</h3>
                     <ul>
-                        <li>Stylable Docs - Stylable.io</li>
+                        <li>Stylable docs - Stylable.io</li>
                         <li>Stylable repo - github.com/wix/stylable</li>
                         <li>Slides - goo.gl/zaHjyE</li>
-                        <li><img className="plain" src={twitterLogo} style={{width:'1em'}}/> @ idoros</li>
+                        <li><img className="plain" src={twitterLogo} style={{width:'1em'}}/> @stylableio - @brucel - @idoros</li>
                     </ul>
 
                     <SpeakerNotes markdown>
@@ -21,7 +23,6 @@ export class Outro extends React.Component {
                         - thank you
                             - all
                             - organizers
-                            - bruce for bruce
                         - i hope ... think about styling and components in a different light
                         - Stylable docs, stylable.io
                         - repo on github.com/wix/stylable
